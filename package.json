@@ -1,0 +1,32 @@
+{
+  "name": "palmtong-test",
+  "version": "1.0.0",
+  "description": "E2E tests for Palmtong system (Cloudflare Workers + Pages)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:backend": "playwright test tests/backend --project=chromium",
+    "test:frontend": "playwright test tests/frontend --project=chromium",
+    "test:e2e": "playwright test tests/e2e --project=chromium",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "test:headed": "playwright test --headed",
+    "test:all": "playwright test --project=chromium --project=firefox --project=webkit"
+  },
+  "keywords": [
+    "playwright",
+    "e2e",
+    "testing",
+    "cloudflare"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.0",
+    "dotenv": "^17.2.3",
+    "typescript": "^5.9.3"
+  }
+}

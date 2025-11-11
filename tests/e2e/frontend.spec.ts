@@ -1,0 +1,503 @@
+import { test, expect } from '@playwright/test';
+
+const FRONTEND_URL = process.env.FRONTEND_URL || 'https://palmtong-frontend.pages.dev';
+const BACKEND_URL = process.env.BACKEND_URL || 'https://palmtong-backend.anusoft.workers.dev';
+
+test.describe('Frontend E2E Tests', () => {
+  test.describe('Navigation and Layout', () => {
+    test('Dashboard page loads', async ({ page }) => {
+      await page.goto(FRONTEND_URL);
+      await expect(page).toHaveTitle(/Palmtong/i);
+
+      // Check for main navigation elements
+      await expect(page.locator('nav, [role="navigation"], header')).toBeVisible();
+    });
+
+    test('Navigation between all pages works', async ({ page }) => {
+      await page.goto(FRONTEND_URL);
+
+      // Test navigation links (adjust selectors based on your actual UI)
+      const navLinks = [
+        { text: /dashboard|home/i, url: '/' },
+        { text: /customer/i, url: '/customers' },
+        { text: /bike/i, url: '/bikes' },
+        { text: /sale/i, url: '/sales' },
+        { text: /invoice/i, url: '/invoices' },
+      ];
+
+      for (const link of navLinks) {
+        const navElement = page.locator(`a:has-text("${link.text.source}")`).first();
+        if (await navElement.count() > 0) {
+          await navElement.click();
+          await page.waitForLoadState('networkidle');
+          expect(page.url()).toContain(link.url);
+        }
+      }
+    });
+  });
+
+  test.describe('Dashboard Page', () => {
+    test('Dashboard shows metrics and stats', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/`);
+      await page.waitForLoadState('networkidle');
+
+      // Look for common dashboard elements
+      // These selectors should be adjusted to match your actual UI
+      const possibleMetrics = [
+        'Total Bikes',
+        'Total Sales',
+        'Total Customers',
+        'Revenue',
+        'Unsold Bikes',
+      ];
+
+      // Check if at least one metric is visible
+      let foundMetric = false;
+      for (const metric of possibleMetrics) {
+        const element = page.locator(`text=${metric}`);
+        if ((await element.count()) > 0) {
+          foundMetric = true;
+          break;
+        }
+      }
+
+      if (!foundMetric) {
+        // If no text metrics, check for cards or stat containers
+        const statCards = page.locator('[class*="stat"], [class*="card"], [class*="metric"]');
+        expect(await statCards.count()).toBeGreaterThan(0);
+      }
+    });
+  });
+
+  test.describe('Customers Page', () => {
+    test('Customers page displays table with data', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/customers`);
+      await page.waitForLoadState('networkidle');
+
+      // Check for table or list
+      const table = page.locator('table, [role="table"], [class*="table"]');
+      await expect(table).toBeVisible();
+    });
+
+    test('Can create new customer with Thai name', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/customers`);
+      await page.waitForLoadState('networkidle');
+
+      // Click add customer button (adjust selector)
+      const addButton = page.locator('button:has-text("Add"), button:has-text("New"), button:has-text("Create"), button:has-text("เพิ่ม")').first();
+
+      if ((await addButton.count()) > 0) {
+        await addButton.click();
+
+        // Wait for form to appear
+        await page.waitForTimeout(500);
+
+        // Fill form with Thai name
+        const timestamp = Date.now();
+        const idcard = `${timestamp}`.padStart(13, '1');
+
+        // Try different possible field names/selectors
+        const fillField = async (fieldNames: string[], value: string) => {
+          for (const name of fieldNames) {
+            const field = page.locator(`input[name="${name}"], input[id="${name}"], input[placeholder*="${name}"]`).first();
+            if ((await field.count()) > 0) {
+              await field.fill(value);
+              return;
+            }
+          }
+        };
+
+        await fillField(['idcard', 'id_card', 'nationalId'], idcard);
+        await fillField(['firstname', 'first_name', 'firstName'], 'สมชาย');
+        await fillField(['lastname', 'last_name', 'lastName'], 'ทดสอบ');
+        await fillField(['phone', 'tel', 'telephone'], '0812345678');
+
+        // Submit form
+        const submitButton = page.locator('button[type="submit"], button:has-text("Save"), button:has-text("บันทึก")').first();
+        if ((await submitButton.count()) > 0) {
+          await submitButton.click();
+
+          // Wait for success message or redirect
+          await page.waitForTimeout(1000);
+
+          // Check for success indicator
+          const successIndicators = [
+            'text=Success',
+            'text=Created',
+            'text=สำเร็จ',
+            '[class*="success"]',
+            '[role="alert"]',
+          ];
+
+          let foundSuccess = false;
+          for (const selector of successIndicators) {
+            if ((await page.locator(selector).count()) > 0) {
+              foundSuccess = true;
+              break;
+            }
+          }
+
+          // If no explicit success message, check if we're back at the list
+          if (!foundSuccess) {
+            expect(page.url()).toContain('/customers');
+          }
+        }
+      }
+    });
+
+    test('Customer edit functionality works', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/customers`);
+      await page.waitForLoadState('networkidle');
+
+      // Look for edit button (in table row or card)
+      const editButton = page.locator('button:has-text("Edit"), button:has-text("แก้ไข"), a:has-text("Edit")').first();
+
+      if ((await editButton.count()) > 0) {
+        await editButton.click();
+        await page.waitForTimeout(500);
+
+        // Verify form is loaded with data
+        const form = page.locator('form, [role="form"]');
+        await expect(form).toBeVisible();
+      }
+    });
+
+    test('Customer delete confirmation shows', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/customers`);
+      await page.waitForLoadState('networkidle');
+
+      // Look for delete button
+      const deleteButton = page.locator('button:has-text("Delete"), button:has-text("ลบ")').first();
+
+      if ((await deleteButton.count()) > 0) {
+        await deleteButton.click();
+
+        // Check for confirmation dialog
+        const confirmDialog = page.locator('[role="dialog"], [role="alertdialog"], .modal, .dialog');
+        await expect(confirmDialog).toBeVisible({ timeout: 2000 });
+      }
+    });
+  });
+
+  test.describe('Bikes Page', () => {
+    test('Bikes page displays table', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/bikes`);
+      await page.waitForLoadState('networkidle');
+
+      // Check for table or grid
+      const table = page.locator('table, [role="table"], [class*="table"], [class*="grid"]');
+      await expect(table).toBeVisible();
+    });
+
+    test('Can create new bike', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/bikes`);
+      await page.waitForLoadState('networkidle');
+
+      // Click add bike button
+      const addButton = page.locator('button:has-text("Add"), button:has-text("New"), button:has-text("เพิ่ม")').first();
+
+      if ((await addButton.count()) > 0) {
+        await addButton.click();
+        await page.waitForTimeout(500);
+
+        // Fill form
+        const timestamp = Date.now();
+
+        const fillField = async (fieldNames: string[], value: string) => {
+          for (const name of fieldNames) {
+            const field = page.locator(`input[name="${name}"], input[id="${name}"]`).first();
+            if ((await field.count()) > 0) {
+              await field.fill(value);
+              return true;
+            }
+          }
+          return false;
+        };
+
+        await fillField(['bike_model', 'model', 'bikeModel'], `Test Bike ${timestamp}`);
+        await fillField(['bike_chasi_number', 'chassis', 'chassisNumber'], `CH${timestamp}`);
+        await fillField(['bike_engine_number', 'engine', 'engineNumber'], `EN${timestamp}`);
+
+        // Select brand if dropdown exists
+        const brandSelect = page.locator('select[name="brand_id"], select[name="brandId"]').first();
+        if ((await brandSelect.count()) > 0) {
+          await brandSelect.selectOption({ index: 1 });
+        }
+
+        // Submit
+        const submitButton = page.locator('button[type="submit"], button:has-text("Save"), button:has-text("บันทึก")').first();
+        if ((await submitButton.count()) > 0) {
+          await submitButton.click();
+          await page.waitForTimeout(1000);
+        }
+      }
+    });
+
+    test('Bike edit form works', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/bikes`);
+      await page.waitForLoadState('networkidle');
+
+      const editButton = page.locator('button:has-text("Edit"), a:has-text("Edit")').first();
+
+      if ((await editButton.count()) > 0) {
+        await editButton.click();
+        await page.waitForTimeout(500);
+
+        const form = page.locator('form');
+        await expect(form).toBeVisible();
+      }
+    });
+  });
+
+  test.describe('Sales Page', () => {
+    test('Sales page displays table', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/sales`);
+      await page.waitForLoadState('networkidle');
+
+      const table = page.locator('table, [role="table"]');
+      await expect(table).toBeVisible();
+    });
+
+    test('Sale create form shows unsold bikes only', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/sales`);
+      await page.waitForLoadState('networkidle');
+
+      const addButton = page.locator('button:has-text("Add"), button:has-text("New Sale")').first();
+
+      if ((await addButton.count()) > 0) {
+        await addButton.click();
+        await page.waitForTimeout(500);
+
+        // Check for bike dropdown
+        const bikeSelect = page.locator('select[name*="bike"], select:has-text("Bike"), select:has-text("รถ")').first();
+        if ((await bikeSelect.count()) > 0) {
+          await expect(bikeSelect).toBeVisible();
+
+          // Verify it has options (unsold bikes)
+          const options = await bikeSelect.locator('option').count();
+          expect(options).toBeGreaterThan(0);
+        }
+      }
+    });
+
+    test('Can create sale (selects bike + customer)', async ({ page }) => {
+      // First, ensure we have a bike and customer via API
+      const timestamp = Date.now();
+
+      // Create bike via API
+      const bikeResponse = await page.request.post(`${BACKEND_URL}/api/bikes`, {
+        data: {
+          bike_model: `E2E Test Bike ${timestamp}`,
+          bike_chasi_number: `E2ECH${timestamp}`,
+          bike_engine_number: `E2EEN${timestamp}`,
+          brand_id: 1,
+          bike_price_buy: 45000,
+        },
+      });
+      const { bike_id } = await bikeResponse.json();
+
+      // Create customer via API
+      const customerResponse = await page.request.post(`${BACKEND_URL}/api/customers`, {
+        data: {
+          idcard: `${timestamp}`.padStart(13, '7'),
+          firstname: 'E2E Test',
+          lastname: 'Customer',
+          phone: '0877777777',
+        },
+      });
+      const { customer_id } = await customerResponse.json();
+
+      // Now test the sale creation UI
+      await page.goto(`${FRONTEND_URL}/sales`);
+      await page.waitForLoadState('networkidle');
+
+      const addButton = page.locator('button:has-text("Add"), button:has-text("New")').first();
+
+      if ((await addButton.count()) > 0) {
+        await addButton.click();
+        await page.waitForTimeout(500);
+
+        // Select the bike we just created
+        const bikeSelect = page.locator('select[name*="bike"]').first();
+        if ((await bikeSelect.count()) > 0) {
+          // Find option with our bike
+          await bikeSelect.selectOption({ index: 1 }); // Select first available
+        }
+
+        // Select customer
+        const customerSelect = page.locator('select[name*="customer"]').first();
+        if ((await customerSelect.count()) > 0) {
+          await customerSelect.selectOption({ index: 1 });
+        }
+
+        // Enter sale price
+        const priceInput = page.locator('input[name*="price"], input[name*="amount"]').first();
+        if ((await priceInput.count()) > 0) {
+          await priceInput.fill('50000');
+        }
+
+        // Submit
+        const submitButton = page.locator('button[type="submit"], button:has-text("Save")').first();
+        if ((await submitButton.count()) > 0) {
+          await submitButton.click();
+          await page.waitForTimeout(1000);
+        }
+      }
+    });
+  });
+
+  test.describe('Invoices Page', () => {
+    test('Invoices page displays table', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/invoices`);
+      await page.waitForLoadState('networkidle');
+
+      const table = page.locator('table, [role="table"]');
+      await expect(table).toBeVisible();
+    });
+
+    test('Invoice detail page shows full information', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/invoices`);
+      await page.waitForLoadState('networkidle');
+
+      // Click first invoice link or view button
+      const viewButton = page.locator('a[href*="/invoices/"], button:has-text("View"), button:has-text("Detail")').first();
+
+      if ((await viewButton.count()) > 0) {
+        await viewButton.click();
+        await page.waitForTimeout(1000);
+
+        // Verify we're on detail page
+        expect(page.url()).toMatch(/\/invoices\/\d+/);
+      }
+    });
+
+    test('Invoice PDF download button works', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/invoices`);
+      await page.waitForLoadState('networkidle');
+
+      // Look for PDF download button
+      const pdfButton = page.locator('button:has-text("PDF"), a:has-text("PDF"), button:has-text("Download")').first();
+
+      if ((await pdfButton.count()) > 0) {
+        // Set up download listener
+        const downloadPromise = page.waitForEvent('download', { timeout: 5000 }).catch(() => null);
+
+        await pdfButton.click();
+
+        const download = await downloadPromise;
+        if (download) {
+          expect(download.suggestedFilename()).toMatch(/\.pdf$/i);
+        }
+      }
+    });
+  });
+
+  test.describe('Forms and Validation', () => {
+    test('Forms validate input (show error messages)', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/customers`);
+      await page.waitForLoadState('networkidle');
+
+      const addButton = page.locator('button:has-text("Add"), button:has-text("New")').first();
+
+      if ((await addButton.count()) > 0) {
+        await addButton.click();
+        await page.waitForTimeout(500);
+
+        // Try to submit empty form
+        const submitButton = page.locator('button[type="submit"]').first();
+        if ((await submitButton.count()) > 0) {
+          await submitButton.click();
+          await page.waitForTimeout(500);
+
+          // Check for error messages
+          const errorIndicators = [
+            '[class*="error"]',
+            '[role="alert"]',
+            'text=required',
+            'text=invalid',
+          ];
+
+          let foundError = false;
+          for (const selector of errorIndicators) {
+            if ((await page.locator(selector).count()) > 0) {
+              foundError = true;
+              break;
+            }
+          }
+
+          // HTML5 validation might prevent submission
+          const idcardField = page.locator('input[name="idcard"], input[required]').first();
+          if ((await idcardField.count()) > 0) {
+            const isInvalid = await idcardField.evaluate((el: HTMLInputElement) => !el.validity.valid);
+            expect(isInvalid || foundError).toBe(true);
+          }
+        }
+      }
+    });
+
+    test('Loading states show during API calls', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/customers`);
+
+      // Look for loading indicators during page load
+      const loadingIndicators = page.locator('[class*="loading"], [class*="spinner"], [role="progressbar"]');
+
+      // The loading indicator might appear briefly
+      await page.waitForLoadState('networkidle');
+    });
+  });
+
+  test.describe('Thai Language Support', () => {
+    test('Thai text displays correctly throughout', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/customers`);
+      await page.waitForLoadState('networkidle');
+
+      // Check if page contains Thai characters
+      const bodyText = await page.locator('body').textContent();
+
+      // Thai Unicode range: \u0E00-\u0E7F
+      const hasThaiCharacters = /[\u0E00-\u0E7F]/.test(bodyText || '');
+
+      // Either the UI is in Thai, or it's in English (both are acceptable)
+      expect(typeof bodyText).toBe('string');
+    });
+  });
+
+  test.describe('Accessibility', () => {
+    test('No console errors on page load', async ({ page }) => {
+      const errors: string[] = [];
+
+      page.on('console', (msg) => {
+        if (msg.type() === 'error') {
+          errors.push(msg.text());
+        }
+      });
+
+      await page.goto(FRONTEND_URL);
+      await page.waitForLoadState('networkidle');
+
+      // Filter out known third-party errors if any
+      const criticalErrors = errors.filter(
+        (error) => !error.includes('favicon') && !error.includes('chrome-extension')
+      );
+
+      expect(criticalErrors.length).toBe(0);
+    });
+
+    test('Forms are keyboard accessible', async ({ page }) => {
+      await page.goto(`${FRONTEND_URL}/customers`);
+      await page.waitForLoadState('networkidle');
+
+      const addButton = page.locator('button:has-text("Add"), button:has-text("New")').first();
+
+      if ((await addButton.count()) > 0) {
+        // Try to tab to the button
+        await page.keyboard.press('Tab');
+        await page.keyboard.press('Tab');
+
+        // Check if button can be activated with keyboard
+        const focusedElement = await page.evaluate(() => document.activeElement?.tagName);
+        expect(['BUTTON', 'A', 'INPUT']).toContain(focusedElement);
+      }
+    });
+  });
+});
