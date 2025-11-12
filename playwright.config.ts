@@ -22,11 +22,13 @@ export default defineConfig({
   workers: process.env.CI ? 2 : undefined,
 
   // Reporter configuration
+  // IMPORTANT: HTML report set to 'open: never' - Claude Code cannot access browser-based reports
+  // Always use JSON output (test-results/results.json) for automated analysis
   reporter: [
-    ['html', { outputFolder: 'playwright-report', open: 'never' }],
-    ['json', { outputFile: 'test-results/results.json' }],
-    ['junit', { outputFile: 'test-results/junit.xml' }],
-    ['list']
+    ['html', { outputFolder: 'playwright-report', open: 'never' }], // For manual debugging only
+    ['json', { outputFile: 'test-results/results.json' }],           // Primary output for Claude Code
+    ['junit', { outputFile: 'test-results/junit.xml' }],             // For CI/CD integration
+    ['list']                                                          // Console output during test runs
   ],
 
   // Shared settings for all tests

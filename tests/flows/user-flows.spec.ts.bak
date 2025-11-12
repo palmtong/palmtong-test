@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { generateThaiIdFromSeed } from '../helpers/thai-id';
 
 const FRONTEND_URL = process.env.FRONTEND_URL || 'https://palmtong-frontend.pages.dev';
 const BACKEND_URL = process.env.BACKEND_URL || 'https://palmtong-backend.anusoft.workers.dev';
@@ -28,7 +27,7 @@ test.describe('User Flow Tests', () => {
       // Step 2: Create customer via API
       const customerResponse = await request.post(`${BACKEND_URL}/api/customers`, {
         data: {
-          idcard: generateThaiIdFromSeed(timestamp),
+          idcard: `${timestamp}`.padStart(13, '9'),
           firstname: 'ทดสอบ',
           lastname: 'ระบบ',
           phone: '0899999999',
@@ -117,7 +116,7 @@ test.describe('User Flow Tests', () => {
 
       const customerResponse = await request.post(`${BACKEND_URL}/api/customers`, {
         data: {
-          idcard: generateThaiIdFromSeed(timestamp),
+          idcard: `${timestamp}`.padStart(13, '8'),
           firstname: 'Edit',
           lastname: 'Test',
           phone: '0888888888',
@@ -184,7 +183,7 @@ test.describe('User Flow Tests', () => {
 
       const customerResponse = await request.post(`${BACKEND_URL}/api/customers`, {
         data: {
-          idcard: generateThaiIdFromSeed(timestamp),
+          idcard: `${timestamp}`.padStart(13, '6'),
           firstname: 'Multi',
           lastname: 'Step',
           phone: '0866666666',
@@ -238,7 +237,7 @@ test.describe('User Flow Tests', () => {
       // Step 1: Create customer
       const createResponse = await request.post(`${BACKEND_URL}/api/customers`, {
         data: {
-          idcard: generateThaiIdFromSeed(timestamp),
+          idcard: `${timestamp}`.padStart(13, '5'),
           firstname: 'Persist',
           lastname: 'Test',
           phone: '0855555555',
@@ -336,7 +335,7 @@ test.describe('User Flow Tests', () => {
       const timestamp = Date.now();
       const validResponse = await request.post(`${BACKEND_URL}/api/customers`, {
         data: {
-          idcard: generateThaiIdFromSeed(timestamp),
+          idcard: `${timestamp}`.padStart(13, '4'),
           firstname: 'Valid',
           lastname: 'Customer',
           phone: '0833333333',
@@ -371,7 +370,7 @@ test.describe('User Flow Tests', () => {
       console.log('Step 2: Registering customer...');
       const customerResponse = await request.post(`${BACKEND_URL}/api/customers`, {
         data: {
-          idcard: generateThaiIdFromSeed(timestamp),
+          idcard: `${timestamp}`.padStart(13, '3'),
           firstname: 'ลูกค้า',
           lastname: 'ทดสอบ',
           mobile_phone_1: '0822222222',

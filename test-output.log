@@ -1,0 +1,1091 @@
+
+> palmtong-test@1.0.0 test
+> playwright test
+
+[dotenv@17.2.3] injecting env (2) from .env -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+
+Running 260 tests using 5 workers
+
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+  ✓    1 [chromium] › tests/api/backend.spec.ts:7:5 › Backend API Integration Tests › Health and Infrastructure › GET /api/health returns 200 (184ms)
+  ✓    2 [chromium] › tests/api/backend.spec.ts:27:5 › Backend API Integration Tests › Bikes API › POST /api/bikes creates new bike (4.7s)
+  ✓    5 [chromium] › tests/api/backend.spec.ts:19:5 › Backend API Integration Tests › Bikes API › GET /api/bikes returns list (4.7s)
+  ✓    6 [chromium] › tests/api/backend.spec.ts:96:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/unsold returns only unsold bikes (4.5s)
+  ✓    4 [chromium] › tests/api/backend.spec.ts:46:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/:id returns bike details (4.7s)
+  ✓    7 [chromium] › tests/api/backend.spec.ts:110:5 › Backend API Integration Tests › Customers API › GET /api/customers returns list (82ms)
+  ✓    8 [chromium] › tests/api/backend.spec.ts:117:5 › Backend API Integration Tests › Customers API › POST /api/customers creates customer with Thai name (87ms)
+  ✓   10 [chromium] › tests/api/backend.spec.ts:161:5 › Backend API Integration Tests › Brands API › GET /api/brands returns list (68ms)
+  ✓    3 [chromium] › tests/api/backend.spec.ts:67:5 › Backend API Integration Tests › Bikes API › PUT /api/bikes/:id updates bike (4.8s)
+  ✓   11 [chromium] › tests/api/backend.spec.ts:169:5 › Backend API Integration Tests › Brands API › POST /api/brands creates brand (61ms)
+  ✓   12 [chromium] › tests/api/backend.spec.ts:185:5 › Backend API Integration Tests › Suppliers API › GET /api/suppliers returns list (68ms)
+  ✓    9 [chromium] › tests/api/backend.spec.ts:135:5 › Backend API Integration Tests › Customers API › PUT /api/customers/:id updates customer (131ms)
+  ✓   13 [chromium] › tests/api/backend.spec.ts:192:5 › Backend API Integration Tests › Suppliers API › POST /api/suppliers creates supplier (63ms)
+  ✓   14 [chromium] › tests/api/backend.spec.ts:209:5 › Backend API Integration Tests › Sales API › GET /api/sales returns list (70ms)
+  ✓   17 [chromium] › tests/api/backend.spec.ts:304:5 › Backend API Integration Tests › Invoices API › GET /api/invoices returns list (57ms)
+  ✓   19 [chromium] › tests/api/backend.spec.ts:361:5 › Backend API Integration Tests › Error Handling › Returns 404 for non-existent bike (65ms)
+  ✓   20 [chromium] › tests/api/backend.spec.ts:366:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid bike data (46ms)
+  ✓   21 [chromium] › tests/api/backend.spec.ts:376:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid customer idcard (47ms)
+  ✓   22 [chromium] › tests/api/backend.spec.ts:389:5 › Backend API Integration Tests › Data Validation › Validates required fields for bikes (45ms)
+  ✓   23 [chromium] › tests/api/backend.spec.ts:396:5 › Backend API Integration Tests › Data Validation › Validates Thai ID card format (44ms)
+  ✓   15 [chromium] › tests/api/backend.spec.ts:216:5 › Backend API Integration Tests › Sales API › POST /api/sales creates sale (links bike + customer) (251ms)
+  ✓   16 [chromium] › tests/api/backend.spec.ts:256:5 › Backend API Integration Tests › Sales API › GET /api/sales/:id returns sale details (368ms)
+  ✓   18 [chromium] › tests/api/backend.spec.ts:311:5 › Backend API Integration Tests › Invoices API › POST /api/invoices creates invoice from sale (383ms)
+  ✓   24 [chromium] › tests/e2e/frontend.spec.ts:8:5 › Frontend E2E Tests › Navigation and Layout › Dashboard page loads (464ms)
+  ✓   26 [chromium] › tests/e2e/frontend.spec.ts:40:5 › Frontend E2E Tests › Dashboard Page › Dashboard shows metrics and stats (1.3s)
+  ✓   25 [chromium] › tests/e2e/frontend.spec.ts:16:5 › Frontend E2E Tests › Navigation and Layout › Navigation between all pages works (1.3s)
+  ✓   27 [chromium] › tests/e2e/frontend.spec.ts:73:5 › Frontend E2E Tests › Customers Page › Customers page displays table with data (1.2s)
+  ✓   29 [chromium] › tests/e2e/frontend.spec.ts:148:5 › Frontend E2E Tests › Customers Page › Customer edit functionality works (1.7s)
+  ✓   31 [chromium] › tests/e2e/frontend.spec.ts:183:5 › Frontend E2E Tests › Bikes Page › Bikes page displays table (1.1s)
+  ✓   28 [chromium] › tests/e2e/frontend.spec.ts:82:5 › Frontend E2E Tests › Customers Page › Can create new customer with Thai name (2.9s)
+  ✓   34 [chromium] › tests/e2e/frontend.spec.ts:253:5 › Frontend E2E Tests › Sales Page › Sales page displays table (1.2s)
+  ✓   33 [chromium] › tests/e2e/frontend.spec.ts:236:5 › Frontend E2E Tests › Bikes Page › Bike edit form works (1.7s)
+  ✓   32 [chromium] › tests/e2e/frontend.spec.ts:192:5 › Frontend E2E Tests › Bikes Page › Can create new bike (2.8s)
+  ✓   35 [chromium] › tests/e2e/frontend.spec.ts:261:5 › Frontend E2E Tests › Sales Page › Sale create form shows unsold bikes only (1.1s)
+  ✘   30 [chromium] › tests/e2e/frontend.spec.ts:165:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows (3.2s)
+  ✓   36 [chromium] › tests/e2e/frontend.spec.ts:283:5 › Frontend E2E Tests › Sales Page › Can create sale (selects bike + customer) (1.2s)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+  ✓   37 [chromium] › tests/e2e/frontend.spec.ts:350:5 › Frontend E2E Tests › Invoices Page › Invoices page displays table (1.1s)
+  ✓   38 [chromium] › tests/e2e/frontend.spec.ts:358:5 › Frontend E2E Tests › Invoices Page › Invoice detail page shows full information (1.1s)
+  ✓   39 [chromium] › tests/e2e/frontend.spec.ts:374:5 › Frontend E2E Tests › Invoices Page › Invoice PDF download button works (1.1s)
+  ✓   40 [chromium] › tests/e2e/frontend.spec.ts:438:5 › Frontend E2E Tests › Forms and Validation › Loading states show during API calls (1.1s)
+  ✓   42 [chromium] › tests/e2e/frontend.spec.ts:450:5 › Frontend E2E Tests › Thai Language Support › Thai text displays correctly throughout (1.1s)
+  ✘   43 [chromium] › tests/e2e/frontend.spec.ts:466:5 › Frontend E2E Tests › Accessibility › No console errors on page load (1.1s)
+  ✓   44 [chromium] › tests/e2e/frontend.spec.ts:486:5 › Frontend E2E Tests › Accessibility › Forms are keyboard accessible (1.1s)
+  ✘   46 [chromium] › tests/flows/user-flows.spec.ts:99:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data (453ms)
+  ✘   47 [chromium] › tests/flows/user-flows.spec.ts:231:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved (235ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+  ✓   49 [chromium] › tests/flows/user-flows.spec.ts:276:5 › User Flow Tests › Filter and Search › Filter bikes by brand → Search customers by name → Filter sales by date (363ms)
+  ✓   41 [chromium] › tests/e2e/frontend.spec.ts:396:5 › Frontend E2E Tests › Forms and Validation › Forms validate input (show error messages) (2.3s)
+Step 1: Adding bike to stock...
+✓ Bike created: 229
+Step 2: Registering customer...
+  ✓   50 [chromium] › tests/flows/user-flows.spec.ts:312:5 › User Flow Tests › Error Handling Flow › Submit invalid form → Verify error messages → Fix errors → Verify successful submission (268ms)
+✓ Customer created: 245
+Step 3: Creating sale...
+  ✓   45 [chromium] › tests/flows/user-flows.spec.ts:8:5 › User Flow Tests › Complete Bike Sale Flow › End-to-end: Add bike → Add customer → Create sale → Generate invoice → Download PDF (1.5s)
+✓ Sale created: 73
+Step 4: Generating invoice...
+✓ Concurrent customer 1 created
+✓ Concurrent customer 2 created
+✓ Concurrent customer 3 created
+✓ Concurrent customer 4 created
+✓ Concurrent customer 5 created
+  ✓   52 [chromium] › tests/flows/user-flows.spec.ts:431:5 › User Flow Tests › Concurrent Operations › Multiple users creating records simultaneously (238ms)
+✓ Invoice created: 19
+Step 5: Generating PDF...
+✓ PDF generated successfully
+Step 6: Verifying bike sold status...
+✓ Bike marked as sold
+
+✅ Complete business workflow successful!
+  ✓   51 [chromium] › tests/flows/user-flows.spec.ts:350:5 › User Flow Tests › Complete Business Workflow › Full dealership workflow: Stock → Sale → Finance → Invoice (467ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+  ✓   53 [firefox] › tests/api/backend.spec.ts:7:5 › Backend API Integration Tests › Health and Infrastructure › GET /api/health returns 200 (157ms)
+  ✓   54 [firefox] › tests/api/backend.spec.ts:19:5 › Backend API Integration Tests › Bikes API › GET /api/bikes returns list (203ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+  ✓   55 [firefox] › tests/api/backend.spec.ts:27:5 › Backend API Integration Tests › Bikes API › POST /api/bikes creates new bike (179ms)
+  ✓   56 [firefox] › tests/api/backend.spec.ts:67:5 › Backend API Integration Tests › Bikes API › PUT /api/bikes/:id updates bike (183ms)
+  ✓   57 [firefox] › tests/api/backend.spec.ts:96:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/unsold returns only unsold bikes (114ms)
+  ✓   58 [firefox] › tests/api/backend.spec.ts:110:5 › Backend API Integration Tests › Customers API › GET /api/customers returns list (76ms)
+  ✓   60 [firefox] › tests/api/backend.spec.ts:117:5 › Backend API Integration Tests › Customers API › POST /api/customers creates customer with Thai name (76ms)
+  ✓   62 [firefox] › tests/api/backend.spec.ts:161:5 › Backend API Integration Tests › Brands API › GET /api/brands returns list (60ms)
+  ✓   63 [firefox] › tests/api/backend.spec.ts:169:5 › Backend API Integration Tests › Brands API › POST /api/brands creates brand (60ms)
+  ✓   64 [firefox] › tests/api/backend.spec.ts:185:5 › Backend API Integration Tests › Suppliers API › GET /api/suppliers returns list (61ms)
+  ✓   65 [firefox] › tests/api/backend.spec.ts:192:5 › Backend API Integration Tests › Suppliers API › POST /api/suppliers creates supplier (54ms)
+  ✓   61 [firefox] › tests/api/backend.spec.ts:135:5 › Backend API Integration Tests › Customers API › PUT /api/customers/:id updates customer (155ms)
+  ✓   59 [firefox] › tests/api/backend.spec.ts:46:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/:id returns bike details (246ms)
+  ✓   66 [firefox] › tests/api/backend.spec.ts:209:5 › Backend API Integration Tests › Sales API › GET /api/sales returns list (62ms)
+  ✓   69 [firefox] › tests/api/backend.spec.ts:304:5 › Backend API Integration Tests › Invoices API › GET /api/invoices returns list (64ms)
+  ✓   71 [firefox] › tests/api/backend.spec.ts:361:5 › Backend API Integration Tests › Error Handling › Returns 404 for non-existent bike (64ms)
+  ✓   72 [firefox] › tests/api/backend.spec.ts:366:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid bike data (46ms)
+  ✓   67 [firefox] › tests/api/backend.spec.ts:216:5 › Backend API Integration Tests › Sales API › POST /api/sales creates sale (links bike + customer) (238ms)
+  ✓   73 [firefox] › tests/api/backend.spec.ts:376:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid customer idcard (46ms)
+  ✓   74 [firefox] › tests/api/backend.spec.ts:389:5 › Backend API Integration Tests › Data Validation › Validates required fields for bikes (43ms)
+  ✓   48 [chromium] › tests/flows/user-flows.spec.ts:166:5 › User Flow Tests › Multi-step Sale Workflow › View unsold bikes → Select bike → Search customer → Create sale → Verify in sales list (1.7s)
+  ✓   68 [firefox] › tests/api/backend.spec.ts:256:5 › Backend API Integration Tests › Sales API › GET /api/sales/:id returns sale details (314ms)
+  ✓   75 [firefox] › tests/api/backend.spec.ts:396:5 › Backend API Integration Tests › Data Validation › Validates Thai ID card format (46ms)
+  ✓   70 [firefox] › tests/api/backend.spec.ts:311:5 › Backend API Integration Tests › Invoices API › POST /api/invoices creates invoice from sale (334ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+  ✓   76 [firefox] › tests/e2e/frontend.spec.ts:8:5 › Frontend E2E Tests › Navigation and Layout › Dashboard page loads (1.1s)
+  ✓   80 [firefox] › tests/e2e/frontend.spec.ts:16:5 › Frontend E2E Tests › Navigation and Layout › Navigation between all pages works (2.4s)
+  ✓   77 [firefox] › tests/e2e/frontend.spec.ts:40:5 › Frontend E2E Tests › Dashboard Page › Dashboard shows metrics and stats (2.1s)
+  ✓   81 [firefox] › tests/e2e/frontend.spec.ts:148:5 › Frontend E2E Tests › Customers Page › Customer edit functionality works (2.0s)
+  ✓   79 [firefox] › tests/e2e/frontend.spec.ts:82:5 › Frontend E2E Tests › Customers Page › Can create new customer with Thai name (3.8s)
+  ✓   78 [firefox] › tests/e2e/frontend.spec.ts:73:5 › Frontend E2E Tests › Customers Page › Customers page displays table with data (2.1s)
+  ✓   83 [firefox] › tests/e2e/frontend.spec.ts:183:5 › Frontend E2E Tests › Bikes Page › Bikes page displays table (1.3s)
+  ✓   86 [firefox] › tests/e2e/frontend.spec.ts:253:5 › Frontend E2E Tests › Sales Page › Sales page displays table (1.4s)
+  ✓   85 [firefox] › tests/e2e/frontend.spec.ts:236:5 › Frontend E2E Tests › Bikes Page › Bike edit form works (2.0s)
+  ✓   84 [firefox] › tests/e2e/frontend.spec.ts:192:5 › Frontend E2E Tests › Bikes Page › Can create new bike (3.1s)
+  ✘   82 [firefox] › tests/e2e/frontend.spec.ts:165:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows (3.6s)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+  ✓   89 [firefox] › tests/e2e/frontend.spec.ts:350:5 › Frontend E2E Tests › Invoices Page › Invoices page displays table (3.8s)
+  ✓   90 [firefox] › tests/e2e/frontend.spec.ts:358:5 › Frontend E2E Tests › Invoices Page › Invoice detail page shows full information (3.0s)
+  ✓   87 [firefox] › tests/e2e/frontend.spec.ts:261:5 › Frontend E2E Tests › Sales Page › Sale create form shows unsold bikes only (4.9s)
+  ✓   91 [firefox] › tests/e2e/frontend.spec.ts:374:5 › Frontend E2E Tests › Invoices Page › Invoice PDF download button works (1.8s)
+  ✓   88 [firefox] › tests/e2e/frontend.spec.ts:283:5 › Frontend E2E Tests › Sales Page › Can create sale (selects bike + customer) (5.1s)
+  ✓   93 [firefox] › tests/e2e/frontend.spec.ts:438:5 › Frontend E2E Tests › Forms and Validation › Loading states show during API calls (1.3s)
+  ✓   94 [firefox] › tests/e2e/frontend.spec.ts:450:5 › Frontend E2E Tests › Thai Language Support › Thai text displays correctly throughout (1.3s)
+  ✓   95 [firefox] › tests/e2e/frontend.spec.ts:466:5 › Frontend E2E Tests › Accessibility › No console errors on page load (1.3s)
+  ✓   96 [firefox] › tests/e2e/frontend.spec.ts:486:5 › Frontend E2E Tests › Accessibility › Forms are keyboard accessible (1.3s)
+  ✘   98 [firefox] › tests/flows/user-flows.spec.ts:99:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data (668ms)
+  ✓   92 [firefox] › tests/e2e/frontend.spec.ts:396:5 › Frontend E2E Tests › Forms and Validation › Forms validate input (show error messages) (2.5s)
+  ✓  101 [firefox] › tests/flows/user-flows.spec.ts:312:5 › User Flow Tests › Error Handling Flow › Submit invalid form → Verify error messages → Fix errors → Verify successful submission (165ms)
+Step 1: Adding bike to stock...
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+✓ Bike created: 240
+Step 2: Registering customer...
+  ✘  100 [firefox] › tests/flows/user-flows.spec.ts:231:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved (404ms)
+✓ Customer created: 262
+Step 3: Creating sale...
+✓ Sale created: 80
+Step 4: Generating invoice...
+  ✓   97 [firefox] › tests/flows/user-flows.spec.ts:8:5 › User Flow Tests › Complete Bike Sale Flow › End-to-end: Add bike → Add customer → Create sale → Generate invoice → Download PDF (1.7s)
+✓ Invoice created: 23
+Step 5: Generating PDF...
+✓ PDF generated successfully
+Step 6: Verifying bike sold status...
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+  ✓  103 [firefox] › tests/flows/user-flows.spec.ts:276:5 › User Flow Tests › Filter and Search › Filter bikes by brand → Search customers by name → Filter sales by date (386ms)
+✓ Bike marked as sold
+
+✅ Complete business workflow successful!
+  ✓  102 [firefox] › tests/flows/user-flows.spec.ts:350:5 › User Flow Tests › Complete Business Workflow › Full dealership workflow: Stock → Sale → Finance → Invoice (471ms)
+✓ Concurrent customer 1 created
+✓ Concurrent customer 2 created
+✓ Concurrent customer 3 created
+✓ Concurrent customer 4 created
+✓ Concurrent customer 5 created
+  ✓  104 [firefox] › tests/flows/user-flows.spec.ts:431:5 › User Flow Tests › Concurrent Operations › Multiple users creating records simultaneously (220ms)
+  ✓   99 [firefox] › tests/flows/user-flows.spec.ts:166:5 › User Flow Tests › Multi-step Sale Workflow › View unsold bikes → Select bike → Search customer → Create sale → Verify in sales list (1.9s)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+  ✓  105 [webkit] › tests/api/backend.spec.ts:19:5 › Backend API Integration Tests › Bikes API › GET /api/bikes returns list (200ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+  ✓  106 [webkit] › tests/api/backend.spec.ts:7:5 › Backend API Integration Tests › Health and Infrastructure › GET /api/health returns 200 (164ms)
+  ✓  107 [webkit] › tests/api/backend.spec.ts:96:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/unsold returns only unsold bikes (123ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+  ✓  109 [webkit] › tests/api/backend.spec.ts:110:5 › Backend API Integration Tests › Customers API › GET /api/customers returns list (79ms)
+  ✓  110 [webkit] › tests/api/backend.spec.ts:117:5 › Backend API Integration Tests › Customers API › POST /api/customers creates customer with Thai name (82ms)
+  ✓  108 [webkit] › tests/api/backend.spec.ts:46:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/:id returns bike details (233ms)
+  ✓  113 [webkit] › tests/api/backend.spec.ts:161:5 › Backend API Integration Tests › Brands API › GET /api/brands returns list (63ms)
+  ✓  114 [webkit] › tests/api/backend.spec.ts:169:5 › Backend API Integration Tests › Brands API › POST /api/brands creates brand (71ms)
+  ✓  115 [webkit] › tests/api/backend.spec.ts:185:5 › Backend API Integration Tests › Suppliers API › GET /api/suppliers returns list (62ms)
+  ✓  112 [webkit] › tests/api/backend.spec.ts:135:5 › Backend API Integration Tests › Customers API › PUT /api/customers/:id updates customer (159ms)
+  ✓  111 [webkit] › tests/api/backend.spec.ts:27:5 › Backend API Integration Tests › Bikes API › POST /api/bikes creates new bike (209ms)
+  ✓  116 [webkit] › tests/api/backend.spec.ts:192:5 › Backend API Integration Tests › Suppliers API › POST /api/suppliers creates supplier (57ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+  ✓  117 [webkit] › tests/api/backend.spec.ts:209:5 › Backend API Integration Tests › Sales API › GET /api/sales returns list (65ms)
+  ✓  120 [webkit] › tests/api/backend.spec.ts:304:5 › Backend API Integration Tests › Invoices API › GET /api/invoices returns list (64ms)
+  ✓  123 [webkit] › tests/api/backend.spec.ts:361:5 › Backend API Integration Tests › Error Handling › Returns 404 for non-existent bike (55ms)
+  ✓  124 [webkit] › tests/api/backend.spec.ts:366:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid bike data (42ms)
+  ✓  125 [webkit] › tests/api/backend.spec.ts:376:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid customer idcard (42ms)
+  ✓  118 [webkit] › tests/api/backend.spec.ts:216:5 › Backend API Integration Tests › Sales API › POST /api/sales creates sale (links bike + customer) (252ms)
+  ✓  126 [webkit] › tests/api/backend.spec.ts:389:5 › Backend API Integration Tests › Data Validation › Validates required fields for bikes (43ms)
+  ✓  127 [webkit] › tests/api/backend.spec.ts:396:5 › Backend API Integration Tests › Data Validation › Validates Thai ID card format (46ms)
+  ✓  119 [webkit] › tests/api/backend.spec.ts:256:5 › Backend API Integration Tests › Sales API › GET /api/sales/:id returns sale details (324ms)
+  ✓  122 [webkit] › tests/api/backend.spec.ts:67:5 › Backend API Integration Tests › Bikes API › PUT /api/bikes/:id updates bike (306ms)
+  ✓  121 [webkit] › tests/api/backend.spec.ts:311:5 › Backend API Integration Tests › Invoices API › POST /api/invoices creates invoice from sale (354ms)
+  ✓  128 [webkit] › tests/e2e/frontend.spec.ts:8:5 › Frontend E2E Tests › Navigation and Layout › Dashboard page loads (1.5s)
+  ✓  131 [webkit] › tests/e2e/frontend.spec.ts:73:5 › Frontend E2E Tests › Customers Page › Customers page displays table with data (2.2s)
+  ✓  130 [webkit] › tests/e2e/frontend.spec.ts:40:5 › Frontend E2E Tests › Dashboard Page › Dashboard shows metrics and stats (2.3s)
+  ✓  129 [webkit] › tests/e2e/frontend.spec.ts:16:5 › Frontend E2E Tests › Navigation and Layout › Navigation between all pages works (2.4s)
+  ✓  133 [webkit] › tests/e2e/frontend.spec.ts:148:5 › Frontend E2E Tests › Customers Page › Customer edit functionality works (1.9s)
+  ✓  135 [webkit] › tests/e2e/frontend.spec.ts:183:5 › Frontend E2E Tests › Bikes Page › Bikes page displays table (1.3s)
+  ✓  132 [webkit] › tests/e2e/frontend.spec.ts:82:5 › Frontend E2E Tests › Customers Page › Can create new customer with Thai name (4.0s)
+  ✓  138 [webkit] › tests/e2e/frontend.spec.ts:253:5 › Frontend E2E Tests › Sales Page › Sales page displays table (1.2s)
+  ✓  137 [webkit] › tests/e2e/frontend.spec.ts:236:5 › Frontend E2E Tests › Bikes Page › Bike edit form works (1.9s)
+  ✓  139 [webkit] › tests/e2e/frontend.spec.ts:261:5 › Frontend E2E Tests › Sales Page › Sale create form shows unsold bikes only (1.3s)
+  ✓  136 [webkit] › tests/e2e/frontend.spec.ts:192:5 › Frontend E2E Tests › Bikes Page › Can create new bike (3.1s)
+  ✘  134 [webkit] › tests/e2e/frontend.spec.ts:165:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows (3.4s)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+  ✓  140 [webkit] › tests/e2e/frontend.spec.ts:283:5 › Frontend E2E Tests › Sales Page › Can create sale (selects bike + customer) (1.4s)
+  ✓  141 [webkit] › tests/e2e/frontend.spec.ts:350:5 › Frontend E2E Tests › Invoices Page › Invoices page displays table (1.2s)
+  ✓  142 [webkit] › tests/e2e/frontend.spec.ts:358:5 › Frontend E2E Tests › Invoices Page › Invoice detail page shows full information (1.2s)
+  ✓  143 [webkit] › tests/e2e/frontend.spec.ts:374:5 › Frontend E2E Tests › Invoices Page › Invoice PDF download button works (1.2s)
+  ✓  145 [webkit] › tests/e2e/frontend.spec.ts:438:5 › Frontend E2E Tests › Forms and Validation › Loading states show during API calls (1.2s)
+  ✓  146 [webkit] › tests/e2e/frontend.spec.ts:450:5 › Frontend E2E Tests › Thai Language Support › Thai text displays correctly throughout (1.2s)
+  ✘  147 [webkit] › tests/e2e/frontend.spec.ts:466:5 › Frontend E2E Tests › Accessibility › No console errors on page load (1.3s)
+  ✓  148 [webkit] › tests/e2e/frontend.spec.ts:486:5 › Frontend E2E Tests › Accessibility › Forms are keyboard accessible (1.3s)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+  ✘  150 [webkit] › tests/flows/user-flows.spec.ts:99:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data (558ms)
+  ✘  151 [webkit] › tests/flows/user-flows.spec.ts:231:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved (342ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+  ✓  144 [webkit] › tests/e2e/frontend.spec.ts:396:5 › Frontend E2E Tests › Forms and Validation › Forms validate input (show error messages) (2.7s)
+Step 1: Adding bike to stock...
+  ✓  154 [webkit] › tests/flows/user-flows.spec.ts:312:5 › User Flow Tests › Error Handling Flow › Submit invalid form → Verify error messages → Fix errors → Verify successful submission (268ms)
+  ✓  149 [webkit] › tests/flows/user-flows.spec.ts:8:5 › User Flow Tests › Complete Bike Sale Flow › End-to-end: Add bike → Add customer → Create sale → Generate invoice → Download PDF (1.6s)
+✓ Bike created: 253
+Step 2: Registering customer...
+  ✓  153 [webkit] › tests/flows/user-flows.spec.ts:276:5 › User Flow Tests › Filter and Search › Filter bikes by brand → Search customers by name → Filter sales by date (388ms)
+✓ Customer created: 280
+Step 3: Creating sale...
+✓ Concurrent customer 1 created
+✓ Concurrent customer 2 created
+✓ Concurrent customer 3 created
+✓ Concurrent customer 4 created
+✓ Concurrent customer 5 created
+  ✓  156 [webkit] › tests/flows/user-flows.spec.ts:431:5 › User Flow Tests › Concurrent Operations › Multiple users creating records simultaneously (179ms)
+✓ Sale created: 87
+Step 4: Generating invoice...
+✓ Invoice created: 27
+Step 5: Generating PDF...
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+✓ PDF generated successfully
+Step 6: Verifying bike sold status...
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+✓ Bike marked as sold
+
+✅ Complete business workflow successful!
+  ✓  155 [webkit] › tests/flows/user-flows.spec.ts:350:5 › User Flow Tests › Complete Business Workflow › Full dealership workflow: Stock → Sale → Finance → Invoice (622ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+  ✓  157 [Mobile Chrome] › tests/api/backend.spec.ts:7:5 › Backend API Integration Tests › Health and Infrastructure › GET /api/health returns 200 (162ms)
+  ✓  158 [Mobile Chrome] › tests/api/backend.spec.ts:19:5 › Backend API Integration Tests › Bikes API › GET /api/bikes returns list (182ms)
+  ✓  159 [Mobile Chrome] › tests/api/backend.spec.ts:27:5 › Backend API Integration Tests › Bikes API › POST /api/bikes creates new bike (177ms)
+  ✓  160 [Mobile Chrome] › tests/api/backend.spec.ts:67:5 › Backend API Integration Tests › Bikes API › PUT /api/bikes/:id updates bike (189ms)
+  ✓  161 [Mobile Chrome] › tests/api/backend.spec.ts:96:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/unsold returns only unsold bikes (158ms)
+  ✓  162 [Mobile Chrome] › tests/api/backend.spec.ts:110:5 › Backend API Integration Tests › Customers API › GET /api/customers returns list (76ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+  ✓  163 [Mobile Chrome] › tests/api/backend.spec.ts:117:5 › Backend API Integration Tests › Customers API › POST /api/customers creates customer with Thai name (80ms)
+  ✓  165 [Mobile Chrome] › tests/api/backend.spec.ts:161:5 › Backend API Integration Tests › Brands API › GET /api/brands returns list (64ms)
+  ✓  166 [Mobile Chrome] › tests/api/backend.spec.ts:169:5 › Backend API Integration Tests › Brands API › POST /api/brands creates brand (60ms)
+  ✓  164 [Mobile Chrome] › tests/api/backend.spec.ts:135:5 › Backend API Integration Tests › Customers API › PUT /api/customers/:id updates customer (127ms)
+  ✓  168 [Mobile Chrome] › tests/api/backend.spec.ts:185:5 › Backend API Integration Tests › Suppliers API › GET /api/suppliers returns list (62ms)
+  ✓  169 [Mobile Chrome] › tests/api/backend.spec.ts:192:5 › Backend API Integration Tests › Suppliers API › POST /api/suppliers creates supplier (57ms)
+  ✓  170 [Mobile Chrome] › tests/api/backend.spec.ts:209:5 › Backend API Integration Tests › Sales API › GET /api/sales returns list (61ms)
+  ✓  173 [Mobile Chrome] › tests/api/backend.spec.ts:304:5 › Backend API Integration Tests › Invoices API › GET /api/invoices returns list (55ms)
+  ✓  167 [Mobile Chrome] › tests/api/backend.spec.ts:46:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/:id returns bike details (219ms)
+  ✓  175 [Mobile Chrome] › tests/api/backend.spec.ts:361:5 › Backend API Integration Tests › Error Handling › Returns 404 for non-existent bike (60ms)
+  ✓  171 [Mobile Chrome] › tests/api/backend.spec.ts:216:5 › Backend API Integration Tests › Sales API › POST /api/sales creates sale (links bike + customer) (227ms)
+  ✓  176 [Mobile Chrome] › tests/api/backend.spec.ts:366:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid bike data (43ms)
+  ✓  177 [Mobile Chrome] › tests/api/backend.spec.ts:376:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid customer idcard (41ms)
+  ✓  178 [Mobile Chrome] › tests/api/backend.spec.ts:389:5 › Backend API Integration Tests › Data Validation › Validates required fields for bikes (40ms)
+  ✓  172 [Mobile Chrome] › tests/api/backend.spec.ts:256:5 › Backend API Integration Tests › Sales API › GET /api/sales/:id returns sale details (283ms)
+  ✓  179 [Mobile Chrome] › tests/api/backend.spec.ts:396:5 › Backend API Integration Tests › Data Validation › Validates Thai ID card format (42ms)
+  ✓  174 [Mobile Chrome] › tests/api/backend.spec.ts:311:5 › Backend API Integration Tests › Invoices API › POST /api/invoices creates invoice from sale (296ms)
+  ✓  152 [webkit] › tests/flows/user-flows.spec.ts:166:5 › User Flow Tests › Multi-step Sale Workflow › View unsold bikes → Select bike → Search customer → Create sale → Verify in sales list (2.0s)
+  ✓  180 [Mobile Chrome] › tests/e2e/frontend.spec.ts:8:5 › Frontend E2E Tests › Navigation and Layout › Dashboard page loads (498ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+  ✓  182 [Mobile Chrome] › tests/e2e/frontend.spec.ts:40:5 › Frontend E2E Tests › Dashboard Page › Dashboard shows metrics and stats (1.3s)
+  ✓  183 [Mobile Chrome] › tests/e2e/frontend.spec.ts:73:5 › Frontend E2E Tests › Customers Page › Customers page displays table with data (1.2s)
+  ✓  181 [Mobile Chrome] › tests/e2e/frontend.spec.ts:16:5 › Frontend E2E Tests › Navigation and Layout › Navigation between all pages works (1.4s)
+  ✓  184 [Mobile Chrome] › tests/e2e/frontend.spec.ts:148:5 › Frontend E2E Tests › Customers Page › Customer edit functionality works (1.7s)
+  ✓  187 [Mobile Chrome] › tests/e2e/frontend.spec.ts:183:5 › Frontend E2E Tests › Bikes Page › Bikes page displays table (1.2s)
+  ✓  185 [Mobile Chrome] › tests/e2e/frontend.spec.ts:82:5 › Frontend E2E Tests › Customers Page › Can create new customer with Thai name (2.9s)
+  ✓  190 [Mobile Chrome] › tests/e2e/frontend.spec.ts:253:5 › Frontend E2E Tests › Sales Page › Sales page displays table (1.2s)
+  ✓  189 [Mobile Chrome] › tests/e2e/frontend.spec.ts:236:5 › Frontend E2E Tests › Bikes Page › Bike edit form works (1.7s)
+  ✓  188 [Mobile Chrome] › tests/e2e/frontend.spec.ts:192:5 › Frontend E2E Tests › Bikes Page › Can create new bike (2.9s)
+  ✘  186 [Mobile Chrome] › tests/e2e/frontend.spec.ts:165:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows (3.3s)
+  ✓  191 [Mobile Chrome] › tests/e2e/frontend.spec.ts:261:5 › Frontend E2E Tests › Sales Page › Sale create form shows unsold bikes only (1.2s)
+  ✓  192 [Mobile Chrome] › tests/e2e/frontend.spec.ts:283:5 › Frontend E2E Tests › Sales Page › Can create sale (selects bike + customer) (1.3s)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+  ✓  193 [Mobile Chrome] › tests/e2e/frontend.spec.ts:350:5 › Frontend E2E Tests › Invoices Page › Invoices page displays table (1.2s)
+  ✓  194 [Mobile Chrome] › tests/e2e/frontend.spec.ts:358:5 › Frontend E2E Tests › Invoices Page › Invoice detail page shows full information (1.1s)
+  ✓  196 [Mobile Chrome] › tests/e2e/frontend.spec.ts:438:5 › Frontend E2E Tests › Forms and Validation › Loading states show during API calls (1.1s)
+  ✓  198 [Mobile Chrome] › tests/e2e/frontend.spec.ts:450:5 › Frontend E2E Tests › Thai Language Support › Thai text displays correctly throughout (1.1s)
+  ✓  197 [Mobile Chrome] › tests/e2e/frontend.spec.ts:374:5 › Frontend E2E Tests › Invoices Page › Invoice PDF download button works (1.2s)
+  ✘  199 [Mobile Chrome] › tests/e2e/frontend.spec.ts:466:5 › Frontend E2E Tests › Accessibility › No console errors on page load (1.2s)
+  ✓  195 [Mobile Chrome] › tests/e2e/frontend.spec.ts:396:5 › Frontend E2E Tests › Forms and Validation › Forms validate input (show error messages) (2.2s)
+  ✘  202 [Mobile Chrome] › tests/flows/user-flows.spec.ts:99:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data (608ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+  ✘  203 [Mobile Chrome] › tests/flows/user-flows.spec.ts:231:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved (364ms)
+  ✓  200 [Mobile Chrome] › tests/e2e/frontend.spec.ts:486:5 › Frontend E2E Tests › Accessibility › Forms are keyboard accessible (1.2s)
+Step 1: Adding bike to stock...
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+✓ Bike created: 264
+Step 2: Registering customer...
+✓ Customer created: 295
+Step 3: Creating sale...
+✓ Sale created: 93
+Step 4: Generating invoice...
+✓ Invoice created: 31
+Step 5: Generating PDF...
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+✓ PDF generated successfully
+Step 6: Verifying bike sold status...
+  ✓  201 [Mobile Chrome] › tests/flows/user-flows.spec.ts:8:5 › User Flow Tests › Complete Bike Sale Flow › End-to-end: Add bike → Add customer → Create sale → Generate invoice → Download PDF (1.5s)
+✓ Bike marked as sold
+
+✅ Complete business workflow successful!
+  ✓  205 [Mobile Chrome] › tests/flows/user-flows.spec.ts:350:5 › User Flow Tests › Complete Business Workflow › Full dealership workflow: Stock → Sale → Finance → Invoice (418ms)
+  ✓  206 [Mobile Chrome] › tests/flows/user-flows.spec.ts:276:5 › User Flow Tests › Filter and Search › Filter bikes by brand → Search customers by name → Filter sales by date (404ms)
+✓ Concurrent customer 1 created
+✓ Concurrent customer 2 created
+✓ Concurrent customer 3 created
+✓ Concurrent customer 4 created
+✓ Concurrent customer 5 created
+  ✓  208 [Mobile Chrome] › tests/flows/user-flows.spec.ts:431:5 › User Flow Tests › Concurrent Operations › Multiple users creating records simultaneously (167ms)
+  ✓  207 [Mobile Chrome] › tests/flows/user-flows.spec.ts:312:5 › User Flow Tests › Error Handling Flow › Submit invalid form → Verify error messages → Fix errors → Verify successful submission (260ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+  ✓  209 [Mobile Safari] › tests/api/backend.spec.ts:7:5 › Backend API Integration Tests › Health and Infrastructure › GET /api/health returns 200 (160ms)
+  ✓  210 [Mobile Safari] › tests/api/backend.spec.ts:19:5 › Backend API Integration Tests › Bikes API › GET /api/bikes returns list (194ms)
+  ✓  211 [Mobile Safari] › tests/api/backend.spec.ts:27:5 › Backend API Integration Tests › Bikes API › POST /api/bikes creates new bike (182ms)
+  ✓  214 [Mobile Safari] › tests/api/backend.spec.ts:96:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/unsold returns only unsold bikes (124ms)
+  ✓  213 [Mobile Safari] › tests/api/backend.spec.ts:67:5 › Backend API Integration Tests › Bikes API › PUT /api/bikes/:id updates bike (187ms)
+  ✓  215 [Mobile Safari] › tests/api/backend.spec.ts:110:5 › Backend API Integration Tests › Customers API › GET /api/customers returns list (79ms)
+  ✓  212 [Mobile Safari] › tests/api/backend.spec.ts:46:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/:id returns bike details (248ms)
+  ✓  216 [Mobile Safari] › tests/api/backend.spec.ts:117:5 › Backend API Integration Tests › Customers API › POST /api/customers creates customer with Thai name (83ms)
+  ✓  218 [Mobile Safari] › tests/api/backend.spec.ts:161:5 › Backend API Integration Tests › Brands API › GET /api/brands returns list (63ms)
+  ✓  219 [Mobile Safari] › tests/api/backend.spec.ts:169:5 › Backend API Integration Tests › Brands API › POST /api/brands creates brand (66ms)
+  ✓  217 [Mobile Safari] › tests/api/backend.spec.ts:135:5 › Backend API Integration Tests › Customers API › PUT /api/customers/:id updates customer (128ms)
+  ✓  220 [Mobile Safari] › tests/api/backend.spec.ts:185:5 › Backend API Integration Tests › Suppliers API › GET /api/suppliers returns list (62ms)
+  ✓  221 [Mobile Safari] › tests/api/backend.spec.ts:192:5 › Backend API Integration Tests › Suppliers API › POST /api/suppliers creates supplier (60ms)
+  ✓  222 [Mobile Safari] › tests/api/backend.spec.ts:209:5 › Backend API Integration Tests › Sales API › GET /api/sales returns list (70ms)
+  ✓  225 [Mobile Safari] › tests/api/backend.spec.ts:304:5 › Backend API Integration Tests › Invoices API › GET /api/invoices returns list (62ms)
+  ✓  227 [Mobile Safari] › tests/api/backend.spec.ts:361:5 › Backend API Integration Tests › Error Handling › Returns 404 for non-existent bike (56ms)
+  ✓  228 [Mobile Safari] › tests/api/backend.spec.ts:366:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid bike data (44ms)
+  ✓  204 [Mobile Chrome] › tests/flows/user-flows.spec.ts:166:5 › User Flow Tests › Multi-step Sale Workflow › View unsold bikes → Select bike → Search customer → Create sale → Verify in sales list (1.8s)
+  ✓  223 [Mobile Safari] › tests/api/backend.spec.ts:216:5 › Backend API Integration Tests › Sales API › POST /api/sales creates sale (links bike + customer) (234ms)
+  ✓  229 [Mobile Safari] › tests/api/backend.spec.ts:376:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid customer idcard (44ms)
+  ✓  230 [Mobile Safari] › tests/api/backend.spec.ts:396:5 › Backend API Integration Tests › Data Validation › Validates Thai ID card format (46ms)
+  ✓  224 [Mobile Safari] › tests/api/backend.spec.ts:256:5 › Backend API Integration Tests › Sales API › GET /api/sales/:id returns sale details (318ms)
+  ✓  226 [Mobile Safari] › tests/api/backend.spec.ts:311:5 › Backend API Integration Tests › Invoices API › POST /api/invoices creates invoice from sale (398ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+  ✓  235 [Mobile Safari] › tests/api/backend.spec.ts:389:5 › Backend API Integration Tests › Data Validation › Validates required fields for bikes (206ms)
+  ✓  231 [Mobile Safari] › tests/e2e/frontend.spec.ts:8:5 › Frontend E2E Tests › Navigation and Layout › Dashboard page loads (895ms)
+  ✓  233 [Mobile Safari] › tests/e2e/frontend.spec.ts:40:5 › Frontend E2E Tests › Dashboard Page › Dashboard shows metrics and stats (1.6s)
+  ✓  234 [Mobile Safari] › tests/e2e/frontend.spec.ts:73:5 › Frontend E2E Tests › Customers Page › Customers page displays table with data (1.4s)
+  ✓  232 [Mobile Safari] › tests/e2e/frontend.spec.ts:16:5 › Frontend E2E Tests › Navigation and Layout › Navigation between all pages works (1.8s)
+  ✓  237 [Mobile Safari] › tests/e2e/frontend.spec.ts:148:5 › Frontend E2E Tests › Customers Page › Customer edit functionality works (1.8s)
+  ✓  239 [Mobile Safari] › tests/e2e/frontend.spec.ts:183:5 › Frontend E2E Tests › Bikes Page › Bikes page displays table (1.3s)
+  ✓  236 [Mobile Safari] › tests/e2e/frontend.spec.ts:82:5 › Frontend E2E Tests › Customers Page › Can create new customer with Thai name (3.2s)
+  ✓  242 [Mobile Safari] › tests/e2e/frontend.spec.ts:253:5 › Frontend E2E Tests › Sales Page › Sales page displays table (1.2s)
+  ✓  241 [Mobile Safari] › tests/e2e/frontend.spec.ts:236:5 › Frontend E2E Tests › Bikes Page › Bike edit form works (1.8s)
+  ✓  240 [Mobile Safari] › tests/e2e/frontend.spec.ts:192:5 › Frontend E2E Tests › Bikes Page › Can create new bike (3.0s)
+  ✘  238 [Mobile Safari] › tests/e2e/frontend.spec.ts:165:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows (3.3s)
+  ✓  243 [Mobile Safari] › tests/e2e/frontend.spec.ts:261:5 › Frontend E2E Tests › Sales Page › Sale create form shows unsold bikes only (1.2s)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+  ✓  244 [Mobile Safari] › tests/e2e/frontend.spec.ts:283:5 › Frontend E2E Tests › Sales Page › Can create sale (selects bike + customer) (1.3s)
+  ✓  245 [Mobile Safari] › tests/e2e/frontend.spec.ts:350:5 › Frontend E2E Tests › Invoices Page › Invoices page displays table (1.2s)
+  ✓  246 [Mobile Safari] › tests/e2e/frontend.spec.ts:358:5 › Frontend E2E Tests › Invoices Page › Invoice detail page shows full information (1.2s)
+  ✓  249 [Mobile Safari] › tests/e2e/frontend.spec.ts:438:5 › Frontend E2E Tests › Forms and Validation › Loading states show during API calls (1.2s)
+  ✓  250 [Mobile Safari] › tests/e2e/frontend.spec.ts:450:5 › Frontend E2E Tests › Thai Language Support › Thai text displays correctly throughout (1.2s)
+  ✓  248 [Mobile Safari] › tests/e2e/frontend.spec.ts:374:5 › Frontend E2E Tests › Invoices Page › Invoice PDF download button works (1.4s)
+  ✘  251 [Mobile Safari] › tests/e2e/frontend.spec.ts:466:5 › Frontend E2E Tests › Accessibility › No console errors on page load (1.3s)
+  ✓  247 [Mobile Safari] › tests/e2e/frontend.spec.ts:396:5 › Frontend E2E Tests › Forms and Validation › Forms validate input (show error messages) (2.4s)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+  ✘  254 [Mobile Safari] › tests/flows/user-flows.spec.ts:99:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data (697ms)
+  ✘  255 [Mobile Safari] › tests/flows/user-flows.spec.ts:231:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved (318ms)
+  ✓  252 [Mobile Safari] › tests/e2e/frontend.spec.ts:486:5 › Frontend E2E Tests › Accessibility › Forms are keyboard accessible (1.3s)
+Step 1: Adding bike to stock...
+✓ Bike created: 275
+Step 2: Registering customer...
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+✓ Customer created: 311
+Step 3: Creating sale...
+✓ Sale created: 100
+Step 4: Generating invoice...
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+✓ Invoice created: 35
+Step 5: Generating PDF...
+✓ PDF generated successfully
+Step 6: Verifying bike sold status...
+  ✓  253 [Mobile Safari] › tests/flows/user-flows.spec.ts:8:5 › User Flow Tests › Complete Bike Sale Flow › End-to-end: Add bike → Add customer → Create sale → Generate invoice → Download PDF (1.6s)
+✓ Bike marked as sold
+
+✅ Complete business workflow successful!
+  ✓  257 [Mobile Safari] › tests/flows/user-flows.spec.ts:350:5 › User Flow Tests › Complete Business Workflow › Full dealership workflow: Stock → Sale → Finance → Invoice (558ms)
+  ✓  259 [Mobile Safari] › tests/flows/user-flows.spec.ts:312:5 › User Flow Tests › Error Handling Flow › Submit invalid form → Verify error messages → Fix errors → Verify successful submission (259ms)
+  ✓  258 [Mobile Safari] › tests/flows/user-flows.spec.ts:276:5 › User Flow Tests › Filter and Search › Filter bikes by brand → Search customers by name → Filter sales by date (483ms)
+✓ Concurrent customer 1 created
+✓ Concurrent customer 2 created
+✓ Concurrent customer 3 created
+✓ Concurrent customer 4 created
+✓ Concurrent customer 5 created
+  ✓  260 [Mobile Safari] › tests/flows/user-flows.spec.ts:431:5 › User Flow Tests › Concurrent Operations › Multiple users creating records simultaneously (171ms)
+  ✓  256 [Mobile Safari] › tests/flows/user-flows.spec.ts:166:5 › User Flow Tests › Multi-step Sale Workflow › View unsold bikes → Select bike → Search customer → Create sale → Verify in sales list (2.0s)
+
+
+  1) [chromium] › tests/e2e/frontend.spec.ts:165:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('[role="dialog"], [role="alertdialog"], .modal, .dialog')
+    Expected: visible
+    Timeout: 2000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 2000ms[22m
+    [2m  - waiting for locator('[role="dialog"], [role="alertdialog"], .modal, .dialog')[22m
+
+
+      175 |         // Check for confirmation dialog
+      176 |         const confirmDialog = page.locator('[role="dialog"], [role="alertdialog"], .modal, .dialog');
+    > 177 |         await expect(confirmDialog).toBeVisible({ timeout: 2000 });
+          |                                     ^
+      178 |       }
+      179 |     });
+      180 |   });
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/e2e/frontend.spec.ts:177:37
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests/e2e/frontend.spec.ts:466:5 › Frontend E2E Tests › Accessibility › No console errors on page load 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      481 |       );
+      482 |
+    > 483 |       expect(criticalErrors.length).toBe(0);
+          |                                     ^
+      484 |     });
+      485 |
+      486 |     test('Forms are keyboard accessible', async ({ page }) => {
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/e2e/frontend.spec.ts:483:37
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › tests/flows/user-flows.spec.ts:99:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeTruthy[2m()[22m
+
+    Received: [31mfalse[39m
+
+      149 |         },
+      150 |       });
+    > 151 |       expect(updateResponse.ok()).toBeTruthy();
+          |                                   ^
+      152 |
+      153 |       // Verify PDF can be generated with updated data
+      154 |       const pdfResponse = await request.get(`${BACKEND_URL}/api/invoices/${invoice_id}/pdf`);
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/flows/user-flows.spec.ts:151:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › tests/flows/user-flows.spec.ts:231:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"Original Address"[39m
+    Received: [31mundefined[39m
+
+      253 |       const customer = await getResponse.json();
+      254 |       expect(customer.firstname).toBe('Persist');
+    > 255 |       expect(customer.address).toBe('Original Address');
+          |                                ^
+      256 |
+      257 |       // Step 3: Edit record
+      258 |       const updateResponse = await request.put(`${BACKEND_URL}/api/customers/${customer_id}`, {
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/flows/user-flows.spec.ts:255:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [firefox] › tests/e2e/frontend.spec.ts:165:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('[role="dialog"], [role="alertdialog"], .modal, .dialog')
+    Expected: visible
+    Timeout: 2000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 2000ms[22m
+    [2m  - waiting for locator('[role="dialog"], [role="alertdialog"], .modal, .dialog')[22m
+
+
+      175 |         // Check for confirmation dialog
+      176 |         const confirmDialog = page.locator('[role="dialog"], [role="alertdialog"], .modal, .dialog');
+    > 177 |         await expect(confirmDialog).toBeVisible({ timeout: 2000 });
+          |                                     ^
+      178 |       }
+      179 |     });
+      180 |   });
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/e2e/frontend.spec.ts:177:37
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-firefox/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [firefox] › tests/flows/user-flows.spec.ts:99:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeTruthy[2m()[22m
+
+    Received: [31mfalse[39m
+
+      149 |         },
+      150 |       });
+    > 151 |       expect(updateResponse.ok()).toBeTruthy();
+          |                                   ^
+      152 |
+      153 |       // Verify PDF can be generated with updated data
+      154 |       const pdfResponse = await request.get(`${BACKEND_URL}/api/invoices/${invoice_id}/pdf`);
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/flows/user-flows.spec.ts:151:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [firefox] › tests/flows/user-flows.spec.ts:231:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"Original Address"[39m
+    Received: [31mundefined[39m
+
+      253 |       const customer = await getResponse.json();
+      254 |       expect(customer.firstname).toBe('Persist');
+    > 255 |       expect(customer.address).toBe('Original Address');
+          |                                ^
+      256 |
+      257 |       // Step 3: Edit record
+      258 |       const updateResponse = await request.put(`${BACKEND_URL}/api/customers/${customer_id}`, {
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/flows/user-flows.spec.ts:255:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-firefox/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-firefox/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-firefox/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-firefox/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [webkit] › tests/e2e/frontend.spec.ts:165:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('[role="dialog"], [role="alertdialog"], .modal, .dialog')
+    Expected: visible
+    Timeout: 2000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 2000ms[22m
+    [2m  - waiting for locator('[role="dialog"], [role="alertdialog"], .modal, .dialog')[22m
+
+
+      175 |         // Check for confirmation dialog
+      176 |         const confirmDialog = page.locator('[role="dialog"], [role="alertdialog"], .modal, .dialog');
+    > 177 |         await expect(confirmDialog).toBeVisible({ timeout: 2000 });
+          |                                     ^
+      178 |       }
+      179 |     });
+      180 |   });
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/e2e/frontend.spec.ts:177:37
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-webkit/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [webkit] › tests/e2e/frontend.spec.ts:466:5 › Frontend E2E Tests › Accessibility › No console errors on page load 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      481 |       );
+      482 |
+    > 483 |       expect(criticalErrors.length).toBe(0);
+          |                                     ^
+      484 |     });
+      485 |
+      486 |     test('Forms are keyboard accessible', async ({ page }) => {
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/e2e/frontend.spec.ts:483:37
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-webkit/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) [webkit] › tests/flows/user-flows.spec.ts:99:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeTruthy[2m()[22m
+
+    Received: [31mfalse[39m
+
+      149 |         },
+      150 |       });
+    > 151 |       expect(updateResponse.ok()).toBeTruthy();
+          |                                   ^
+      152 |
+      153 |       // Verify PDF can be generated with updated data
+      154 |       const pdfResponse = await request.get(`${BACKEND_URL}/api/invoices/${invoice_id}/pdf`);
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/flows/user-flows.spec.ts:151:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11) [webkit] › tests/flows/user-flows.spec.ts:231:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"Original Address"[39m
+    Received: [31mundefined[39m
+
+      253 |       const customer = await getResponse.json();
+      254 |       expect(customer.firstname).toBe('Persist');
+    > 255 |       expect(customer.address).toBe('Original Address');
+          |                                ^
+      256 |
+      257 |       // Step 3: Edit record
+      258 |       const updateResponse = await request.put(`${BACKEND_URL}/api/customers/${customer_id}`, {
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/flows/user-flows.spec.ts:255:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-webkit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-webkit/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  12) [Mobile Chrome] › tests/e2e/frontend.spec.ts:165:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('[role="dialog"], [role="alertdialog"], .modal, .dialog')
+    Expected: visible
+    Timeout: 2000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 2000ms[22m
+    [2m  - waiting for locator('[role="dialog"], [role="alertdialog"], .modal, .dialog')[22m
+
+
+      175 |         // Check for confirmation dialog
+      176 |         const confirmDialog = page.locator('[role="dialog"], [role="alertdialog"], .modal, .dialog');
+    > 177 |         await expect(confirmDialog).toBeVisible({ timeout: 2000 });
+          |                                     ^
+      178 |       }
+      179 |     });
+      180 |   });
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/e2e/frontend.spec.ts:177:37
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-Mobile-Chrome/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-Mobile-Chrome/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-Mobile-Chrome/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  13) [Mobile Chrome] › tests/e2e/frontend.spec.ts:466:5 › Frontend E2E Tests › Accessibility › No console errors on page load 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      481 |       );
+      482 |
+    > 483 |       expect(criticalErrors.length).toBe(0);
+          |                                     ^
+      484 |     });
+      485 |
+      486 |     test('Forms are keyboard accessible', async ({ page }) => {
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/e2e/frontend.spec.ts:483:37
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-Mobile-Chrome/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-Mobile-Chrome/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-Mobile-Chrome/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  14) [Mobile Chrome] › tests/flows/user-flows.spec.ts:99:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeTruthy[2m()[22m
+
+    Received: [31mfalse[39m
+
+      149 |         },
+      150 |       });
+    > 151 |       expect(updateResponse.ok()).toBeTruthy();
+          |                                   ^
+      152 |
+      153 |       // Verify PDF can be generated with updated data
+      154 |       const pdfResponse = await request.get(`${BACKEND_URL}/api/invoices/${invoice_id}/pdf`);
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/flows/user-flows.spec.ts:151:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-Mobile-Chrome/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-Mobile-Chrome/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  15) [Mobile Chrome] › tests/flows/user-flows.spec.ts:231:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"Original Address"[39m
+    Received: [31mundefined[39m
+
+      253 |       const customer = await getResponse.json();
+      254 |       expect(customer.firstname).toBe('Persist');
+    > 255 |       expect(customer.address).toBe('Original Address');
+          |                                ^
+      256 |
+      257 |       // Step 3: Edit record
+      258 |       const updateResponse = await request.put(`${BACKEND_URL}/api/customers/${customer_id}`, {
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/flows/user-flows.spec.ts:255:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-Mobile-Chrome/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-Mobile-Chrome/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-Mobile-Chrome/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  16) [Mobile Safari] › tests/e2e/frontend.spec.ts:165:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('[role="dialog"], [role="alertdialog"], .modal, .dialog')
+    Expected: visible
+    Timeout: 2000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 2000ms[22m
+    [2m  - waiting for locator('[role="dialog"], [role="alertdialog"], .modal, .dialog')[22m
+
+
+      175 |         // Check for confirmation dialog
+      176 |         const confirmDialog = page.locator('[role="dialog"], [role="alertdialog"], .modal, .dialog');
+    > 177 |         await expect(confirmDialog).toBeVisible({ timeout: 2000 });
+          |                                     ^
+      178 |       }
+      179 |     });
+      180 |   });
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/e2e/frontend.spec.ts:177:37
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-Mobile-Safari/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-Mobile-Safari/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-frontend-Frontend-E2E--cf4c0-r-delete-confirmation-shows-Mobile-Safari/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  17) [Mobile Safari] › tests/e2e/frontend.spec.ts:466:5 › Frontend E2E Tests › Accessibility › No console errors on page load 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m0[39m
+    Received: [31m1[39m
+
+      481 |       );
+      482 |
+    > 483 |       expect(criticalErrors.length).toBe(0);
+          |                                     ^
+      484 |     });
+      485 |
+      486 |     test('Forms are keyboard accessible', async ({ page }) => {
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/e2e/frontend.spec.ts:483:37
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-Mobile-Safari/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-Mobile-Safari/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-frontend-Frontend-E2E--fa7f7-console-errors-on-page-load-Mobile-Safari/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  18) [Mobile Safari] › tests/flows/user-flows.spec.ts:99:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeTruthy[2m()[22m
+
+    Received: [31mfalse[39m
+
+      149 |         },
+      150 |       });
+    > 151 |       expect(updateResponse.ok()).toBeTruthy();
+          |                                   ^
+      152 |
+      153 |       // Verify PDF can be generated with updated data
+      154 |       const pdfResponse = await request.get(`${BACKEND_URL}/api/invoices/${invoice_id}/pdf`);
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/flows/user-flows.spec.ts:151:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-Mobile-Safari/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/flows-user-flows-User-Flow-20cb7-e-PDF-→-Verify-updated-data-Mobile-Safari/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  19) [Mobile Safari] › tests/flows/user-flows.spec.ts:231:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m"Original Address"[39m
+    Received: [31mundefined[39m
+
+      253 |       const customer = await getResponse.json();
+      254 |       expect(customer.firstname).toBe('Persist');
+    > 255 |       expect(customer.address).toBe('Original Address');
+          |                                ^
+      256 |
+      257 |       // Step 3: Edit record
+      258 |       const updateResponse = await request.put(`${BACKEND_URL}/api/customers/${customer_id}`, {
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/flows/user-flows.spec.ts:255:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-Mobile-Safari/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/flows-user-flows-User-Flow-d7aeb-Edit-→-Verify-changes-saved-Mobile-Safari/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  19 failed
+    [chromium] › tests/e2e/frontend.spec.ts:165:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows 
+    [chromium] › tests/e2e/frontend.spec.ts:466:5 › Frontend E2E Tests › Accessibility › No console errors on page load 
+    [chromium] › tests/flows/user-flows.spec.ts:99:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data 
+    [chromium] › tests/flows/user-flows.spec.ts:231:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved 
+    [firefox] › tests/e2e/frontend.spec.ts:165:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows 
+    [firefox] › tests/flows/user-flows.spec.ts:99:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data 
+    [firefox] › tests/flows/user-flows.spec.ts:231:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved 
+    [webkit] › tests/e2e/frontend.spec.ts:165:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows 
+    [webkit] › tests/e2e/frontend.spec.ts:466:5 › Frontend E2E Tests › Accessibility › No console errors on page load 
+    [webkit] › tests/flows/user-flows.spec.ts:99:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data 
+    [webkit] › tests/flows/user-flows.spec.ts:231:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved 
+    [Mobile Chrome] › tests/e2e/frontend.spec.ts:165:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows 
+    [Mobile Chrome] › tests/e2e/frontend.spec.ts:466:5 › Frontend E2E Tests › Accessibility › No console errors on page load 
+    [Mobile Chrome] › tests/flows/user-flows.spec.ts:99:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data 
+    [Mobile Chrome] › tests/flows/user-flows.spec.ts:231:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved 
+    [Mobile Safari] › tests/e2e/frontend.spec.ts:165:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows 
+    [Mobile Safari] › tests/e2e/frontend.spec.ts:466:5 › Frontend E2E Tests › Accessibility › No console errors on page load 
+    [Mobile Safari] › tests/flows/user-flows.spec.ts:99:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data 
+    [Mobile Safari] › tests/flows/user-flows.spec.ts:231:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved 
+  241 passed (1.1m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

@@ -138,7 +138,7 @@ test.describe('Backend API Integration Tests', () => {
       const timestamp = Date.now();
       const createResponse = await request.post(`${BACKEND_URL}/api/customers`, {
         data: {
-          idcard: generateThaiIdFromSeed(timestamp),
+          idcard: `${timestamp}`.padStart(13, '2'),
           firstname: 'Original',
           lastname: 'Name',
           phone: '0898765432',
@@ -231,7 +231,7 @@ test.describe('Backend API Integration Tests', () => {
       // Create customer
       const customerResponse = await request.post(`${BACKEND_URL}/api/customers`, {
         data: {
-          idcard: generateThaiIdFromSeed(timestamp),
+          idcard: `${timestamp}`.padStart(13, '3'),
           firstname: 'Test',
           lastname: 'Buyer',
           phone: '0898765432',
@@ -273,7 +273,7 @@ test.describe('Backend API Integration Tests', () => {
       // Create customer
       const customerResponse = await request.post(`${BACKEND_URL}/api/customers`, {
         data: {
-          idcard: generateThaiIdFromSeed(timestamp),
+          idcard: `${timestamp}`.padStart(13, '4'),
           firstname: 'Detail',
           lastname: 'Test',
           phone: '0811111111',
@@ -326,7 +326,7 @@ test.describe('Backend API Integration Tests', () => {
 
       const customerResponse = await request.post(`${BACKEND_URL}/api/customers`, {
         data: {
-          idcard: generateThaiIdFromSeed(timestamp),
+          idcard: `${timestamp}`.padStart(13, '5'),
           firstname: 'Invoice',
           lastname: 'Test',
           phone: '0822222222',

@@ -9,11 +9,13 @@
     "test:backend": "playwright test tests/backend --project=chromium",
     "test:frontend": "playwright test tests/frontend --project=chromium",
     "test:e2e": "playwright test tests/e2e --project=chromium",
-    "test:debug": "playwright test --debug",
-    "test:ui": "playwright test --ui",
-    "test:report": "playwright show-report",
-    "test:headed": "playwright test --headed",
-    "test:all": "playwright test --project=chromium --project=firefox --project=webkit"
+    "test:all": "playwright test --project=chromium --project=firefox --project=webkit",
+    "test:json": "cat test-results/results.json | jq '{expected: .stats.expected, unexpected: .stats.unexpected, skipped: .stats.skipped}'",
+    "test:failures": "cat test-results/results.json | jq '.suites[].suites[].specs[] | select(.ok == false) | {title: .title, file: .file}' | head -20",
+    "MANUAL:test:debug": "playwright test --debug",
+    "MANUAL:test:ui": "playwright test --ui",
+    "MANUAL:test:report": "playwright show-report",
+    "MANUAL:test:headed": "playwright test --headed"
   },
   "keywords": [
     "playwright",

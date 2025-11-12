@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { generateThaiIdFromSeed } from '../helpers/thai-id';
 
 const FRONTEND_URL = process.env.FRONTEND_URL || 'https://palmtong-frontend.pages.dev';
 const BACKEND_URL = process.env.BACKEND_URL || 'https://palmtong-backend.anusoft.workers.dev';
@@ -95,7 +94,7 @@ test.describe('Frontend E2E Tests', () => {
 
         // Fill form with Thai name
         const timestamp = Date.now();
-        const idcard = generateThaiIdFromSeed(timestamp);
+        const idcard = `${timestamp}`.padStart(13, '1');
 
         // Try different possible field names/selectors
         const fillField = async (fieldNames: string[], value: string) => {
@@ -300,7 +299,7 @@ test.describe('Frontend E2E Tests', () => {
       // Create customer via API
       const customerResponse = await page.request.post(`${BACKEND_URL}/api/customers`, {
         data: {
-          idcard: generateThaiIdFromSeed(timestamp),
+          idcard: `${timestamp}`.padStart(13, '7'),
           firstname: 'E2E Test',
           lastname: 'Customer',
           phone: '0877777777',

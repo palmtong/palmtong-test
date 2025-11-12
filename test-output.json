@@ -1,0 +1,597 @@
+[dotenv@17.2.3] injecting env (2) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+{
+  "config": {
+    "configFile": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/playwright.config.ts",
+    "rootDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 5
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "Mobile Safari",
+        "name": "Mobile Safari",
+        "testDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "production/latest-deployment.spec.ts",
+      "file": "production/latest-deployment.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Latest Deployment - Thai Language & API",
+          "file": "production/latest-deployment.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Homepage should display Thai language",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4182,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T14:37:28.484Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "efe589d995a9e38cd854-0c80d7d5b282bc13e340",
+              "file": "production/latest-deployment.spec.ts",
+              "line": 7,
+              "column": 3
+            },
+            {
+              "title": "Dashboard should load with Thai text and API data",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 9823,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h1').first()\nExpected substring: \u001b[32m\"หน้าหลัก\"\u001b[39m\nReceived string:    \u001b[31m\"ปาล์มทอง\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1').first()\u001b[22m\n\u001b[2m    9 × locator resolved to <h1 class=\"text-xl font-semibold\">ปาล์มทอง</h1>\u001b[22m\n\u001b[2m      - unexpected value \"ปาล์มทอง\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h1').first()\nExpected substring: \u001b[32m\"หน้าหลัก\"\u001b[39m\nReceived string:    \u001b[31m\"ปาล์มทอง\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1').first()\u001b[22m\n\u001b[2m    9 × locator resolved to <h1 class=\"text-xl font-semibold\">ปาล์มทอง</h1>\u001b[22m\n\u001b[2m      - unexpected value \"ปาล์มทอง\"\u001b[22m\n\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts:23:25",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts",
+                          "column": 25,
+                          "line": 23
+                        },
+                        "snippet": "  21 |     // Check Thai title\n  22 |     const title = await page.locator('h1').first();\n> 23 |     await expect(title).toContainText('หน้าหลัก');\n     |                         ^\n  24 |\n  25 |     // Check dashboard stats loaded from API\n  26 |     await expect(page.locator('text=จักรยานยนต์ที่ยังไม่ได้ขาย')).toBeVisible();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts",
+                            "column": 25,
+                            "line": 23
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h1').first()\nExpected substring: \u001b[32m\"หน้าหลัก\"\u001b[39m\nReceived string:    \u001b[31m\"ปาล์มทอง\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1').first()\u001b[22m\n\u001b[2m    9 × locator resolved to <h1 class=\"text-xl font-semibold\">ปาล์มทอง</h1>\u001b[22m\n\u001b[2m      - unexpected value \"ปาล์มทอง\"\u001b[22m\n\n\n  21 |     // Check Thai title\n  22 |     const title = await page.locator('h1').first();\n> 23 |     await expect(title).toContainText('หน้าหลัก');\n     |                         ^\n  24 |\n  25 |     // Check dashboard stats loaded from API\n  26 |     await expect(page.locator('text=จักรยานยนต์ที่ยังไม่ได้ขาย')).toBeVisible();\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts:23:25"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T14:37:28.483Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-1623f-with-Thai-text-and-API-data-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-1623f-with-Thai-text-and-API-data-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-1623f-with-Thai-text-and-API-data-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-1623f-with-Thai-text-and-API-data-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts",
+                        "column": 25,
+                        "line": 23
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "efe589d995a9e38cd854-5d4c198b517ecc00cabe",
+              "file": "production/latest-deployment.spec.ts",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "All navigation items should be in Thai",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 1777,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=ลูกค้า')\nExpected: visible\nError: strict mode violation: locator('text=ลูกค้า') resolved to 4 elements:\n    1) <span>ลูกค้า</span> aka getByRole('link', { name: '👥 ลูกค้า' })\n    2) <div class=\"text-sm font-medium text-muted-foreground\">ลูกค้า</div> aka getByRole('main').getByText('ลูกค้า', { exact: true })\n    3) <div class=\"text-sm font-medium\">ลูกค้า ทดสอบ</div> aka getByText('ลูกค้า ทดสอบ').first()\n    4) <div class=\"text-sm font-medium\">ลูกค้า ทดสอบ</div> aka getByText('ลูกค้า ทดสอบ').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=ลูกค้า')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=ลูกค้า')\nExpected: visible\nError: strict mode violation: locator('text=ลูกค้า') resolved to 4 elements:\n    1) <span>ลูกค้า</span> aka getByRole('link', { name: '👥 ลูกค้า' })\n    2) <div class=\"text-sm font-medium text-muted-foreground\">ลูกค้า</div> aka getByRole('main').getByText('ลูกค้า', { exact: true })\n    3) <div class=\"text-sm font-medium\">ลูกค้า ทดสอบ</div> aka getByText('ลูกค้า ทดสอบ').first()\n    4) <div class=\"text-sm font-medium\">ลูกค้า ทดสอบ</div> aka getByText('ลูกค้า ทดสอบ').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=ลูกค้า')\u001b[22m\n\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts:34:47",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts",
+                          "column": 47,
+                          "line": 34
+                        },
+                        "snippet": "  32 |     await page.waitForLoadState('networkidle');\n  33 |\n> 34 |     await expect(page.locator('text=ลูกค้า')).toBeVisible();\n     |                                               ^\n  35 |     await expect(page.locator('text=สต๊อค')).toBeVisible();\n  36 |     await expect(page.locator('text=ขายออก')).toBeVisible();\n  37 |     await expect(page.locator('text=ใบกำกับภาษี')).toBeVisible();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts",
+                            "column": 47,
+                            "line": 34
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=ลูกค้า')\nExpected: visible\nError: strict mode violation: locator('text=ลูกค้า') resolved to 4 elements:\n    1) <span>ลูกค้า</span> aka getByRole('link', { name: '👥 ลูกค้า' })\n    2) <div class=\"text-sm font-medium text-muted-foreground\">ลูกค้า</div> aka getByRole('main').getByText('ลูกค้า', { exact: true })\n    3) <div class=\"text-sm font-medium\">ลูกค้า ทดสอบ</div> aka getByText('ลูกค้า ทดสอบ').first()\n    4) <div class=\"text-sm font-medium\">ลูกค้า ทดสอบ</div> aka getByText('ลูกค้า ทดสอบ').nth(1)\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=ลูกค้า')\u001b[22m\n\n\n  32 |     await page.waitForLoadState('networkidle');\n  33 |\n> 34 |     await expect(page.locator('text=ลูกค้า')).toBeVisible();\n     |                                               ^\n  35 |     await expect(page.locator('text=สต๊อค')).toBeVisible();\n  36 |     await expect(page.locator('text=ขายออก')).toBeVisible();\n  37 |     await expect(page.locator('text=ใบกำกับภาษี')).toBeVisible();\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts:34:47"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T14:37:28.485Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-8d6c6-ion-items-should-be-in-Thai-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-8d6c6-ion-items-should-be-in-Thai-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-8d6c6-ion-items-should-be-in-Thai-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-8d6c6-ion-items-should-be-in-Thai-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts",
+                        "column": 47,
+                        "line": 34
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "efe589d995a9e38cd854-c337f491bf9f4b712429",
+              "file": "production/latest-deployment.spec.ts",
+              "line": 30,
+              "column": 3
+            },
+            {
+              "title": "Backend API /api/dashboard returns valid data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 828,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T14:37:28.484Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "efe589d995a9e38cd854-18cfa583e3f2c0607c32",
+              "file": "production/latest-deployment.spec.ts",
+              "line": 41,
+              "column": 3
+            },
+            {
+              "title": "Customers page should show Thai headers and API data",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 4467,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h1')\nExpected substring: \u001b[32m\"ลูกค้า\"\u001b[39m\nError: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-xl font-semibold\">ปาล์มทอง</h1> aka getByRole('heading', { name: 'ปาล์มทอง' })\n    2) <h1 class=\"text-3xl font-semibold\">ลูกค้า</h1> aka getByRole('heading', { name: 'ลูกค้า' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h1')\nExpected substring: \u001b[32m\"ลูกค้า\"\u001b[39m\nError: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-xl font-semibold\">ปาล์มทอง</h1> aka getByRole('heading', { name: 'ปาล์มทอง' })\n    2) <h1 class=\"text-3xl font-semibold\">ลูกค้า</h1> aka getByRole('heading', { name: 'ลูกค้า' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts:58:38",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts",
+                          "column": 38,
+                          "line": 58
+                        },
+                        "snippet": "  56 |\n  57 |     // Check Thai title\n> 58 |     await expect(page.locator('h1')).toContainText('ลูกค้า');\n     |                                      ^\n  59 |\n  60 |     // Check Thai table headers\n  61 |     await expect(page.locator('th', { hasText: 'เลขบัตรประชาชน' })).toBeVisible();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts",
+                            "column": 38,
+                            "line": 58
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h1')\nExpected substring: \u001b[32m\"ลูกค้า\"\u001b[39m\nError: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-xl font-semibold\">ปาล์มทอง</h1> aka getByRole('heading', { name: 'ปาล์มทอง' })\n    2) <h1 class=\"text-3xl font-semibold\">ลูกค้า</h1> aka getByRole('heading', { name: 'ลูกค้า' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n\n  56 |\n  57 |     // Check Thai title\n> 58 |     await expect(page.locator('h1')).toContainText('ลูกค้า');\n     |                                      ^\n  59 |\n  60 |     // Check Thai table headers\n  61 |     await expect(page.locator('th', { hasText: 'เลขบัตรประชาชน' })).toBeVisible();\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts:58:38"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T14:37:28.485Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-6f126-w-Thai-headers-and-API-data-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-6f126-w-Thai-headers-and-API-data-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-6f126-w-Thai-headers-and-API-data-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-6f126-w-Thai-headers-and-API-data-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts",
+                        "column": 38,
+                        "line": 58
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "efe589d995a9e38cd854-2c6bba8714121622117a",
+              "file": "production/latest-deployment.spec.ts",
+              "line": 52,
+              "column": 3
+            },
+            {
+              "title": "Bikes page should show Thai headers",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 4483,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h1')\nExpected substring: \u001b[32m\"สต๊อค\"\u001b[39m\nError: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-xl font-semibold\">ปาล์มทอง</h1> aka getByRole('heading', { name: 'ปาล์มทอง' })\n    2) <h1 class=\"text-3xl font-semibold\">สต๊อค</h1> aka getByRole('heading', { name: 'สต๊อค' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h1')\nExpected substring: \u001b[32m\"สต๊อค\"\u001b[39m\nError: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-xl font-semibold\">ปาล์มทอง</h1> aka getByRole('heading', { name: 'ปาล์มทอง' })\n    2) <h1 class=\"text-3xl font-semibold\">สต๊อค</h1> aka getByRole('heading', { name: 'สต๊อค' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts:70:38",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts",
+                          "column": 38,
+                          "line": 70
+                        },
+                        "snippet": "  68 |     await page.waitForTimeout(3000);\n  69 |\n> 70 |     await expect(page.locator('h1')).toContainText('สต๊อค');\n     |                                      ^\n  71 |     await expect(page.locator('button', { hasText: 'ซื้อเข้า' })).toBeVisible();\n  72 |   });\n  73 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts",
+                            "column": 38,
+                            "line": 70
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h1')\nExpected substring: \u001b[32m\"สต๊อค\"\u001b[39m\nError: strict mode violation: locator('h1') resolved to 2 elements:\n    1) <h1 class=\"text-xl font-semibold\">ปาล์มทอง</h1> aka getByRole('heading', { name: 'ปาล์มทอง' })\n    2) <h1 class=\"text-3xl font-semibold\">สต๊อค</h1> aka getByRole('heading', { name: 'สต๊อค' })\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n\n  68 |     await page.waitForTimeout(3000);\n  69 |\n> 70 |     await expect(page.locator('h1')).toContainText('สต๊อค');\n     |                                      ^\n  71 |     await expect(page.locator('button', { hasText: 'ซื้อเข้า' })).toBeVisible();\n  72 |   });\n  73 |\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts:70:38"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T14:37:29.325Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-2e623-ge-should-show-Thai-headers-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-2e623-ge-should-show-Thai-headers-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-2e623-ge-should-show-Thai-headers-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-latest-deployme-2e623-ge-should-show-Thai-headers-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/latest-deployment.spec.ts",
+                        "column": 38,
+                        "line": 70
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "efe589d995a9e38cd854-ed614064bb812f3cf5f9",
+              "file": "production/latest-deployment.spec.ts",
+              "line": 65,
+              "column": 3
+            },
+            {
+              "title": "API integration works with CORS",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 2353,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T14:37:30.798Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "efe589d995a9e38cd854-34576aea909761ff49ea",
+              "file": "production/latest-deployment.spec.ts",
+              "line": 74,
+              "column": 3
+            },
+            {
+              "title": "Performance - loads within 5 seconds",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1572,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-12T14:37:32.832Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "efe589d995a9e38cd854-b151b03b29ad5eaf6c5e",
+              "file": "production/latest-deployment.spec.ts",
+              "line": 85,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-12T14:37:27.988Z",
+    "duration": 10519.601999999999,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}
