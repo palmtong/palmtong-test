@@ -246,12 +246,14 @@ test.describe('Production Frontend - Data Display', () => {
     await page.waitForLoadState('networkidle');
     await page.waitForTimeout(2000);
 
-    // Check for table headers (currently in English in production)
+    // Check for table headers (now in Thai)
     const headers = page.locator('th');
     const headerText = await headers.allTextContents();
 
-    // Verify essential bike table columns are present
-    const hasRequiredColumns = headerText.some(text => /ID|Brand|Model|Chassis|Engine/i.test(text));
+    // Verify essential bike table columns are present (Thai headers)
+    const hasRequiredColumns = headerText.some(text =>
+      /รหัส|ยี่ห้อ|รุ่น|เลขคอ|เลขเครื่อง|สี|ราคา/.test(text)
+    );
     expect(hasRequiredColumns).toBe(true);
     expect(headerText.length).toBeGreaterThan(0);
   });
