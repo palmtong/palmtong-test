@@ -13,12 +13,13 @@ export default defineConfig({
   testDir: './tests',
 
   // Maximum time one test can run for
-  timeout: 60 * 1000,
+  // Increased to 120s for production environment tests (Cloudflare network latency)
+  timeout: 120 * 1000,
 
   // Test execution settings
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 2 : 1, // Enable 1 retry for production flaky network tests
   workers: process.env.CI ? 2 : undefined,
 
   // Reporter configuration
