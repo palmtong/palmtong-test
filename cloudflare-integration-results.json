@@ -1,0 +1,1097 @@
+[dotenv@17.2.3] injecting env (2) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+{
+  "config": {
+    "configFile": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/playwright.config.ts",
+    "rootDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 5
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "Mobile Safari",
+        "name": "Mobile Safari",
+        "testDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "production/cloudflare-integration.spec.ts",
+      "file": "production/cloudflare-integration.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Cloudflare Backend API Integration",
+          "file": "production/cloudflare-integration.spec.ts",
+          "line": 23,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Backend health check returns 200",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 168,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:02.970Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-71b74304cda6d3245046",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 25,
+              "column": 3
+            },
+            {
+              "title": "Backend supports CORS for frontend origin",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 548,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:02.980Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-2c14e8df885b94f4fb54",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 35,
+              "column": 3
+            },
+            {
+              "title": "Dashboard API returns valid data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 571,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:02.971Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-7fce50abf701f5d20356",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 47,
+              "column": 3
+            },
+            {
+              "title": "Customers API returns paginated data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 262,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:02.971Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-b2a40e24e28f71911cca",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 58,
+              "column": 3
+            },
+            {
+              "title": "Bikes API returns data with proper structure",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 247,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:02.973Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-6bb690d4a6da924c9574",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 69,
+              "column": 3
+            },
+            {
+              "title": "Brands API returns data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 100,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:03.152Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-230365e55eeba191e28b",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 86,
+              "column": 3
+            },
+            {
+              "title": "Suppliers API returns data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 84,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:03.233Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-053106f8b57fba00ab00",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 95,
+              "column": 3
+            },
+            {
+              "title": "Sales API returns data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 93,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:03.246Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-d5d1845f1a65a57fc2f6",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 104,
+              "column": 3
+            },
+            {
+              "title": "Invoices API returns data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 95,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:03.258Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-55f1124d228114b919a1",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 113,
+              "column": 3
+            },
+            {
+              "title": "Finance companies API returns data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 84,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:03.324Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-a3687801226a1cd9168c",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 122,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Cloudflare Frontend Integration",
+          "file": "production/cloudflare-integration.spec.ts",
+          "line": 132,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Frontend loads successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1638,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:03.345Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-c0d2becac09933eff7f9",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 134,
+              "column": 3
+            },
+            {
+              "title": "Frontend displays Thai language correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1522,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:03.358Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-611fb392c406e8f25c12",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 142,
+              "column": 3
+            },
+            {
+              "title": "Dashboard loads and displays data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 3958,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:03.413Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-2141402744f863316160",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 153,
+              "column": 3
+            },
+            {
+              "title": "Navigation to Customers page works",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1646,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:03.542Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-e12cc27403ac8beb6486",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 165,
+              "column": 3
+            },
+            {
+              "title": "Navigation to Bikes page works",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1648,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:03.557Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-e38d27fba6bc11bee958",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 180,
+              "column": 3
+            },
+            {
+              "title": "All action buttons display in Thai",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3273,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:05.002Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-fc538db69d836a69cf1f",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 195,
+              "column": 3
+            },
+            {
+              "title": "Frontend can fetch data from backend",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 3214,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:05.119Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-11832986e0707467792b",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 223,
+              "column": 3
+            },
+            {
+              "title": "Frontend handles API errors gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2447,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:05.336Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-7e1352e9e44e668a99b7",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 235,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Cloudflare Full Stack Integration",
+          "file": "production/cloudflare-integration.spec.ts",
+          "line": 262,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Complete flow: Load frontend → Fetch backend data → Display in UI",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 9104,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('main').getByRole('heading', { name: 'หน้าหลัก' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('main').getByRole('heading', { name: 'หน้าหลัก' })\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('main').getByRole('heading', { name: 'หน้าหลัก' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('main').getByRole('heading', { name: 'หน้าหลัก' })\u001b[22m\n\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/cloudflare-integration.spec.ts:276:74",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/cloudflare-integration.spec.ts",
+                          "column": 74,
+                          "line": 276
+                        },
+                        "snippet": "  274 |\n  275 |     // Check for dashboard heading\n> 276 |     await expect(mainContent.getByRole('heading', { name: 'หน้าหลัก' })).toBeVisible();\n      |                                                                          ^\n  277 |\n  278 |     // 4. Check for numerical data (from backend) - dashboard metrics\n  279 |     // Look for numbers displayed on the page"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/cloudflare-integration.spec.ts",
+                            "column": 74,
+                            "line": 276
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('main').getByRole('heading', { name: 'หน้าหลัก' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('main').getByRole('heading', { name: 'หน้าหลัก' })\u001b[22m\n\n\n  274 |\n  275 |     // Check for dashboard heading\n> 276 |     await expect(mainContent.getByRole('heading', { name: 'หน้าหลัก' })).toBeVisible();\n      |                                                                          ^\n  277 |\n  278 |     // 4. Check for numerical data (from backend) - dashboard metrics\n  279 |     // Look for numbers displayed on the page\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/cloudflare-integration.spec.ts:276:74"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:05.338Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-cloudflare-inte-12d75-ackend-data-→-Display-in-UI-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-cloudflare-inte-12d75-ackend-data-→-Display-in-UI-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-cloudflare-inte-12d75-ackend-data-→-Display-in-UI-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-cloudflare-inte-12d75-ackend-data-→-Display-in-UI-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/cloudflare-integration.spec.ts",
+                        "column": 74,
+                        "line": 276
+                      }
+                    },
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 9208,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('main').getByRole('heading', { name: 'หน้าหลัก' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('main').getByRole('heading', { name: 'หน้าหลัก' })\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('main').getByRole('heading', { name: 'หน้าหลัก' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('main').getByRole('heading', { name: 'หน้าหลัก' })\u001b[22m\n\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/cloudflare-integration.spec.ts:276:74",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/cloudflare-integration.spec.ts",
+                          "column": 74,
+                          "line": 276
+                        },
+                        "snippet": "  274 |\n  275 |     // Check for dashboard heading\n> 276 |     await expect(mainContent.getByRole('heading', { name: 'หน้าหลัก' })).toBeVisible();\n      |                                                                          ^\n  277 |\n  278 |     // 4. Check for numerical data (from backend) - dashboard metrics\n  279 |     // Look for numbers displayed on the page"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/cloudflare-integration.spec.ts",
+                            "column": 74,
+                            "line": 276
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('main').getByRole('heading', { name: 'หน้าหลัก' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('main').getByRole('heading', { name: 'หน้าหลัก' })\u001b[22m\n\n\n  274 |\n  275 |     // Check for dashboard heading\n> 276 |     await expect(mainContent.getByRole('heading', { name: 'หน้าหลัก' })).toBeVisible();\n      |                                                                          ^\n  277 |\n  278 |     // 4. Check for numerical data (from backend) - dashboard metrics\n  279 |     // Look for numbers displayed on the page\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/cloudflare-integration.spec.ts:276:74"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-11-13T16:48:14.817Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-cloudflare-inte-12d75-ackend-data-→-Display-in-UI-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-cloudflare-inte-12d75-ackend-data-→-Display-in-UI-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-cloudflare-inte-12d75-ackend-data-→-Display-in-UI-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-cloudflare-inte-12d75-ackend-data-→-Display-in-UI-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/cloudflare-integration.spec.ts",
+                        "column": 74,
+                        "line": 276
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-a3cdd05af39326ed94e5",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 264,
+              "column": 3
+            },
+            {
+              "title": "DataTable pagination works end-to-end",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 3246,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:07.499Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-bb7e1e9e5c5333766577",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 293,
+              "column": 3
+            },
+            {
+              "title": "Search/Filter functionality works end-to-end",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3195,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:07.789Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-454116b7e2a08ae247e6",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 316,
+              "column": 3
+            },
+            {
+              "title": "Thai language persists across navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4622,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:08.279Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-f13597c486939fb8596d",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 339,
+              "column": 3
+            },
+            {
+              "title": "Performance: Page loads within 5 seconds",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1919,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Page loaded in 1814ms\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:08.340Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-d5f65a1ae3c2fdc3b447",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 357,
+              "column": 3
+            },
+            {
+              "title": "Performance: API responses within 2 seconds",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 600,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "/api/dashboard responded in 349ms\n"
+                        },
+                        {
+                          "text": "/api/customers?page=1&rows=10 responded in 91ms\n"
+                        },
+                        {
+                          "text": "/api/bikes/unsold?page=1&rows=10 responded in 75ms\n"
+                        },
+                        {
+                          "text": "/api/brands?page=1&rows=10 responded in 78ms\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T16:48:10.265Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f7a43ba53b9f05a3d830-fc748e4068fefdff628e",
+              "file": "production/cloudflare-integration.spec.ts",
+              "line": 369,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-13T16:48:02.447Z",
+    "duration": 21721.781,
+    "expected": 23,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

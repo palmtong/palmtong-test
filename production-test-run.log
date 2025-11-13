@@ -1,0 +1,922 @@
+
+> palmtong-test@1.0.0 test
+> playwright test
+
+[dotenv@17.2.3] injecting env (2) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+
+Running 490 tests using 5 workers
+
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+  ✓    2 [chromium] › tests/api/backend.spec.ts:8:5 › Backend API Integration Tests › Health and Infrastructure › GET /api/health returns 200 (298ms)
+  ✓    3 [chromium] › tests/api/backend.spec.ts:28:5 › Backend API Integration Tests › Bikes API › POST /api/bikes creates new bike (442ms)
+  ✓    4 [chromium] › tests/api/backend.spec.ts:47:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/:id returns bike details (504ms)
+  ✓    6 [chromium] › tests/api/backend.spec.ts:97:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/unsold returns only unsold bikes (231ms)
+  ✓    1 [chromium] › tests/api/backend.spec.ts:20:5 › Backend API Integration Tests › Bikes API › GET /api/bikes returns list (685ms)
+  ✓    5 [chromium] › tests/api/backend.spec.ts:68:5 › Backend API Integration Tests › Bikes API › PUT /api/bikes/:id updates bike (765ms)
+  ✓   10 [chromium] › tests/api/backend.spec.ts:162:5 › Backend API Integration Tests › Brands API › GET /api/brands returns list (87ms)
+  ✓    8 [chromium] › tests/api/backend.spec.ts:118:5 › Backend API Integration Tests › Customers API › POST /api/customers creates customer with Thai name (280ms)
+  ✓   11 [chromium] › tests/api/backend.spec.ts:170:5 › Backend API Integration Tests › Brands API › POST /api/brands creates brand (65ms)
+  ✓   12 [chromium] › tests/api/backend.spec.ts:186:5 › Backend API Integration Tests › Suppliers API › GET /api/suppliers returns list (71ms)
+  ✓   13 [chromium] › tests/api/backend.spec.ts:193:5 › Backend API Integration Tests › Suppliers API › POST /api/suppliers creates supplier (64ms)
+  ✓    9 [chromium] › tests/api/backend.spec.ts:136:5 › Backend API Integration Tests › Customers API › PUT /api/customers/:id updates customer (548ms)
+  ✓    7 [chromium] › tests/api/backend.spec.ts:111:5 › Backend API Integration Tests › Customers API › GET /api/customers returns list (763ms)
+  ✓   14 [chromium] › tests/api/backend.spec.ts:210:5 › Backend API Integration Tests › Sales API › GET /api/sales returns list (480ms)
+  ✓   19 [chromium] › tests/api/backend.spec.ts:362:5 › Backend API Integration Tests › Error Handling › Returns 404 for non-existent bike (81ms)
+  ✓   20 [chromium] › tests/api/backend.spec.ts:367:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid bike data (46ms)
+  ✓   21 [chromium] › tests/api/backend.spec.ts:377:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid customer idcard (43ms)
+  ✓   15 [chromium] › tests/api/backend.spec.ts:217:5 › Backend API Integration Tests › Sales API › POST /api/sales creates sale (links bike + customer) (688ms)
+  ✓   22 [chromium] › tests/api/backend.spec.ts:390:5 › Backend API Integration Tests › Data Validation › Validates required fields for bikes (44ms)
+  ✓   23 [chromium] › tests/api/backend.spec.ts:397:5 › Backend API Integration Tests › Data Validation › Validates Thai ID card format (51ms)
+  ✓   16 [chromium] › tests/api/backend.spec.ts:257:5 › Backend API Integration Tests › Sales API › GET /api/sales/:id returns sale details (756ms)
+  ✓   17 [chromium] › tests/api/backend.spec.ts:305:5 › Backend API Integration Tests › Invoices API › GET /api/invoices returns list (674ms)
+  ✓   18 [chromium] › tests/api/backend.spec.ts:312:5 › Backend API Integration Tests › Invoices API › POST /api/invoices creates invoice from sale (627ms)
+  ✓   24 [chromium] › tests/e2e/frontend.spec.ts:9:5 › Frontend E2E Tests › Navigation and Layout › Dashboard page loads (695ms)
+  ✓   25 [chromium] › tests/e2e/frontend.spec.ts:17:5 › Frontend E2E Tests › Navigation and Layout › Navigation between all pages works (700ms)
+  ✓   27 [chromium] › tests/e2e/frontend.spec.ts:74:5 › Frontend E2E Tests › Customers Page › Customers page displays table with data (1.3s)
+  ✓   26 [chromium] › tests/e2e/frontend.spec.ts:41:5 › Frontend E2E Tests › Dashboard Page › Dashboard shows metrics and stats (1.6s)
+  ✓   29 [chromium] › tests/e2e/frontend.spec.ts:166:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows (1.3s)
+  ✓   30 [chromium] › tests/e2e/frontend.spec.ts:149:5 › Frontend E2E Tests › Customers Page › Customer edit functionality works (1.7s)
+  ✓   31 [chromium] › tests/e2e/frontend.spec.ts:184:5 › Frontend E2E Tests › Bikes Page › Bikes page displays table (1.2s)
+  ✓   32 [chromium] › tests/e2e/frontend.spec.ts:193:5 › Frontend E2E Tests › Bikes Page › Can create new bike (1.1s)
+  ✓   28 [chromium] › tests/e2e/frontend.spec.ts:83:5 › Frontend E2E Tests › Customers Page › Can create new customer with Thai name (2.9s)
+  ✓   34 [chromium] › tests/e2e/frontend.spec.ts:254:5 › Frontend E2E Tests › Sales Page › Sales page displays table (1.2s)
+  ✓   35 [chromium] › tests/e2e/frontend.spec.ts:262:5 › Frontend E2E Tests › Sales Page › Sale create form shows unsold bikes only (1.2s)
+  ✓   33 [chromium] › tests/e2e/frontend.spec.ts:237:5 › Frontend E2E Tests › Bikes Page › Bike edit form works (1.7s)
+  ✓   36 [chromium] › tests/e2e/frontend.spec.ts:284:5 › Frontend E2E Tests › Sales Page › Can create sale (selects bike + customer) (1.3s)
+  ✓   37 [chromium] › tests/e2e/frontend.spec.ts:351:5 › Frontend E2E Tests › Invoices Page › Invoices page displays table (1.1s)
+  ✓   38 [chromium] › tests/e2e/frontend.spec.ts:359:5 › Frontend E2E Tests › Invoices Page › Invoice detail page shows full information (1.2s)
+  ✓   40 [chromium] › tests/e2e/frontend.spec.ts:397:5 › Frontend E2E Tests › Forms and Validation › Forms validate input (show error messages) (1.1s)
+  ✓   39 [chromium] › tests/e2e/frontend.spec.ts:375:5 › Frontend E2E Tests › Invoices Page › Invoice PDF download button works (1.2s)
+  ✓   41 [chromium] › tests/e2e/frontend.spec.ts:439:5 › Frontend E2E Tests › Forms and Validation › Loading states show during API calls (1.1s)
+  ✓   42 [chromium] › tests/e2e/frontend.spec.ts:451:5 › Frontend E2E Tests › Thai Language Support › Thai text displays correctly throughout (1.1s)
+  ✓   46 [chromium] › tests/flows/user-flows.spec.ts:100:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data (695ms)
+  ✓   44 [chromium] › tests/e2e/frontend.spec.ts:487:5 › Frontend E2E Tests › Accessibility › Forms are keyboard accessible (1.1s)
+  ✓   43 [chromium] › tests/e2e/frontend.spec.ts:467:5 › Frontend E2E Tests › Accessibility › No console errors on page load (1.4s)
+  ✓   48 [chromium] › tests/flows/user-flows.spec.ts:232:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved (419ms)
+Step 1: Adding bike to stock...
+✓ Bike created: 8801
+Step 2: Registering customer...
+  ✓   50 [chromium] › tests/flows/user-flows.spec.ts:313:5 › User Flow Tests › Error Handling Flow › Submit invalid form → Verify error messages → Fix errors → Verify successful submission (166ms)
+✓ Customer created: 8344
+Step 3: Creating sale...
+✓ Concurrent customer 1 created
+✓ Concurrent customer 2 created
+✓ Concurrent customer 3 created
+✓ Concurrent customer 4 created
+✓ Concurrent customer 5 created
+  ✓   52 [chromium] › tests/flows/user-flows.spec.ts:432:5 › User Flow Tests › Concurrent Operations › Multiple users creating records simultaneously (221ms)
+  ✓   45 [chromium] › tests/flows/user-flows.spec.ts:9:5 › User Flow Tests › Complete Bike Sale Flow › End-to-end: Add bike → Add customer → Create sale → Generate invoice → Download PDF (1.8s)
+✓ Sale created: 8532
+Step 4: Generating invoice...
+✓ Invoice created: 19342
+Step 5: Generating PDF...
+✓ PDF generated successfully
+Step 6: Verifying bike sold status...
+  ✓   47 [chromium] › tests/flows/user-flows.spec.ts:167:5 › User Flow Tests › Multi-step Sale Workflow › View unsold bikes → Select bike → Search customer → Create sale → Verify in sales list (1.6s)
+✓ Bike marked as sold
+
+✅ Complete business workflow successful!
+  ✓   51 [chromium] › tests/flows/user-flows.spec.ts:351:5 › User Flow Tests › Complete Business Workflow › Full dealership workflow: Stock → Sale → Finance → Invoice (621ms)
+  ✓   49 [chromium] › tests/flows/user-flows.spec.ts:277:5 › User Flow Tests › Filter and Search › Filter bikes by brand → Search customers by name → Filter sales by date (1.3s)
+  ✓   54 [chromium] › tests/production/frontend-validation.spec.ts:23:3 › Production Frontend - UI & Thai Language › should display Dashboard page in Thai (1.4s)
+  ✓   53 [chromium] › tests/production/frontend-validation.spec.ts:7:3 › Production Frontend - UI & Thai Language › should load homepage with Thai language (1.4s)
+  ✓   56 [chromium] › tests/production/frontend-validation.spec.ts:51:3 › Production Frontend - UI & Thai Language › should navigate to Bikes page in Thai (1.5s)
+  ✓   55 [chromium] › tests/production/frontend-validation.spec.ts:36:3 › Production Frontend - UI & Thai Language › should navigate to Customers page in Thai (1.6s)
+  ✓   57 [chromium] › tests/production/frontend-validation.spec.ts:66:3 › Production Frontend - UI & Thai Language › should navigate to Sales page in Thai (1.5s)
+  ✓   58 [chromium] › tests/production/frontend-validation.spec.ts:76:3 › Production Frontend - UI & Thai Language › should navigate to Invoices page in Thai (1.5s)
+  ✓   59 [chromium] › tests/production/frontend-validation.spec.ts:86:3 › Production Frontend - UI & Thai Language › should display Management section in Thai (1.5s)
+  ✓   60 [chromium] › tests/production/frontend-validation.spec.ts:99:3 › Production Frontend - UI & Thai Language › should display footer with Thai app version (1.4s)
+  ✓   65 [chromium] › tests/production/frontend-validation.spec.ts:178:3 › Production Frontend - Backend API Direct Tests › backend API /api/dashboard should return valid data (335ms)
+  ✓   64 [chromium] › tests/production/frontend-validation.spec.ts:165:3 › Production Frontend - API Integration › should handle API errors gracefully (593ms)
+  ✓   67 [chromium] › tests/production/frontend-validation.spec.ts:201:3 › Production Frontend - Backend API Direct Tests › backend API /api/bikes should return bike list (576ms)
+  ✓   66 [chromium] › tests/production/frontend-validation.spec.ts:192:3 › Production Frontend - Backend API Direct Tests › backend API /api/customers should return customer list (604ms)
+  ✓   68 [chromium] › tests/production/frontend-validation.spec.ts:210:3 › Production Frontend - Backend API Direct Tests › backend API /api/brands should return brand list (63ms)
+  ✓   69 [chromium] › tests/production/frontend-validation.spec.ts:219:3 › Production Frontend - Backend API Direct Tests › backend API should support CORS from frontend (337ms)
+  ✓   62 [chromium] › tests/production/frontend-validation.spec.ts:133:3 › Production Frontend - API Integration › should fetch customers data from API (3.2s)
+  ✓   61 [chromium] › tests/production/frontend-validation.spec.ts:109:3 › Production Frontend - API Integration › should load dashboard data from backend API (3.5s)
+  ✓   63 [chromium] › tests/production/frontend-validation.spec.ts:149:3 › Production Frontend - API Integration › should fetch bikes data from API (3.2s)
+  ✓   73 [chromium] › tests/production/frontend-validation.spec.ts:277:3 › Production Frontend - Responsive Design › should be responsive on mobile viewport (1.4s)
+  ✓   70 [chromium] › tests/production/frontend-validation.spec.ts:233:3 › Production Frontend - Data Display › should display customer table with Thai headers (3.1s)
+  ✓   74 [chromium] › tests/production/frontend-validation.spec.ts:286:3 › Production Frontend - Responsive Design › should be responsive on tablet viewport (1.4s)
+  ✓   71 [chromium] › tests/production/frontend-validation.spec.ts:244:3 › Production Frontend - Data Display › should display bike table with headers (3.2s)
+  ✓   75 [chromium] › tests/production/frontend-validation.spec.ts:296:3 › Production Frontend - Performance › should load homepage within acceptable time (1.3s)
+  ✓   76 [chromium] › tests/production/frontend-validation.spec.ts:306:3 › Production Frontend - Performance › should not have console errors on load (1.3s)
+  ✓   80 [chromium] › tests/production/latest-deployment.spec.ts:41:3 › Latest Deployment - Thai Language & API › Backend API /api/dashboard returns valid data (330ms)
+  ✓   79 [chromium] › tests/production/latest-deployment.spec.ts:29:3 › Latest Deployment - Thai Language & API › All navigation items should be in Thai (1.4s)
+  ✓   72 [chromium] › tests/production/frontend-validation.spec.ts:259:3 › Production Frontend - Data Display › should display dashboard statistics (4.5s)
+  ✓   83 [chromium] › tests/production/latest-deployment.spec.ts:75:3 › Latest Deployment - Thai Language & API › API integration works with CORS (1.1s)
+  ✓   77 [chromium] › tests/production/latest-deployment.spec.ts:7:3 › Latest Deployment - Thai Language & API › Homepage should display Thai language (3.6s)
+✓ bikes table accessible
+✓ brands table accessible
+✓ customers table accessible
+✓ finance table accessible
+  ✓   78 [chromium] › tests/production/latest-deployment.spec.ts:16:3 › Latest Deployment - Thai Language & API › Dashboard should load with Thai text and API data (4.5s)
+✓ Customer CREATE works (ID: 8350)
+✓ Customer READ works
+✓ Customer UPDATE works
+✓ Customer DELETE works
+  ✓   86 [chromium] › tests/verification/legacy-php-parity.spec.ts:46:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Customer CRUD matches legacy PHP functionality (268ms)
+  ✓   84 [chromium] › tests/production/latest-deployment.spec.ts:86:3 › Latest Deployment - Thai Language & API › Performance - loads within 5 seconds (1.5s)
+✓ invoices table accessible
+✓ Bike CREATE works (ID: 8802)
+✓ Step 1: Bike created for sale (ID: 8803)
+✓ Bike unsold list works (252 bikes)
+✓ Step 2: Customer created (ID: 8351)
+✓ Bike UPDATE works
+✓ Step 3: Sale created (ID: 8533)
+✓ Bike DELETE works
+  ✓   87 [chromium] › tests/verification/legacy-php-parity.spec.ts:92:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Bike inventory CRUD matches legacy PHP functionality (371ms)
+✓ Step 4: Bike marked as sold
+✓ sales table accessible
+✓ suppliers table accessible
+✓ Cleanup completed
+  ✓   88 [chromium] › tests/verification/legacy-php-parity.spec.ts:137:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Sale transaction matches legacy PHP multi-step workflow (612ms)
+✓ Invoice CREATE works (ID: 19343)
+  ✓   81 [chromium] › tests/production/latest-deployment.spec.ts:52:3 › Latest Deployment - Thai Language & API › Customers page should show Thai headers and API data (4.3s)
+✓ Invoice READ works
+✓ Invoice UPDATE works
+✓ dashboard table accessible
+  ✓   85 [chromium] › tests/verification/legacy-php-parity.spec.ts:21:5 › Legacy PHP to Cloudflare Parity Verification › Database Schema Parity › All legacy tables are accessible via API (2.3s)
+✓ jqGrid pagination format works (8668 records)
+  ✓   91 [chromium] › tests/verification/legacy-php-parity.spec.ts:313:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Search/Filter Parity › Search and filter functionality matches legacy (88ms)
+✓ Required field validation works
+  ✓   93 [chromium] › tests/verification/legacy-php-parity.spec.ts:370:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Data Validation Parity › Required field validation matches legacy (42ms)
+✓ Inventory stats: 250 unsold, 8418 sold
+✓ Sales stats: 8447 sales, ฿476488463.07
+✓ Customer count: 7983
+✓ Supplier count: 87
+✓ Invoice stats: 9848 invoices, ฿501194027.58
+  ✓   90 [chromium] › tests/verification/legacy-php-parity.spec.ts:270:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Dashboard/Reporting Parity › Dashboard statistics match legacy PHP tabs functionality (362ms)
+✓ Valid Thai ID accepted (ID: 8353)
+✓ Cleanup completed
+  ✓   89 [chromium] › tests/verification/legacy-php-parity.spec.ts:194:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Invoice generation matches legacy PHP functionality (814ms)
+✓ Invalid Thai ID rejected
+  ✓   92 [chromium] › tests/verification/legacy-php-parity.spec.ts:339:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Data Validation Parity › Thai ID card validation matches legacy (388ms)
+  ✓   82 [chromium] › tests/production/latest-deployment.spec.ts:65:3 › Latest Deployment - Thai Language & API › Bikes page should show Thai headers (4.3s)
+✓ Concurrent operations handled successfully
+✓ /api/bikes responded in 414ms
+  ✓   98 [chromium] › tests/verification/legacy-php-parity.spec.ts:475:3 › Performance & Reliability Parity › Concurrent operations handle correctly (585ms)
+✓ /api/customers responded in 451ms
+✓ Delete confirmation dialog works (modern AlertDialog vs legacy window.confirm)
+✓ Dashboard page accessible (legacy: Dashboard)
+✓ Thai language content detected and displayed
+  ✓   96 [chromium] › tests/verification/legacy-php-parity.spec.ts:437:5 › Legacy PHP to Cloudflare Parity Verification › Thai Language Support Parity › Thai language content displays correctly (1.1s)
+  ✓   95 [chromium] › tests/verification/legacy-php-parity.spec.ts:411:5 › Legacy PHP to Cloudflare Parity Verification › Frontend UI Parity › Delete confirmation dialog matches legacy alert behavior (1.3s)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+✓ /api/sales responded in 347ms
+  ✓   99 [firefox] › tests/api/backend.spec.ts:8:5 › Backend API Integration Tests › Health and Infrastructure › GET /api/health returns 200 (165ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+  ✓  100 [firefox] › tests/api/backend.spec.ts:47:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/:id returns bike details (140ms)
+  ✓  101 [firefox] › tests/api/backend.spec.ts:28:5 › Backend API Integration Tests › Bikes API › POST /api/bikes creates new bike (215ms)
+✓ /api/invoices responded in 470ms
+  ✓  103 [firefox] › tests/api/backend.spec.ts:68:5 › Backend API Integration Tests › Bikes API › PUT /api/bikes/:id updates bike (252ms)
+✓ Customers page accessible (legacy: Customer Management)
+  ✓  104 [firefox] › tests/api/backend.spec.ts:97:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/unsold returns only unsold bikes (138ms)
+  ✓  106 [firefox] › tests/api/backend.spec.ts:118:5 › Backend API Integration Tests › Customers API › POST /api/customers creates customer with Thai name (102ms)
+  ✓  102 [firefox] › tests/api/backend.spec.ts:20:5 › Backend API Integration Tests › Bikes API › GET /api/bikes returns list (534ms)
+  ✓  108 [firefox] › tests/api/backend.spec.ts:162:5 › Backend API Integration Tests › Brands API › GET /api/brands returns list (66ms)
+  ✓  107 [firefox] › tests/api/backend.spec.ts:136:5 › Backend API Integration Tests › Customers API › PUT /api/customers/:id updates customer (138ms)
+  ✓  110 [firefox] › tests/api/backend.spec.ts:186:5 › Backend API Integration Tests › Suppliers API › GET /api/suppliers returns list (58ms)
+  ✓  109 [firefox] › tests/api/backend.spec.ts:170:5 › Backend API Integration Tests › Brands API › POST /api/brands creates brand (64ms)
+✓ /api/dashboard responded in 461ms
+  ✓   97 [chromium] › tests/verification/legacy-php-parity.spec.ts:455:3 › Performance & Reliability Parity › API response times are acceptable (2.1s)
+  ✓  111 [firefox] › tests/api/backend.spec.ts:193:5 › Backend API Integration Tests › Suppliers API › POST /api/suppliers creates supplier (58ms)
+  ✓  105 [firefox] › tests/api/backend.spec.ts:111:5 › Backend API Integration Tests › Customers API › GET /api/customers returns list (496ms)
+  ✓  112 [firefox] › tests/api/backend.spec.ts:210:5 › Backend API Integration Tests › Sales API › GET /api/sales returns list (327ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+  ✓  113 [firefox] › tests/api/backend.spec.ts:257:5 › Backend API Integration Tests › Sales API › GET /api/sales/:id returns sale details (355ms)
+✓ Bikes page accessible (legacy: Stock Management)
+  ✓  116 [firefox] › tests/api/backend.spec.ts:362:5 › Backend API Integration Tests › Error Handling › Returns 404 for non-existent bike (57ms)
+  ✓  114 [firefox] › tests/api/backend.spec.ts:305:5 › Backend API Integration Tests › Invoices API › GET /api/invoices returns list (396ms)
+  ✓  118 [firefox] › tests/api/backend.spec.ts:367:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid bike data (42ms)
+  ✓  119 [firefox] › tests/api/backend.spec.ts:377:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid customer idcard (42ms)
+  ✓  120 [firefox] › tests/api/backend.spec.ts:390:5 › Backend API Integration Tests › Data Validation › Validates required fields for bikes (41ms)
+  ✓  121 [firefox] › tests/api/backend.spec.ts:397:5 › Backend API Integration Tests › Data Validation › Validates Thai ID card format (42ms)
+  ✓  115 [firefox] › tests/api/backend.spec.ts:312:5 › Backend API Integration Tests › Invoices API › POST /api/invoices creates invoice from sale (370ms)
+  ✓  117 [firefox] › tests/api/backend.spec.ts:217:5 › Backend API Integration Tests › Sales API › POST /api/sales creates sale (links bike + customer) (405ms)
+✓ Sales page accessible (legacy: Sales)
+✓ Invoices page accessible (legacy: Invoices)
+✓ Brands page accessible (legacy: Brand Management)
+✓ Suppliers page accessible (legacy: Supplier Management)
+✓ Finance page accessible (legacy: Finance Management)
+  ✓   94 [chromium] › tests/verification/legacy-php-parity.spec.ts:388:5 › Legacy PHP to Cloudflare Parity Verification › Frontend UI Parity › All legacy UI tabs/pages are accessible (6.7s)
+  ✓  122 [firefox] › tests/e2e/frontend.spec.ts:9:5 › Frontend E2E Tests › Navigation and Layout › Dashboard page loads (1.3s)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+  ✓  124 [firefox] › tests/e2e/frontend.spec.ts:41:5 › Frontend E2E Tests › Dashboard Page › Dashboard shows metrics and stats (2.2s)
+  ✓  125 [firefox] › tests/e2e/frontend.spec.ts:74:5 › Frontend E2E Tests › Customers Page › Customers page displays table with data (2.0s)
+  ✓  123 [firefox] › tests/e2e/frontend.spec.ts:17:5 › Frontend E2E Tests › Navigation and Layout › Navigation between all pages works (1.4s)
+  ✓  127 [firefox] › tests/e2e/frontend.spec.ts:166:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows (1.5s)
+  ✓  129 [firefox] › tests/e2e/frontend.spec.ts:184:5 › Frontend E2E Tests › Bikes Page › Bikes page displays table (1.5s)
+  ✓  126 [firefox] › tests/e2e/frontend.spec.ts:149:5 › Frontend E2E Tests › Customers Page › Customer edit functionality works (2.0s)
+  ✓  130 [firefox] › tests/e2e/frontend.spec.ts:193:5 › Frontend E2E Tests › Bikes Page › Can create new bike (1.5s)
+  ✓  132 [firefox] › tests/e2e/frontend.spec.ts:254:5 › Frontend E2E Tests › Sales Page › Sales page displays table (1.4s)
+  ✓  133 [firefox] › tests/e2e/frontend.spec.ts:262:5 › Frontend E2E Tests › Sales Page › Sale create form shows unsold bikes only (1.4s)
+  ✓  131 [firefox] › tests/e2e/frontend.spec.ts:237:5 › Frontend E2E Tests › Bikes Page › Bike edit form works (1.9s)
+  ✓  134 [firefox] › tests/e2e/frontend.spec.ts:284:5 › Frontend E2E Tests › Sales Page › Can create sale (selects bike + customer) (1.5s)
+  ✓  128 [firefox] › tests/e2e/frontend.spec.ts:83:5 › Frontend E2E Tests › Customers Page › Can create new customer with Thai name (3.6s)
+  ✓  135 [firefox] › tests/e2e/frontend.spec.ts:351:5 › Frontend E2E Tests › Invoices Page › Invoices page displays table (1.4s)
+  ✓  136 [firefox] › tests/e2e/frontend.spec.ts:359:5 › Frontend E2E Tests › Invoices Page › Invoice detail page shows full information (1.4s)
+  ✓  137 [firefox] › tests/e2e/frontend.spec.ts:375:5 › Frontend E2E Tests › Invoices Page › Invoice PDF download button works (1.3s)
+  ✓  138 [firefox] › tests/e2e/frontend.spec.ts:397:5 › Frontend E2E Tests › Forms and Validation › Forms validate input (show error messages) (1.3s)
+  ✓  139 [firefox] › tests/e2e/frontend.spec.ts:439:5 › Frontend E2E Tests › Forms and Validation › Loading states show during API calls (1.3s)
+  ✓  140 [firefox] › tests/e2e/frontend.spec.ts:451:5 › Frontend E2E Tests › Thai Language Support › Thai text displays correctly throughout (1.3s)
+  ✓  142 [firefox] › tests/e2e/frontend.spec.ts:487:5 › Frontend E2E Tests › Accessibility › Forms are keyboard accessible (1.4s)
+  ✓  141 [firefox] › tests/e2e/frontend.spec.ts:467:5 › Frontend E2E Tests › Accessibility › No console errors on page load (1.6s)
+  ✓  143 [firefox] › tests/flows/user-flows.spec.ts:9:5 › User Flow Tests › Complete Bike Sale Flow › End-to-end: Add bike → Add customer → Create sale → Generate invoice → Download PDF (1.8s)
+  ✓  144 [firefox] › tests/flows/user-flows.spec.ts:100:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data (1.2s)
+Step 1: Adding bike to stock...
+  ✓  146 [firefox] › tests/flows/user-flows.spec.ts:232:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved (611ms)
+✓ Bike created: 8816
+Step 2: Registering customer...
+  ✓  148 [firefox] › tests/flows/user-flows.spec.ts:313:5 › User Flow Tests › Error Handling Flow › Submit invalid form → Verify error messages → Fix errors → Verify successful submission (303ms)
+✓ Concurrent customer 1 created
+✓ Concurrent customer 2 created
+✓ Concurrent customer 3 created
+✓ Concurrent customer 4 created
+✓ Concurrent customer 5 created
+  ✓  150 [firefox] › tests/flows/user-flows.spec.ts:432:5 › User Flow Tests › Concurrent Operations › Multiple users creating records simultaneously (225ms)
+✓ Customer created: 8375
+Step 3: Creating sale...
+✓ Sale created: 8541
+Step 4: Generating invoice...
+✓ Invoice created: 19347
+Step 5: Generating PDF...
+✓ PDF generated successfully
+Step 6: Verifying bike sold status...
+✓ Bike marked as sold
+
+✅ Complete business workflow successful!
+  ✓  149 [firefox] › tests/flows/user-flows.spec.ts:351:5 › User Flow Tests › Complete Business Workflow › Full dealership workflow: Stock → Sale → Finance → Invoice (781ms)
+  ✓  147 [firefox] › tests/flows/user-flows.spec.ts:277:5 › User Flow Tests › Filter and Search › Filter bikes by brand → Search customers by name → Filter sales by date (1.2s)
+  ✓  145 [firefox] › tests/flows/user-flows.spec.ts:167:5 › User Flow Tests › Multi-step Sale Workflow › View unsold bikes → Select bike → Search customer → Create sale → Verify in sales list (1.9s)
+  ✓  152 [firefox] › tests/production/frontend-validation.spec.ts:23:3 › Production Frontend - UI & Thai Language › should display Dashboard page in Thai (1.5s)
+  ✓  151 [firefox] › tests/production/frontend-validation.spec.ts:7:3 › Production Frontend - UI & Thai Language › should load homepage with Thai language (1.5s)
+  ✓  153 [firefox] › tests/production/frontend-validation.spec.ts:51:3 › Production Frontend - UI & Thai Language › should navigate to Bikes page in Thai (1.7s)
+  ✓  154 [firefox] › tests/production/frontend-validation.spec.ts:36:3 › Production Frontend - UI & Thai Language › should navigate to Customers page in Thai (1.7s)
+  ✓  155 [firefox] › tests/production/frontend-validation.spec.ts:66:3 › Production Frontend - UI & Thai Language › should navigate to Sales page in Thai (1.6s)
+  ✓  156 [firefox] › tests/production/frontend-validation.spec.ts:76:3 › Production Frontend - UI & Thai Language › should navigate to Invoices page in Thai (1.5s)
+  ✓  157 [firefox] › tests/production/frontend-validation.spec.ts:86:3 › Production Frontend - UI & Thai Language › should display Management section in Thai (1.6s)
+  ✓  162 [firefox] › tests/production/frontend-validation.spec.ts:165:3 › Production Frontend - API Integration › should handle API errors gracefully (583ms)
+  ✓  158 [firefox] › tests/production/frontend-validation.spec.ts:99:3 › Production Frontend - UI & Thai Language › should display footer with Thai app version (1.6s)
+  ✓  163 [firefox] › tests/production/frontend-validation.spec.ts:178:3 › Production Frontend - Backend API Direct Tests › backend API /api/dashboard should return valid data (497ms)
+  ✓  164 [firefox] › tests/production/frontend-validation.spec.ts:192:3 › Production Frontend - Backend API Direct Tests › backend API /api/customers should return customer list (455ms)
+  ✓  166 [firefox] › tests/production/frontend-validation.spec.ts:210:3 › Production Frontend - Backend API Direct Tests › backend API /api/brands should return brand list (64ms)
+  ✓  165 [firefox] › tests/production/frontend-validation.spec.ts:201:3 › Production Frontend - Backend API Direct Tests › backend API /api/bikes should return bike list (375ms)
+  ✓  167 [firefox] › tests/production/frontend-validation.spec.ts:219:3 › Production Frontend - Backend API Direct Tests › backend API should support CORS from frontend (284ms)
+  ✓  160 [firefox] › tests/production/frontend-validation.spec.ts:133:3 › Production Frontend - API Integration › should fetch customers data from API (3.4s)
+  ✓  159 [firefox] › tests/production/frontend-validation.spec.ts:109:3 › Production Frontend - API Integration › should load dashboard data from backend API (3.6s)
+  ✓  161 [firefox] › tests/production/frontend-validation.spec.ts:149:3 › Production Frontend - API Integration › should fetch bikes data from API (3.3s)
+  ✓  171 [firefox] › tests/production/frontend-validation.spec.ts:277:3 › Production Frontend - Responsive Design › should be responsive on mobile viewport (1.6s)
+  ✓  168 [firefox] › tests/production/frontend-validation.spec.ts:233:3 › Production Frontend - Data Display › should display customer table with Thai headers (3.3s)
+  ✓  172 [firefox] › tests/production/frontend-validation.spec.ts:286:3 › Production Frontend - Responsive Design › should be responsive on tablet viewport (1.7s)
+  ✓  169 [firefox] › tests/production/frontend-validation.spec.ts:244:3 › Production Frontend - Data Display › should display bike table with headers (3.4s)
+  ✓  173 [firefox] › tests/production/frontend-validation.spec.ts:296:3 › Production Frontend - Performance › should load homepage within acceptable time (1.6s)
+  ✓  174 [firefox] › tests/production/frontend-validation.spec.ts:306:3 › Production Frontend - Performance › should not have console errors on load (1.6s)
+  ✓  178 [firefox] › tests/production/latest-deployment.spec.ts:41:3 › Latest Deployment - Thai Language & API › Backend API /api/dashboard returns valid data (345ms)
+  ✓  170 [firefox] › tests/production/frontend-validation.spec.ts:259:3 › Production Frontend - Data Display › should display dashboard statistics (4.7s)
+  ✓  177 [firefox] › tests/production/latest-deployment.spec.ts:29:3 › Latest Deployment - Thai Language & API › All navigation items should be in Thai (1.6s)
+  ✓  175 [firefox] › tests/production/latest-deployment.spec.ts:7:3 › Latest Deployment - Thai Language & API › Homepage should display Thai language (3.8s)
+  ✓  181 [firefox] › tests/production/latest-deployment.spec.ts:75:3 › Latest Deployment - Thai Language & API › API integration works with CORS (1.5s)
+✓ bikes table accessible
+✓ brands table accessible
+  ✓  176 [firefox] › tests/production/latest-deployment.spec.ts:16:3 › Latest Deployment - Thai Language & API › Dashboard should load with Thai text and API data (4.7s)
+✓ Customer CREATE works (ID: 8376)
+✓ Customer READ works
+✓ Customer UPDATE works
+✓ Customer DELETE works
+  ✓  184 [firefox] › tests/verification/legacy-php-parity.spec.ts:46:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Customer CRUD matches legacy PHP functionality (324ms)
+✓ Bike CREATE works (ID: 8817)
+✓ customers table accessible
+✓ Bike unsold list works (256 bikes)
+✓ finance table accessible
+✓ Bike UPDATE works
+✓ Bike DELETE works
+  ✓  185 [firefox] › tests/verification/legacy-php-parity.spec.ts:92:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Bike inventory CRUD matches legacy PHP functionality (351ms)
+  ✓  182 [firefox] › tests/production/latest-deployment.spec.ts:86:3 › Latest Deployment - Thai Language & API › Performance - loads within 5 seconds (1.6s)
+✓ Step 1: Bike created for sale (ID: 8818)
+✓ Step 2: Customer created (ID: 8377)
+✓ Step 3: Sale created (ID: 8542)
+✓ Step 4: Bike marked as sold
+✓ invoices table accessible
+✓ Invoice CREATE works (ID: 19348)
+✓ Invoice READ works
+✓ Invoice UPDATE works
+✓ Cleanup completed
+  ✓  186 [firefox] › tests/verification/legacy-php-parity.spec.ts:137:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Sale transaction matches legacy PHP multi-step workflow (519ms)
+✓ sales table accessible
+✓ suppliers table accessible
+  ✓  179 [firefox] › tests/production/latest-deployment.spec.ts:52:3 › Latest Deployment - Thai Language & API › Customers page should show Thai headers and API data (4.3s)
+✓ Inventory stats: 255 unsold, 8425 sold
+✓ Sales stats: 8454 sales, ฿476488463.07
+✓ Customer count: 8000
+✓ Supplier count: 88
+✓ Invoice stats: 9852 invoices, ฿501395027.58
+  ✓  188 [firefox] › tests/verification/legacy-php-parity.spec.ts:270:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Dashboard/Reporting Parity › Dashboard statistics match legacy PHP tabs functionality (269ms)
+✓ Cleanup completed
+  ✓  187 [firefox] › tests/verification/legacy-php-parity.spec.ts:194:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Invoice generation matches legacy PHP functionality (838ms)
+✓ jqGrid pagination format works (8679 records)
+✓ Valid Thai ID accepted (ID: 8379)
+  ✓  189 [firefox] › tests/verification/legacy-php-parity.spec.ts:313:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Search/Filter Parity › Search and filter functionality matches legacy (86ms)
+✓ Required field validation works
+  ✓  191 [firefox] › tests/verification/legacy-php-parity.spec.ts:370:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Data Validation Parity › Required field validation matches legacy (44ms)
+✓ Invalid Thai ID rejected
+  ✓  190 [firefox] › tests/verification/legacy-php-parity.spec.ts:339:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Data Validation Parity › Thai ID card validation matches legacy (163ms)
+✓ dashboard table accessible
+  ✓  183 [firefox] › tests/verification/legacy-php-parity.spec.ts:21:5 › Legacy PHP to Cloudflare Parity Verification › Database Schema Parity › All legacy tables are accessible via API (2.4s)
+  ✓  180 [firefox] › tests/production/latest-deployment.spec.ts:65:3 › Latest Deployment - Thai Language & API › Bikes page should show Thai headers (4.5s)
+✓ Concurrent operations handled successfully
+✓ /api/bikes responded in 438ms
+  ✓  196 [firefox] › tests/verification/legacy-php-parity.spec.ts:475:3 › Performance & Reliability Parity › Concurrent operations handle correctly (556ms)
+✓ /api/customers responded in 511ms
+✓ Delete confirmation dialog works (modern AlertDialog vs legacy window.confirm)
+✓ Thai language content detected and displayed
+  ✓  193 [firefox] › tests/verification/legacy-php-parity.spec.ts:411:5 › Legacy PHP to Cloudflare Parity Verification › Frontend UI Parity › Delete confirmation dialog matches legacy alert behavior (1.4s)
+  ✓  194 [firefox] › tests/verification/legacy-php-parity.spec.ts:437:5 › Legacy PHP to Cloudflare Parity Verification › Thai Language Support Parity › Thai language content displays correctly (1.4s)
+✓ Dashboard page accessible (legacy: Dashboard)
+✓ /api/sales responded in 375ms
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+  ✓  197 [webkit] › tests/api/backend.spec.ts:8:5 › Backend API Integration Tests › Health and Infrastructure › GET /api/health returns 200 (171ms)
+✓ /api/invoices responded in 444ms
+  ✓  198 [webkit] › tests/api/backend.spec.ts:47:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/:id returns bike details (125ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+  ✓  199 [webkit] › tests/api/backend.spec.ts:68:5 › Backend API Integration Tests › Bikes API › PUT /api/bikes/:id updates bike (214ms)
+✓ Customers page accessible (legacy: Customer Management)
+✓ /api/dashboard responded in 435ms
+  ✓  195 [firefox] › tests/verification/legacy-php-parity.spec.ts:455:3 › Performance & Reliability Parity › API response times are acceptable (2.2s)
+  ✓  201 [webkit] › tests/api/backend.spec.ts:28:5 › Backend API Integration Tests › Bikes API › POST /api/bikes creates new bike (237ms)
+  ✓  202 [webkit] › tests/api/backend.spec.ts:97:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/unsold returns only unsold bikes (206ms)
+  ✓  203 [webkit] › tests/api/backend.spec.ts:118:5 › Backend API Integration Tests › Customers API › POST /api/customers creates customer with Thai name (81ms)
+  ✓  205 [webkit] › tests/api/backend.spec.ts:162:5 › Backend API Integration Tests › Brands API › GET /api/brands returns list (67ms)
+  ✓  204 [webkit] › tests/api/backend.spec.ts:136:5 › Backend API Integration Tests › Customers API › PUT /api/customers/:id updates customer (181ms)
+  ✓  206 [webkit] › tests/api/backend.spec.ts:170:5 › Backend API Integration Tests › Brands API › POST /api/brands creates brand (100ms)
+  ✓  207 [webkit] › tests/api/backend.spec.ts:186:5 › Backend API Integration Tests › Suppliers API › GET /api/suppliers returns list (60ms)
+  ✓  208 [webkit] › tests/api/backend.spec.ts:193:5 › Backend API Integration Tests › Suppliers API › POST /api/suppliers creates supplier (70ms)
+  ✓  200 [webkit] › tests/api/backend.spec.ts:20:5 › Backend API Integration Tests › Bikes API › GET /api/bikes returns list (734ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+  ✓  209 [webkit] › tests/api/backend.spec.ts:210:5 › Backend API Integration Tests › Sales API › GET /api/sales returns list (384ms)
+✓ Bikes page accessible (legacy: Stock Management)
+  ✓  210 [webkit] › tests/api/backend.spec.ts:217:5 › Backend API Integration Tests › Sales API › POST /api/sales creates sale (links bike + customer) (507ms)
+  ✓  211 [webkit] › tests/api/backend.spec.ts:257:5 › Backend API Integration Tests › Sales API › GET /api/sales/:id returns sale details (711ms)
+  ✓  215 [webkit] › tests/api/backend.spec.ts:362:5 › Backend API Integration Tests › Error Handling › Returns 404 for non-existent bike (71ms)
+  ✓  213 [webkit] › tests/api/backend.spec.ts:305:5 › Backend API Integration Tests › Invoices API › GET /api/invoices returns list (571ms)
+  ✓  216 [webkit] › tests/api/backend.spec.ts:367:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid bike data (45ms)
+  ✓  212 [webkit] › tests/api/backend.spec.ts:111:5 › Backend API Integration Tests › Customers API › GET /api/customers returns list (610ms)
+  ✓  217 [webkit] › tests/api/backend.spec.ts:377:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid customer idcard (41ms)
+  ✓  218 [webkit] › tests/api/backend.spec.ts:390:5 › Backend API Integration Tests › Data Validation › Validates required fields for bikes (54ms)
+  ✓  219 [webkit] › tests/api/backend.spec.ts:397:5 › Backend API Integration Tests › Data Validation › Validates Thai ID card format (45ms)
+  ✓  214 [webkit] › tests/api/backend.spec.ts:312:5 › Backend API Integration Tests › Invoices API › POST /api/invoices creates invoice from sale (737ms)
+✓ Sales page accessible (legacy: Sales)
+✓ Invoices page accessible (legacy: Invoices)
+✓ Brands page accessible (legacy: Brand Management)
+✓ Suppliers page accessible (legacy: Supplier Management)
+  ✓  220 [webkit] › tests/e2e/frontend.spec.ts:9:5 › Frontend E2E Tests › Navigation and Layout › Dashboard page loads (1.0s)
+  ✓  221 [webkit] › tests/e2e/frontend.spec.ts:17:5 › Frontend E2E Tests › Navigation and Layout › Navigation between all pages works (1.1s)
+✓ Finance page accessible (legacy: Finance Management)
+  ✓  192 [firefox] › tests/verification/legacy-php-parity.spec.ts:388:5 › Legacy PHP to Cloudflare Parity Verification › Frontend UI Parity › All legacy UI tabs/pages are accessible (7.3s)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+  ✓  223 [webkit] › tests/e2e/frontend.spec.ts:74:5 › Frontend E2E Tests › Customers Page › Customers page displays table with data (5.1s)
+  ✓  226 [webkit] › tests/e2e/frontend.spec.ts:166:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows (3.0s)
+  ✓  222 [webkit] › tests/e2e/frontend.spec.ts:41:5 › Frontend E2E Tests › Dashboard Page › Dashboard shows metrics and stats (5.3s)
+  ✓  225 [webkit] › tests/e2e/frontend.spec.ts:149:5 › Frontend E2E Tests › Customers Page › Customer edit functionality works (4.6s)
+  ✓  227 [webkit] › tests/e2e/frontend.spec.ts:184:5 › Frontend E2E Tests › Bikes Page › Bikes page displays table (1.4s)
+  ✓  228 [webkit] › tests/e2e/frontend.spec.ts:193:5 › Frontend E2E Tests › Bikes Page › Can create new bike (1.3s)
+  ✓  224 [webkit] › tests/e2e/frontend.spec.ts:83:5 › Frontend E2E Tests › Customers Page › Can create new customer with Thai name (5.8s)
+  ✓  230 [webkit] › tests/e2e/frontend.spec.ts:254:5 › Frontend E2E Tests › Sales Page › Sales page displays table (1.4s)
+  ✓  229 [webkit] › tests/e2e/frontend.spec.ts:237:5 › Frontend E2E Tests › Bikes Page › Bike edit form works (2.0s)
+  ✓  231 [webkit] › tests/e2e/frontend.spec.ts:262:5 › Frontend E2E Tests › Sales Page › Sale create form shows unsold bikes only (1.3s)
+  ✓  233 [webkit] › tests/e2e/frontend.spec.ts:351:5 › Frontend E2E Tests › Invoices Page › Invoices page displays table (1.3s)
+  ✓  232 [webkit] › tests/e2e/frontend.spec.ts:284:5 › Frontend E2E Tests › Sales Page › Can create sale (selects bike + customer) (1.6s)
+  ✓  234 [webkit] › tests/e2e/frontend.spec.ts:359:5 › Frontend E2E Tests › Invoices Page › Invoice detail page shows full information (1.3s)
+  ✓  235 [webkit] › tests/e2e/frontend.spec.ts:375:5 › Frontend E2E Tests › Invoices Page › Invoice PDF download button works (1.3s)
+  ✓  236 [webkit] › tests/e2e/frontend.spec.ts:397:5 › Frontend E2E Tests › Forms and Validation › Forms validate input (show error messages) (1.3s)
+  ✓  237 [webkit] › tests/e2e/frontend.spec.ts:439:5 › Frontend E2E Tests › Forms and Validation › Loading states show during API calls (1.2s)
+  ✓  238 [webkit] › tests/e2e/frontend.spec.ts:451:5 › Frontend E2E Tests › Thai Language Support › Thai text displays correctly throughout (1.3s)
+  ✓  240 [webkit] › tests/e2e/frontend.spec.ts:487:5 › Frontend E2E Tests › Accessibility › Forms are keyboard accessible (1.2s)
+  ✓  239 [webkit] › tests/e2e/frontend.spec.ts:467:5 › Frontend E2E Tests › Accessibility › No console errors on page load (1.5s)
+  ✓  242 [webkit] › tests/flows/user-flows.spec.ts:100:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data (807ms)
+  ✓  244 [webkit] › tests/flows/user-flows.spec.ts:232:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved (470ms)
+Step 1: Adding bike to stock...
+✓ Bike created: 8831
+Step 2: Registering customer...
+  ✓  246 [webkit] › tests/flows/user-flows.spec.ts:313:5 › User Flow Tests › Error Handling Flow › Submit invalid form → Verify error messages → Fix errors → Verify successful submission (236ms)
+✓ Customer created: 8396
+Step 3: Creating sale...
+✓ Concurrent customer 1 created
+✓ Concurrent customer 2 created
+✓ Concurrent customer 3 created
+✓ Concurrent customer 4 created
+✓ Concurrent customer 5 created
+  ✓  248 [webkit] › tests/flows/user-flows.spec.ts:432:5 › User Flow Tests › Concurrent Operations › Multiple users creating records simultaneously (243ms)
+  ✓  241 [webkit] › tests/flows/user-flows.spec.ts:9:5 › User Flow Tests › Complete Bike Sale Flow › End-to-end: Add bike → Add customer → Create sale → Generate invoice → Download PDF (1.8s)
+✓ Sale created: 8550
+Step 4: Generating invoice...
+✓ Invoice created: 19352
+Step 5: Generating PDF...
+✓ PDF generated successfully
+Step 6: Verifying bike sold status...
+✓ Bike marked as sold
+
+✅ Complete business workflow successful!
+  ✓  247 [webkit] › tests/flows/user-flows.spec.ts:351:5 › User Flow Tests › Complete Business Workflow › Full dealership workflow: Stock → Sale → Finance → Invoice (935ms)
+  ✓  245 [webkit] › tests/flows/user-flows.spec.ts:277:5 › User Flow Tests › Filter and Search › Filter bikes by brand → Search customers by name → Filter sales by date (1.4s)
+  ✓  243 [webkit] › tests/flows/user-flows.spec.ts:167:5 › User Flow Tests › Multi-step Sale Workflow › View unsold bikes → Select bike → Search customer → Create sale → Verify in sales list (2.0s)
+  ✓  249 [webkit] › tests/production/frontend-validation.spec.ts:7:3 › Production Frontend - UI & Thai Language › should load homepage with Thai language (1.5s)
+  ✓  250 [webkit] › tests/production/frontend-validation.spec.ts:23:3 › Production Frontend - UI & Thai Language › should display Dashboard page in Thai (1.6s)
+  ✓  251 [webkit] › tests/production/frontend-validation.spec.ts:36:3 › Production Frontend - UI & Thai Language › should navigate to Customers page in Thai (1.6s)
+  ✓  252 [webkit] › tests/production/frontend-validation.spec.ts:51:3 › Production Frontend - UI & Thai Language › should navigate to Bikes page in Thai (1.6s)
+  ✓  253 [webkit] › tests/production/frontend-validation.spec.ts:66:3 › Production Frontend - UI & Thai Language › should navigate to Sales page in Thai (1.6s)
+  ✓  254 [webkit] › tests/production/frontend-validation.spec.ts:76:3 › Production Frontend - UI & Thai Language › should navigate to Invoices page in Thai (1.6s)
+  ✓  255 [webkit] › tests/production/frontend-validation.spec.ts:86:3 › Production Frontend - UI & Thai Language › should display Management section in Thai (1.6s)
+  ✓  256 [webkit] › tests/production/frontend-validation.spec.ts:99:3 › Production Frontend - UI & Thai Language › should display footer with Thai app version (1.6s)
+  ✓  260 [webkit] › tests/production/frontend-validation.spec.ts:165:3 › Production Frontend - API Integration › should handle API errors gracefully (678ms)
+  ✓  261 [webkit] › tests/production/frontend-validation.spec.ts:178:3 › Production Frontend - Backend API Direct Tests › backend API /api/dashboard should return valid data (537ms)
+  ✓  262 [webkit] › tests/production/frontend-validation.spec.ts:192:3 › Production Frontend - Backend API Direct Tests › backend API /api/customers should return customer list (541ms)
+  ✓  264 [webkit] › tests/production/frontend-validation.spec.ts:210:3 › Production Frontend - Backend API Direct Tests › backend API /api/brands should return brand list (118ms)
+  ✓  263 [webkit] › tests/production/frontend-validation.spec.ts:201:3 › Production Frontend - Backend API Direct Tests › backend API /api/bikes should return bike list (359ms)
+  ✓  265 [webkit] › tests/production/frontend-validation.spec.ts:219:3 › Production Frontend - Backend API Direct Tests › backend API should support CORS from frontend (310ms)
+  ✓  258 [webkit] › tests/production/frontend-validation.spec.ts:133:3 › Production Frontend - API Integration › should fetch customers data from API (3.2s)
+  ✓  257 [webkit] › tests/production/frontend-validation.spec.ts:109:3 › Production Frontend - API Integration › should load dashboard data from backend API (3.6s)
+  ✓  259 [webkit] › tests/production/frontend-validation.spec.ts:149:3 › Production Frontend - API Integration › should fetch bikes data from API (3.3s)
+  ✓  269 [webkit] › tests/production/frontend-validation.spec.ts:277:3 › Production Frontend - Responsive Design › should be responsive on mobile viewport (1.5s)
+  ✓  266 [webkit] › tests/production/frontend-validation.spec.ts:233:3 › Production Frontend - Data Display › should display customer table with Thai headers (3.3s)
+  ✓  270 [webkit] › tests/production/frontend-validation.spec.ts:286:3 › Production Frontend - Responsive Design › should be responsive on tablet viewport (1.6s)
+  ✓  267 [webkit] › tests/production/frontend-validation.spec.ts:244:3 › Production Frontend - Data Display › should display bike table with headers (3.3s)
+  ✓  271 [webkit] › tests/production/frontend-validation.spec.ts:296:3 › Production Frontend - Performance › should load homepage within acceptable time (1.5s)
+  ✓  272 [webkit] › tests/production/frontend-validation.spec.ts:306:3 › Production Frontend - Performance › should not have console errors on load (1.6s)
+  ✓  276 [webkit] › tests/production/latest-deployment.spec.ts:41:3 › Latest Deployment - Thai Language & API › Backend API /api/dashboard returns valid data (292ms)
+  ✓  268 [webkit] › tests/production/frontend-validation.spec.ts:259:3 › Production Frontend - Data Display › should display dashboard statistics (4.5s)
+  ✓  275 [webkit] › tests/production/latest-deployment.spec.ts:29:3 › Latest Deployment - Thai Language & API › All navigation items should be in Thai (1.6s)
+  ✓  273 [webkit] › tests/production/latest-deployment.spec.ts:7:3 › Latest Deployment - Thai Language & API › Homepage should display Thai language (3.6s)
+  ✓  279 [webkit] › tests/production/latest-deployment.spec.ts:75:3 › Latest Deployment - Thai Language & API › API integration works with CORS (1.5s)
+✓ bikes table accessible
+✓ brands table accessible
+  ✓  274 [webkit] › tests/production/latest-deployment.spec.ts:16:3 › Latest Deployment - Thai Language & API › Dashboard should load with Thai text and API data (4.5s)
+✓ Customer CREATE works (ID: 8402)
+✓ Customer READ works
+✓ Customer UPDATE works
+✓ Customer DELETE works
+  ✓  282 [webkit] › tests/verification/legacy-php-parity.spec.ts:46:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Customer CRUD matches legacy PHP functionality (256ms)
+✓ customers table accessible
+✓ Bike CREATE works (ID: 8832)
+✓ finance table accessible
+✓ Bike unsold list works (261 bikes)
+✓ Bike UPDATE works
+  ✓  280 [webkit] › tests/production/latest-deployment.spec.ts:86:3 › Latest Deployment - Thai Language & API › Performance - loads within 5 seconds (1.7s)
+✓ Bike DELETE works
+  ✓  283 [webkit] › tests/verification/legacy-php-parity.spec.ts:92:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Bike inventory CRUD matches legacy PHP functionality (332ms)
+✓ Step 1: Bike created for sale (ID: 8833)
+✓ Step 2: Customer created (ID: 8403)
+✓ invoices table accessible
+✓ Step 3: Sale created (ID: 8551)
+✓ Step 4: Bike marked as sold
+✓ Invoice CREATE works (ID: 19353)
+✓ sales table accessible
+✓ Invoice READ works
+✓ Cleanup completed
+  ✓  284 [webkit] › tests/verification/legacy-php-parity.spec.ts:137:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Sale transaction matches legacy PHP multi-step workflow (595ms)
+✓ Invoice UPDATE works
+✓ suppliers table accessible
+  ✓  277 [webkit] › tests/production/latest-deployment.spec.ts:52:3 › Latest Deployment - Thai Language & API › Customers page should show Thai headers and API data (4.3s)
+✓ jqGrid pagination format works (8692 records)
+  ✓  287 [webkit] › tests/verification/legacy-php-parity.spec.ts:313:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Search/Filter Parity › Search and filter functionality matches legacy (75ms)
+✓ Valid Thai ID accepted (ID: 8405)
+✓ Inventory stats: 260 unsold, 8432 sold
+✓ Sales stats: 8461 sales, ฿476488463.07
+✓ Customer count: 8017
+✓ Supplier count: 89
+✓ Invoice stats: 9856 invoices, ฿501596027.58
+  ✓  286 [webkit] › tests/verification/legacy-php-parity.spec.ts:270:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Dashboard/Reporting Parity › Dashboard statistics match legacy PHP tabs functionality (345ms)
+✓ Required field validation works
+  ✓  289 [webkit] › tests/verification/legacy-php-parity.spec.ts:370:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Data Validation Parity › Required field validation matches legacy (43ms)
+✓ Invalid Thai ID rejected
+✓ Cleanup completed
+✓ dashboard table accessible
+  ✓  288 [webkit] › tests/verification/legacy-php-parity.spec.ts:339:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Data Validation Parity › Thai ID card validation matches legacy (195ms)
+  ✓  285 [webkit] › tests/verification/legacy-php-parity.spec.ts:194:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Invoice generation matches legacy PHP functionality (989ms)
+  ✓  281 [webkit] › tests/verification/legacy-php-parity.spec.ts:21:5 › Legacy PHP to Cloudflare Parity Verification › Database Schema Parity › All legacy tables are accessible via API (2.4s)
+  ✓  278 [webkit] › tests/production/latest-deployment.spec.ts:65:3 › Latest Deployment - Thai Language & API › Bikes page should show Thai headers (4.3s)
+✓ Concurrent operations handled successfully
+✓ /api/bikes responded in 397ms
+  ✓  294 [webkit] › tests/verification/legacy-php-parity.spec.ts:475:3 › Performance & Reliability Parity › Concurrent operations handle correctly (647ms)
+  ✘  293 [webkit] › tests/verification/legacy-php-parity.spec.ts:455:3 › Performance & Reliability Parity › API response times are acceptable (669ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+✓ Thai language content detected and displayed
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+  ✓  292 [webkit] › tests/verification/legacy-php-parity.spec.ts:437:5 › Legacy PHP to Cloudflare Parity Verification › Thai Language Support Parity › Thai language content displays correctly (1.3s)
+✓ Delete confirmation dialog works (modern AlertDialog vs legacy window.confirm)
+  ✓  295 [Mobile Chrome] › tests/api/backend.spec.ts:8:5 › Backend API Integration Tests › Health and Infrastructure › GET /api/health returns 200 (168ms)
+  ✓  291 [webkit] › tests/verification/legacy-php-parity.spec.ts:411:5 › Legacy PHP to Cloudflare Parity Verification › Frontend UI Parity › Delete confirmation dialog matches legacy alert behavior (1.4s)
+✓ Dashboard page accessible (legacy: Dashboard)
+  ✓  297 [Mobile Chrome] › tests/api/backend.spec.ts:47:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/:id returns bike details (203ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+  ✓  298 [Mobile Chrome] › tests/api/backend.spec.ts:97:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/unsold returns only unsold bikes (158ms)
+  ✓  296 [Mobile Chrome] › tests/api/backend.spec.ts:20:5 › Backend API Integration Tests › Bikes API › GET /api/bikes returns list (553ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+  ✓  299 [Mobile Chrome] › tests/api/backend.spec.ts:28:5 › Backend API Integration Tests › Bikes API › POST /api/bikes creates new bike (216ms)
+  ✓  301 [Mobile Chrome] › tests/api/backend.spec.ts:118:5 › Backend API Integration Tests › Customers API › POST /api/customers creates customer with Thai name (136ms)
+  ✓  304 [Mobile Chrome] › tests/api/backend.spec.ts:162:5 › Backend API Integration Tests › Brands API › GET /api/brands returns list (68ms)
+  ✓  305 [Mobile Chrome] › tests/api/backend.spec.ts:170:5 › Backend API Integration Tests › Brands API › POST /api/brands creates brand (101ms)
+  ✓  303 [Mobile Chrome] › tests/api/backend.spec.ts:136:5 › Backend API Integration Tests › Customers API › PUT /api/customers/:id updates customer (194ms)
+  ✓  306 [Mobile Chrome] › tests/api/backend.spec.ts:186:5 › Backend API Integration Tests › Suppliers API › GET /api/suppliers returns list (69ms)
+  ✓  307 [Mobile Chrome] › tests/api/backend.spec.ts:193:5 › Backend API Integration Tests › Suppliers API › POST /api/suppliers creates supplier (71ms)
+  ✓  302 [Mobile Chrome] › tests/api/backend.spec.ts:68:5 › Backend API Integration Tests › Bikes API › PUT /api/bikes/:id updates bike (342ms)
+✓ Customers page accessible (legacy: Customer Management)
+  ✓  300 [Mobile Chrome] › tests/api/backend.spec.ts:111:5 › Backend API Integration Tests › Customers API › GET /api/customers returns list (574ms)
+  ✓  308 [Mobile Chrome] › tests/api/backend.spec.ts:210:5 › Backend API Integration Tests › Sales API › GET /api/sales returns list (392ms)
+  ✓  309 [Mobile Chrome] › tests/api/backend.spec.ts:217:5 › Backend API Integration Tests › Sales API › POST /api/sales creates sale (links bike + customer) (470ms)
+  ✓  310 [Mobile Chrome] › tests/api/backend.spec.ts:257:5 › Backend API Integration Tests › Sales API › GET /api/sales/:id returns sale details (478ms)
+  ✓  314 [Mobile Chrome] › tests/api/backend.spec.ts:367:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid bike data (42ms)
+  ✓  313 [Mobile Chrome] › tests/api/backend.spec.ts:362:5 › Backend API Integration Tests › Error Handling › Returns 404 for non-existent bike (68ms)
+  ✓  311 [Mobile Chrome] › tests/api/backend.spec.ts:305:5 › Backend API Integration Tests › Invoices API › GET /api/invoices returns list (449ms)
+  ✓  315 [Mobile Chrome] › tests/api/backend.spec.ts:377:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid customer idcard (44ms)
+  ✓  316 [Mobile Chrome] › tests/api/backend.spec.ts:390:5 › Backend API Integration Tests › Data Validation › Validates required fields for bikes (47ms)
+  ✓  317 [Mobile Chrome] › tests/api/backend.spec.ts:397:5 › Backend API Integration Tests › Data Validation › Validates Thai ID card format (44ms)
+  ✓  312 [Mobile Chrome] › tests/api/backend.spec.ts:312:5 › Backend API Integration Tests › Invoices API › POST /api/invoices creates invoice from sale (413ms)
+✓ Bikes page accessible (legacy: Stock Management)
+  ✓  318 [Mobile Chrome] › tests/e2e/frontend.spec.ts:9:5 › Frontend E2E Tests › Navigation and Layout › Dashboard page loads (515ms)
+  ✓  319 [Mobile Chrome] › tests/e2e/frontend.spec.ts:17:5 › Frontend E2E Tests › Navigation and Layout › Navigation between all pages works (577ms)
+✓ Sales page accessible (legacy: Sales)
+  ✓  321 [Mobile Chrome] › tests/e2e/frontend.spec.ts:74:5 › Frontend E2E Tests › Customers Page › Customers page displays table with data (1.2s)
+  ✓  320 [Mobile Chrome] › tests/e2e/frontend.spec.ts:41:5 › Frontend E2E Tests › Dashboard Page › Dashboard shows metrics and stats (1.5s)
+✓ Invoices page accessible (legacy: Invoices)
+  ✓  323 [Mobile Chrome] › tests/e2e/frontend.spec.ts:149:5 › Frontend E2E Tests › Customers Page › Customer edit functionality works (1.7s)
+✓ Brands page accessible (legacy: Brand Management)
+  ✓  324 [Mobile Chrome] › tests/e2e/frontend.spec.ts:166:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows (1.3s)
+  ✓  325 [Mobile Chrome] › tests/e2e/frontend.spec.ts:184:5 › Frontend E2E Tests › Bikes Page › Bikes page displays table (1.2s)
+✓ Suppliers page accessible (legacy: Supplier Management)
+  ✓  322 [Mobile Chrome] › tests/e2e/frontend.spec.ts:83:5 › Frontend E2E Tests › Customers Page › Can create new customer with Thai name (2.9s)
+  ✓  326 [Mobile Chrome] › tests/e2e/frontend.spec.ts:193:5 › Frontend E2E Tests › Bikes Page › Can create new bike (1.2s)
+  ✓  328 [Mobile Chrome] › tests/e2e/frontend.spec.ts:254:5 › Frontend E2E Tests › Sales Page › Sales page displays table (1.2s)
+✓ Finance page accessible (legacy: Finance Management)
+  ✓  290 [webkit] › tests/verification/legacy-php-parity.spec.ts:388:5 › Legacy PHP to Cloudflare Parity Verification › Frontend UI Parity › All legacy UI tabs/pages are accessible (7.1s)
+  ✓  327 [Mobile Chrome] › tests/e2e/frontend.spec.ts:237:5 › Frontend E2E Tests › Bikes Page › Bike edit form works (1.8s)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+  ✓  329 [Mobile Chrome] › tests/e2e/frontend.spec.ts:262:5 › Frontend E2E Tests › Sales Page › Sale create form shows unsold bikes only (1.2s)
+  ✓  330 [Mobile Chrome] › tests/e2e/frontend.spec.ts:284:5 › Frontend E2E Tests › Sales Page › Can create sale (selects bike + customer) (1.3s)
+  ✓  331 [Mobile Chrome] › tests/e2e/frontend.spec.ts:351:5 › Frontend E2E Tests › Invoices Page › Invoices page displays table (1.3s)
+  ✓  332 [Mobile Chrome] › tests/e2e/frontend.spec.ts:375:5 › Frontend E2E Tests › Invoices Page › Invoice PDF download button works (1.2s)
+  ✓  334 [Mobile Chrome] › tests/e2e/frontend.spec.ts:397:5 › Frontend E2E Tests › Forms and Validation › Forms validate input (show error messages) (1.2s)
+  ✓  333 [Mobile Chrome] › tests/e2e/frontend.spec.ts:359:5 › Frontend E2E Tests › Invoices Page › Invoice detail page shows full information (1.2s)
+  ✓  335 [Mobile Chrome] › tests/e2e/frontend.spec.ts:439:5 › Frontend E2E Tests › Forms and Validation › Loading states show during API calls (1.1s)
+  ✓  336 [Mobile Chrome] › tests/e2e/frontend.spec.ts:451:5 › Frontend E2E Tests › Thai Language Support › Thai text displays correctly throughout (1.1s)
+  ✓  340 [Mobile Chrome] › tests/flows/user-flows.spec.ts:100:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data (876ms)
+  ✓  338 [Mobile Chrome] › tests/e2e/frontend.spec.ts:487:5 › Frontend E2E Tests › Accessibility › Forms are keyboard accessible (1.2s)
+  ✓  337 [Mobile Chrome] › tests/e2e/frontend.spec.ts:467:5 › Frontend E2E Tests › Accessibility › No console errors on page load (1.6s)
+  ✓  342 [Mobile Chrome] › tests/flows/user-flows.spec.ts:232:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved (483ms)
+Step 1: Adding bike to stock...
+  ✓  344 [Mobile Chrome] › tests/flows/user-flows.spec.ts:313:5 › User Flow Tests › Error Handling Flow › Submit invalid form → Verify error messages → Fix errors → Verify successful submission (163ms)
+✓ Bike created: 8846
+Step 2: Registering customer...
+✓ Customer created: 8423
+Step 3: Creating sale...
+  ✓  339 [Mobile Chrome] › tests/flows/user-flows.spec.ts:9:5 › User Flow Tests › Complete Bike Sale Flow › End-to-end: Add bike → Add customer → Create sale → Generate invoice → Download PDF (1.8s)
+✓ Concurrent customer 1 created
+✓ Concurrent customer 2 created
+✓ Concurrent customer 3 created
+✓ Concurrent customer 4 created
+✓ Concurrent customer 5 created
+  ✓  346 [Mobile Chrome] › tests/flows/user-flows.spec.ts:432:5 › User Flow Tests › Concurrent Operations › Multiple users creating records simultaneously (278ms)
+✓ Sale created: 8559
+Step 4: Generating invoice...
+✓ Invoice created: 19357
+Step 5: Generating PDF...
+✓ PDF generated successfully
+Step 6: Verifying bike sold status...
+  ✓  341 [Mobile Chrome] › tests/flows/user-flows.spec.ts:167:5 › User Flow Tests › Multi-step Sale Workflow › View unsold bikes → Select bike → Search customer → Create sale → Verify in sales list (1.6s)
+✓ Bike marked as sold
+
+✅ Complete business workflow successful!
+  ✓  345 [Mobile Chrome] › tests/flows/user-flows.spec.ts:351:5 › User Flow Tests › Complete Business Workflow › Full dealership workflow: Stock → Sale → Finance → Invoice (627ms)
+  ✓  343 [Mobile Chrome] › tests/flows/user-flows.spec.ts:277:5 › User Flow Tests › Filter and Search › Filter bikes by brand → Search customers by name → Filter sales by date (1.3s)
+  ✓  347 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:7:3 › Production Frontend - UI & Thai Language › should load homepage with Thai language (1.4s)
+  ✓  348 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:23:3 › Production Frontend - UI & Thai Language › should display Dashboard page in Thai (1.4s)
+  ✓  349 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:36:3 › Production Frontend - UI & Thai Language › should navigate to Customers page in Thai (1.5s)
+  ✓  350 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:51:3 › Production Frontend - UI & Thai Language › should navigate to Bikes page in Thai (1.5s)
+  ✓  351 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:66:3 › Production Frontend - UI & Thai Language › should navigate to Sales page in Thai (1.5s)
+  ✓  352 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:76:3 › Production Frontend - UI & Thai Language › should navigate to Invoices page in Thai (1.5s)
+  ✓  353 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:86:3 › Production Frontend - UI & Thai Language › should display Management section in Thai (1.5s)
+  ✓  354 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:99:3 › Production Frontend - UI & Thai Language › should display footer with Thai app version (1.4s)
+  ✓  358 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:165:3 › Production Frontend - API Integration › should handle API errors gracefully (608ms)
+  ✓  359 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:178:3 › Production Frontend - Backend API Direct Tests › backend API /api/dashboard should return valid data (364ms)
+  ✘  360 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:192:3 › Production Frontend - Backend API Direct Tests › backend API /api/customers should return customer list (425ms)
+  ✓  361 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:201:3 › Production Frontend - Backend API Direct Tests › backend API /api/bikes should return bike list (554ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+  ✓  362 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:219:3 › Production Frontend - Backend API Direct Tests › backend API should support CORS from frontend (382ms)
+  ✓  363 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:210:3 › Production Frontend - Backend API Direct Tests › backend API /api/brands should return brand list (184ms)
+  ✓  355 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:109:3 › Production Frontend - API Integration › should load dashboard data from backend API (3.5s)
+  ✓  356 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:133:3 › Production Frontend - API Integration › should fetch customers data from API (3.2s)
+  ✓  357 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:149:3 › Production Frontend - API Integration › should fetch bikes data from API (3.2s)
+  ✓  367 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:277:3 › Production Frontend - Responsive Design › should be responsive on mobile viewport (1.5s)
+  ✓  368 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:286:3 › Production Frontend - Responsive Design › should be responsive on tablet viewport (1.5s)
+  ✓  364 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:233:3 › Production Frontend - Data Display › should display customer table with Thai headers (3.2s)
+  ✓  365 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:244:3 › Production Frontend - Data Display › should display bike table with headers (3.3s)
+  ✓  369 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:296:3 › Production Frontend - Performance › should load homepage within acceptable time (1.4s)
+  ✓  370 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:306:3 › Production Frontend - Performance › should not have console errors on load (1.4s)
+  ✓  374 [Mobile Chrome] › tests/production/latest-deployment.spec.ts:41:3 › Latest Deployment - Thai Language & API › Backend API /api/dashboard returns valid data (453ms)
+  ✓  373 [Mobile Chrome] › tests/production/latest-deployment.spec.ts:29:3 › Latest Deployment - Thai Language & API › All navigation items should be in Thai (1.5s)
+  ✓  366 [Mobile Chrome] › tests/production/frontend-validation.spec.ts:259:3 › Production Frontend - Data Display › should display dashboard statistics (4.5s)
+  ✓  371 [Mobile Chrome] › tests/production/latest-deployment.spec.ts:7:3 › Latest Deployment - Thai Language & API › Homepage should display Thai language (3.5s)
+  ✓  377 [Mobile Chrome] › tests/production/latest-deployment.spec.ts:75:3 › Latest Deployment - Thai Language & API › API integration works with CORS (1.6s)
+✓ bikes table accessible
+✓ brands table accessible
+✓ customers table accessible
+  ✓  372 [Mobile Chrome] › tests/production/latest-deployment.spec.ts:16:3 › Latest Deployment - Thai Language & API › Dashboard should load with Thai text and API data (4.6s)
+✓ finance table accessible
+  ✓  378 [Mobile Chrome] › tests/production/latest-deployment.spec.ts:86:3 › Latest Deployment - Thai Language & API › Performance - loads within 5 seconds (1.4s)
+✓ Customer CREATE works (ID: 8428)
+✓ Bike CREATE works (ID: 8847)
+✓ Customer READ works
+✓ Bike unsold list works (266 bikes)
+✓ Customer UPDATE works
+✓ Bike UPDATE works
+✓ Customer DELETE works
+  ✓  380 [Mobile Chrome] › tests/verification/legacy-php-parity.spec.ts:46:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Customer CRUD matches legacy PHP functionality (375ms)
+✓ Bike DELETE works
+  ✓  381 [Mobile Chrome] › tests/verification/legacy-php-parity.spec.ts:92:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Bike inventory CRUD matches legacy PHP functionality (358ms)
+✓ invoices table accessible
+✓ Step 1: Bike created for sale (ID: 8848)
+✓ Step 2: Customer created (ID: 8429)
+✓ Step 3: Sale created (ID: 8560)
+✓ Step 4: Bike marked as sold
+✓ sales table accessible
+✓ Invoice CREATE works (ID: 19358)
+✓ suppliers table accessible
+✓ Invoice READ works
+✓ Cleanup completed
+  ✓  382 [Mobile Chrome] › tests/verification/legacy-php-parity.spec.ts:137:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Sale transaction matches legacy PHP multi-step workflow (619ms)
+✓ Invoice UPDATE works
+  ✓  375 [Mobile Chrome] › tests/production/latest-deployment.spec.ts:52:3 › Latest Deployment - Thai Language & API › Customers page should show Thai headers and API data (4.2s)
+✓ Inventory stats: 265 unsold, 8439 sold
+✓ Sales stats: 8468 sales, ฿476488463.07
+✓ Customer count: 8034
+✓ Supplier count: 90
+✓ Invoice stats: 9860 invoices, ฿501797027.58
+  ✓  384 [Mobile Chrome] › tests/verification/legacy-php-parity.spec.ts:270:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Dashboard/Reporting Parity › Dashboard statistics match legacy PHP tabs functionality (347ms)
+✓ jqGrid pagination format works (8703 records)
+  ✓  385 [Mobile Chrome] › tests/verification/legacy-php-parity.spec.ts:313:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Search/Filter Parity › Search and filter functionality matches legacy (87ms)
+✓ dashboard table accessible
+✓ Cleanup completed
+  ✓  379 [Mobile Chrome] › tests/verification/legacy-php-parity.spec.ts:21:5 › Legacy PHP to Cloudflare Parity Verification › Database Schema Parity › All legacy tables are accessible via API (2.5s)
+  ✓  383 [Mobile Chrome] › tests/verification/legacy-php-parity.spec.ts:194:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Invoice generation matches legacy PHP functionality (936ms)
+  ✓  376 [Mobile Chrome] › tests/production/latest-deployment.spec.ts:65:3 › Latest Deployment - Thai Language & API › Bikes page should show Thai headers (4.2s)
+✓ Required field validation works
+  ✓  387 [Mobile Chrome] › tests/verification/legacy-php-parity.spec.ts:370:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Data Validation Parity › Required field validation matches legacy (51ms)
+✓ Valid Thai ID accepted (ID: 8431)
+✓ Invalid Thai ID rejected
+  ✓  386 [Mobile Chrome] › tests/verification/legacy-php-parity.spec.ts:339:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Data Validation Parity › Thai ID card validation matches legacy (241ms)
+✓ Concurrent operations handled successfully
+✓ /api/bikes responded in 397ms
+  ✓  392 [Mobile Chrome] › tests/verification/legacy-php-parity.spec.ts:475:3 › Performance & Reliability Parity › Concurrent operations handle correctly (568ms)
+✓ /api/customers responded in 418ms
+✓ Thai language content detected and displayed
+✓ /api/sales responded in 298ms
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+✓ Delete confirmation dialog works (modern AlertDialog vs legacy window.confirm)
+  ✓  390 [Mobile Chrome] › tests/verification/legacy-php-parity.spec.ts:437:5 › Legacy PHP to Cloudflare Parity Verification › Thai Language Support Parity › Thai language content displays correctly (1.2s)
+  ✓  389 [Mobile Chrome] › tests/verification/legacy-php-parity.spec.ts:411:5 › Legacy PHP to Cloudflare Parity Verification › Frontend UI Parity › Delete confirmation dialog matches legacy alert behavior (1.4s)
+  ✓  393 [Mobile Safari] › tests/api/backend.spec.ts:8:5 › Backend API Integration Tests › Health and Infrastructure › GET /api/health returns 200 (167ms)
+✓ Dashboard page accessible (legacy: Dashboard)
+  ✓  394 [Mobile Safari] › tests/api/backend.spec.ts:47:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/:id returns bike details (139ms)
+✓ /api/invoices responded in 430ms
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+  ✓  395 [Mobile Safari] › tests/api/backend.spec.ts:68:5 › Backend API Integration Tests › Bikes API › PUT /api/bikes/:id updates bike (227ms)
+  ✓  397 [Mobile Safari] › tests/api/backend.spec.ts:28:5 › Backend API Integration Tests › Bikes API › POST /api/bikes creates new bike (178ms)
+  ✓  398 [Mobile Safari] › tests/api/backend.spec.ts:97:5 › Backend API Integration Tests › Bikes API › GET /api/bikes/unsold returns only unsold bikes (216ms)
+✓ /api/dashboard responded in 403ms
+  ✓  391 [Mobile Chrome] › tests/verification/legacy-php-parity.spec.ts:455:3 › Performance & Reliability Parity › API response times are acceptable (2.0s)
+✓ Customers page accessible (legacy: Customer Management)
+  ✓  400 [Mobile Safari] › tests/api/backend.spec.ts:118:5 › Backend API Integration Tests › Customers API › POST /api/customers creates customer with Thai name (192ms)
+  ✓  396 [Mobile Safari] › tests/api/backend.spec.ts:20:5 › Backend API Integration Tests › Bikes API › GET /api/bikes returns list (557ms)
+  ✓  401 [Mobile Safari] › tests/api/backend.spec.ts:162:5 › Backend API Integration Tests › Brands API › GET /api/brands returns list (73ms)
+  ✓  402 [Mobile Safari] › tests/api/backend.spec.ts:170:5 › Backend API Integration Tests › Brands API › POST /api/brands creates brand (68ms)
+  ✓  403 [Mobile Safari] › tests/api/backend.spec.ts:186:5 › Backend API Integration Tests › Suppliers API › GET /api/suppliers returns list (68ms)
+  ✓  404 [Mobile Safari] › tests/api/backend.spec.ts:193:5 › Backend API Integration Tests › Suppliers API › POST /api/suppliers creates supplier (60ms)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+  ✓  399 [Mobile Safari] › tests/api/backend.spec.ts:111:5 › Backend API Integration Tests › Customers API › GET /api/customers returns list (540ms)
+  ✓  407 [Mobile Safari] › tests/api/backend.spec.ts:136:5 › Backend API Integration Tests › Customers API › PUT /api/customers/:id updates customer (259ms)
+  ✓  406 [Mobile Safari] › tests/api/backend.spec.ts:217:5 › Backend API Integration Tests › Sales API › POST /api/sales creates sale (links bike + customer) (308ms)
+  ✓  405 [Mobile Safari] › tests/api/backend.spec.ts:210:5 › Backend API Integration Tests › Sales API › GET /api/sales returns list (461ms)
+  ✓  411 [Mobile Safari] › tests/api/backend.spec.ts:362:5 › Backend API Integration Tests › Error Handling › Returns 404 for non-existent bike (70ms)
+  ✓  412 [Mobile Safari] › tests/api/backend.spec.ts:367:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid bike data (44ms)
+  ✓  408 [Mobile Safari] › tests/api/backend.spec.ts:257:5 › Backend API Integration Tests › Sales API › GET /api/sales/:id returns sale details (426ms)
+  ✓  413 [Mobile Safari] › tests/api/backend.spec.ts:377:5 › Backend API Integration Tests › Error Handling › Returns 400 for invalid customer idcard (43ms)
+  ✓  414 [Mobile Safari] › tests/api/backend.spec.ts:390:5 › Backend API Integration Tests › Data Validation › Validates required fields for bikes (43ms)
+  ✓  415 [Mobile Safari] › tests/api/backend.spec.ts:397:5 › Backend API Integration Tests › Data Validation › Validates Thai ID card format (42ms)
+✓ Bikes page accessible (legacy: Stock Management)
+  ✓  410 [Mobile Safari] › tests/api/backend.spec.ts:312:5 › Backend API Integration Tests › Invoices API › POST /api/invoices creates invoice from sale (430ms)
+  ✓  409 [Mobile Safari] › tests/api/backend.spec.ts:305:5 › Backend API Integration Tests › Invoices API › GET /api/invoices returns list (527ms)
+✓ Sales page accessible (legacy: Sales)
+  ✓  417 [Mobile Safari] › tests/e2e/frontend.spec.ts:17:5 › Frontend E2E Tests › Navigation and Layout › Navigation between all pages works (879ms)
+  ✓  416 [Mobile Safari] › tests/e2e/frontend.spec.ts:9:5 › Frontend E2E Tests › Navigation and Layout › Dashboard page loads (881ms)
+✓ Invoices page accessible (legacy: Invoices)
+  ✓  419 [Mobile Safari] › tests/e2e/frontend.spec.ts:74:5 › Frontend E2E Tests › Customers Page › Customers page displays table with data (1.4s)
+  ✓  418 [Mobile Safari] › tests/e2e/frontend.spec.ts:41:5 › Frontend E2E Tests › Dashboard Page › Dashboard shows metrics and stats (1.8s)
+✓ Brands page accessible (legacy: Brand Management)
+  ✓  421 [Mobile Safari] › tests/e2e/frontend.spec.ts:149:5 › Frontend E2E Tests › Customers Page › Customer edit functionality works (1.9s)
+✓ Suppliers page accessible (legacy: Supplier Management)
+  ✓  422 [Mobile Safari] › tests/e2e/frontend.spec.ts:166:5 › Frontend E2E Tests › Customers Page › Customer delete confirmation shows (1.3s)
+  ✓  423 [Mobile Safari] › tests/e2e/frontend.spec.ts:184:5 › Frontend E2E Tests › Bikes Page › Bikes page displays table (1.2s)
+✓ Finance page accessible (legacy: Finance Management)
+  ✓  388 [Mobile Chrome] › tests/verification/legacy-php-parity.spec.ts:388:5 › Legacy PHP to Cloudflare Parity Verification › Frontend UI Parity › All legacy UI tabs/pages are accessible (6.7s)
+  ✓  420 [Mobile Safari] › tests/e2e/frontend.spec.ts:83:5 › Frontend E2E Tests › Customers Page › Can create new customer with Thai name (3.0s)
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+  ✓  424 [Mobile Safari] › tests/e2e/frontend.spec.ts:193:5 › Frontend E2E Tests › Bikes Page › Can create new bike (1.3s)
+  ✓  426 [Mobile Safari] › tests/e2e/frontend.spec.ts:254:5 › Frontend E2E Tests › Sales Page › Sales page displays table (1.3s)
+  ✓  425 [Mobile Safari] › tests/e2e/frontend.spec.ts:237:5 › Frontend E2E Tests › Bikes Page › Bike edit form works (1.9s)
+  ✓  429 [Mobile Safari] › tests/e2e/frontend.spec.ts:351:5 › Frontend E2E Tests › Invoices Page › Invoices page displays table (1.3s)
+  ✓  427 [Mobile Safari] › tests/e2e/frontend.spec.ts:284:5 › Frontend E2E Tests › Sales Page › Can create sale (selects bike + customer) (1.5s)
+  ✓  428 [Mobile Safari] › tests/e2e/frontend.spec.ts:262:5 › Frontend E2E Tests › Sales Page › Sale create form shows unsold bikes only (1.5s)
+  ✓  430 [Mobile Safari] › tests/e2e/frontend.spec.ts:359:5 › Frontend E2E Tests › Invoices Page › Invoice detail page shows full information (1.3s)
+  ✓  431 [Mobile Safari] › tests/e2e/frontend.spec.ts:375:5 › Frontend E2E Tests › Invoices Page › Invoice PDF download button works (1.3s)
+  ✓  432 [Mobile Safari] › tests/e2e/frontend.spec.ts:397:5 › Frontend E2E Tests › Forms and Validation › Forms validate input (show error messages) (1.2s)
+  ✓  433 [Mobile Safari] › tests/e2e/frontend.spec.ts:439:5 › Frontend E2E Tests › Forms and Validation › Loading states show during API calls (1.2s)
+  ✓  434 [Mobile Safari] › tests/e2e/frontend.spec.ts:451:5 › Frontend E2E Tests › Thai Language Support › Thai text displays correctly throughout (1.3s)
+  ✓  435 [Mobile Safari] › tests/e2e/frontend.spec.ts:467:5 › Frontend E2E Tests › Accessibility › No console errors on page load (1.5s)
+  ✓  436 [Mobile Safari] › tests/e2e/frontend.spec.ts:487:5 › Frontend E2E Tests › Accessibility › Forms are keyboard accessible (1.2s)
+  ✓  438 [Mobile Safari] › tests/flows/user-flows.spec.ts:100:5 › User Flow Tests › Edit and Regenerate PDF Flow › Create invoice → Edit invoice details → Regenerate PDF → Verify updated data (862ms)
+  ✓  440 [Mobile Safari] › tests/flows/user-flows.spec.ts:232:5 › User Flow Tests › Data Persistence Flow › Create record → Refresh page → Verify data persisted → Edit → Verify changes saved (417ms)
+Step 1: Adding bike to stock...
+✓ Bike created: 8861
+Step 2: Registering customer...
+  ✓  442 [Mobile Safari] › tests/flows/user-flows.spec.ts:313:5 › User Flow Tests › Error Handling Flow › Submit invalid form → Verify error messages → Fix errors → Verify successful submission (264ms)
+✓ Customer created: 8448
+Step 3: Creating sale...
+✓ Sale created: 8568
+Step 4: Generating invoice...
+✓ Concurrent customer 1 created
+✓ Concurrent customer 2 created
+✓ Concurrent customer 3 created
+✓ Concurrent customer 4 created
+✓ Concurrent customer 5 created
+  ✓  444 [Mobile Safari] › tests/flows/user-flows.spec.ts:432:5 › User Flow Tests › Concurrent Operations › Multiple users creating records simultaneously (197ms)
+✓ Invoice created: 19362
+Step 5: Generating PDF...
+✓ PDF generated successfully
+Step 6: Verifying bike sold status...
+✓ Bike marked as sold
+
+✅ Complete business workflow successful!
+  ✓  443 [Mobile Safari] › tests/flows/user-flows.spec.ts:351:5 › User Flow Tests › Complete Business Workflow › Full dealership workflow: Stock → Sale → Finance → Invoice (594ms)
+  ✓  437 [Mobile Safari] › tests/flows/user-flows.spec.ts:9:5 › User Flow Tests › Complete Bike Sale Flow › End-to-end: Add bike → Add customer → Create sale → Generate invoice → Download PDF (1.8s)
+  ✓  439 [Mobile Safari] › tests/flows/user-flows.spec.ts:167:5 › User Flow Tests › Multi-step Sale Workflow › View unsold bikes → Select bike → Search customer → Create sale → Verify in sales list (1.9s)
+  ✓  441 [Mobile Safari] › tests/flows/user-flows.spec.ts:277:5 › User Flow Tests › Filter and Search › Filter bikes by brand → Search customers by name → Filter sales by date (1.5s)
+  ✓  445 [Mobile Safari] › tests/production/frontend-validation.spec.ts:7:3 › Production Frontend - UI & Thai Language › should load homepage with Thai language (1.6s)
+  ✓  446 [Mobile Safari] › tests/production/frontend-validation.spec.ts:23:3 › Production Frontend - UI & Thai Language › should display Dashboard page in Thai (1.6s)
+  ✓  447 [Mobile Safari] › tests/production/frontend-validation.spec.ts:36:3 › Production Frontend - UI & Thai Language › should navigate to Customers page in Thai (1.6s)
+  ✓  448 [Mobile Safari] › tests/production/frontend-validation.spec.ts:51:3 › Production Frontend - UI & Thai Language › should navigate to Bikes page in Thai (1.5s)
+  ✓  449 [Mobile Safari] › tests/production/frontend-validation.spec.ts:66:3 › Production Frontend - UI & Thai Language › should navigate to Sales page in Thai (1.5s)
+  ✓  450 [Mobile Safari] › tests/production/frontend-validation.spec.ts:76:3 › Production Frontend - UI & Thai Language › should navigate to Invoices page in Thai (1.6s)
+  ✓  451 [Mobile Safari] › tests/production/frontend-validation.spec.ts:86:3 › Production Frontend - UI & Thai Language › should display Management section in Thai (1.5s)
+  ✓  452 [Mobile Safari] › tests/production/frontend-validation.spec.ts:99:3 › Production Frontend - UI & Thai Language › should display footer with Thai app version (1.5s)
+  ✓  457 [Mobile Safari] › tests/production/frontend-validation.spec.ts:178:3 › Production Frontend - Backend API Direct Tests › backend API /api/dashboard should return valid data (319ms)
+  ✓  456 [Mobile Safari] › tests/production/frontend-validation.spec.ts:165:3 › Production Frontend - API Integration › should handle API errors gracefully (616ms)
+  ✓  458 [Mobile Safari] › tests/production/frontend-validation.spec.ts:192:3 › Production Frontend - Backend API Direct Tests › backend API /api/customers should return customer list (449ms)
+  ✓  460 [Mobile Safari] › tests/production/frontend-validation.spec.ts:210:3 › Production Frontend - Backend API Direct Tests › backend API /api/brands should return brand list (61ms)
+  ✓  459 [Mobile Safari] › tests/production/frontend-validation.spec.ts:201:3 › Production Frontend - Backend API Direct Tests › backend API /api/bikes should return bike list (500ms)
+  ✓  461 [Mobile Safari] › tests/production/frontend-validation.spec.ts:219:3 › Production Frontend - Backend API Direct Tests › backend API should support CORS from frontend (326ms)
+  ✓  454 [Mobile Safari] › tests/production/frontend-validation.spec.ts:133:3 › Production Frontend - API Integration › should fetch customers data from API (3.2s)
+  ✓  453 [Mobile Safari] › tests/production/frontend-validation.spec.ts:109:3 › Production Frontend - API Integration › should load dashboard data from backend API (3.6s)
+  ✓  455 [Mobile Safari] › tests/production/frontend-validation.spec.ts:149:3 › Production Frontend - API Integration › should fetch bikes data from API (3.4s)
+  ✓  465 [Mobile Safari] › tests/production/frontend-validation.spec.ts:277:3 › Production Frontend - Responsive Design › should be responsive on mobile viewport (1.5s)
+  ✓  462 [Mobile Safari] › tests/production/frontend-validation.spec.ts:233:3 › Production Frontend - Data Display › should display customer table with Thai headers (3.2s)
+  ✓  463 [Mobile Safari] › tests/production/frontend-validation.spec.ts:244:3 › Production Frontend - Data Display › should display bike table with headers (3.3s)
+  ✓  466 [Mobile Safari] › tests/production/frontend-validation.spec.ts:286:3 › Production Frontend - Responsive Design › should be responsive on tablet viewport (1.6s)
+  ✓  467 [Mobile Safari] › tests/production/frontend-validation.spec.ts:296:3 › Production Frontend - Performance › should load homepage within acceptable time (1.6s)
+  ✓  468 [Mobile Safari] › tests/production/frontend-validation.spec.ts:306:3 › Production Frontend - Performance › should not have console errors on load (1.5s)
+  ✓  472 [Mobile Safari] › tests/production/latest-deployment.spec.ts:41:3 › Latest Deployment - Thai Language & API › Backend API /api/dashboard returns valid data (507ms)
+  ✓  464 [Mobile Safari] › tests/production/frontend-validation.spec.ts:259:3 › Production Frontend - Data Display › should display dashboard statistics (4.5s)
+  ✓  469 [Mobile Safari] › tests/production/latest-deployment.spec.ts:7:3 › Latest Deployment - Thai Language & API › Homepage should display Thai language (3.5s)
+  ✓  470 [Mobile Safari] › tests/production/latest-deployment.spec.ts:16:3 › Latest Deployment - Thai Language & API › Dashboard should load with Thai text and API data (4.5s)
+  ✓  471 [Mobile Safari] › tests/production/latest-deployment.spec.ts:29:3 › Latest Deployment - Thai Language & API › All navigation items should be in Thai (8.5s)
+  ✓  476 [Mobile Safari] › tests/production/latest-deployment.spec.ts:86:3 › Latest Deployment - Thai Language & API › Performance - loads within 5 seconds (5.0s)
+✓ Customer CREATE works (ID: 8454)
+✓ Customer READ works
+✓ Customer UPDATE works
+✓ bikes table accessible
+✓ Customer DELETE works
+  ✓  478 [Mobile Safari] › tests/verification/legacy-php-parity.spec.ts:46:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Customer CRUD matches legacy PHP functionality (293ms)
+  ✓  475 [Mobile Safari] › tests/production/latest-deployment.spec.ts:75:3 › Latest Deployment - Thai Language & API › API integration works with CORS (6.6s)
+✓ brands table accessible
+✓ Bike CREATE works (ID: 8862)
+✓ Step 1: Bike created for sale (ID: 8863)
+✓ Bike unsold list works (272 bikes)
+✓ Bike UPDATE works
+✓ Step 2: Customer created (ID: 8455)
+✓ Bike DELETE works
+  ✓  479 [Mobile Safari] › tests/verification/legacy-php-parity.spec.ts:92:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Bike inventory CRUD matches legacy PHP functionality (406ms)
+✓ customers table accessible
+✓ Step 3: Sale created (ID: 8569)
+✓ finance table accessible
+✓ Step 4: Bike marked as sold
+✓ Cleanup completed
+  ✓  480 [Mobile Safari] › tests/verification/legacy-php-parity.spec.ts:137:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Sale transaction matches legacy PHP multi-step workflow (822ms)
+✓ Invoice CREATE works (ID: 19363)
+✓ Invoice READ works
+✓ Invoice UPDATE works
+✓ Inventory stats: 270 unsold, 8446 sold
+✓ Sales stats: 8475 sales, ฿476488463.07
+✓ Customer count: 8051
+✓ Supplier count: 91
+✓ Invoice stats: 9865 invoices, ฿501998027.58
+  ✓  482 [Mobile Safari] › tests/verification/legacy-php-parity.spec.ts:270:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Dashboard/Reporting Parity › Dashboard statistics match legacy PHP tabs functionality (347ms)
+✓ invoices table accessible
+✓ jqGrid pagination format works (8716 records)
+  ✓  483 [Mobile Safari] › tests/verification/legacy-php-parity.spec.ts:313:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Search/Filter Parity › Search and filter functionality matches legacy (174ms)
+✓ Valid Thai ID accepted (ID: 8457)
+✓ sales table accessible
+✓ Cleanup completed
+✓ Invalid Thai ID rejected
+  ✓  481 [Mobile Safari] › tests/verification/legacy-php-parity.spec.ts:194:5 › Legacy PHP to Cloudflare Parity Verification › Legacy CRUD Operations Parity › Invoice generation matches legacy PHP functionality (1.2s)
+  ✓  484 [Mobile Safari] › tests/verification/legacy-php-parity.spec.ts:339:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Data Validation Parity › Thai ID card validation matches legacy (277ms)
+✓ suppliers table accessible
+✓ Required field validation works
+  ✓  485 [Mobile Safari] › tests/verification/legacy-php-parity.spec.ts:370:5 › Legacy PHP to Cloudflare Parity Verification › Legacy Data Validation Parity › Required field validation matches legacy (44ms)
+✓ dashboard table accessible
+  ✓  477 [Mobile Safari] › tests/verification/legacy-php-parity.spec.ts:21:5 › Legacy PHP to Cloudflare Parity Verification › Database Schema Parity › All legacy tables are accessible via API (2.5s)
+  ✓  474 [Mobile Safari] › tests/production/latest-deployment.spec.ts:65:3 › Latest Deployment - Thai Language & API › Bikes page should show Thai headers (10.2s)
+  ✓  473 [Mobile Safari] › tests/production/latest-deployment.spec.ts:52:3 › Latest Deployment - Thai Language & API › Customers page should show Thai headers and API data (10.8s)
+✓ Concurrent operations handled successfully
+✓ /api/bikes responded in 398ms
+✓ Delete confirmation dialog works (modern AlertDialog vs legacy window.confirm)
+  ✓  490 [Mobile Safari] › tests/verification/legacy-php-parity.spec.ts:475:3 › Performance & Reliability Parity › Concurrent operations handle correctly (628ms)
+  ✓  487 [Mobile Safari] › tests/verification/legacy-php-parity.spec.ts:411:5 › Legacy PHP to Cloudflare Parity Verification › Frontend UI Parity › Delete confirmation dialog matches legacy alert behavior (1.4s)
+✓ Dashboard page accessible (legacy: Dashboard)
+✓ Thai language content detected and displayed
+✓ /api/customers responded in 428ms
+  ✓  488 [Mobile Safari] › tests/verification/legacy-php-parity.spec.ts:437:5 › Legacy PHP to Cloudflare Parity Verification › Thai Language Support Parity › Thai language content displays correctly (1.3s)
+✓ /api/sales responded in 304ms
+✓ Customers page accessible (legacy: Customer Management)
+✓ /api/invoices responded in 473ms
+✓ /api/dashboard responded in 312ms
+  ✓  489 [Mobile Safari] › tests/verification/legacy-php-parity.spec.ts:455:3 › Performance & Reliability Parity › API response times are acceptable (1.9s)
+✓ Bikes page accessible (legacy: Stock Management)
+✓ Sales page accessible (legacy: Sales)
+✓ Invoices page accessible (legacy: Invoices)
+✓ Brands page accessible (legacy: Brand Management)
+✓ Suppliers page accessible (legacy: Supplier Management)
+✓ Finance page accessible (legacy: Finance Management)
+  ✓  486 [Mobile Safari] › tests/verification/legacy-php-parity.spec.ts:388:5 › Legacy PHP to Cloudflare Parity Verification › Frontend UI Parity › All legacy UI tabs/pages are accessible (6.9s)
+
+
+  1) [webkit] › tests/verification/legacy-php-parity.spec.ts:455:3 › Performance & Reliability Parity › API response times are acceptable 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeTruthy[2m()[22m
+
+    Received: [31mfalse[39m
+
+      467 |       const duration = Date.now() - start;
+      468 |
+    > 469 |       expect(response.ok()).toBeTruthy();
+          |                             ^
+      470 |       expect(duration).toBeLessThan(3000); // Should respond within 3 seconds (mobile may be slower)
+      471 |       console.log(`✓ ${endpoint} responded in ${duration}ms`);
+      472 |     }
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/verification/legacy-php-parity.spec.ts:469:29
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/verification-legacy-php-pa-5dee2-sponse-times-are-acceptable-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/verification-legacy-php-pa-5dee2-sponse-times-are-acceptable-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [Mobile Chrome] › tests/production/frontend-validation.spec.ts:192:3 › Production Frontend - Backend API Direct Tests › backend API /api/customers should return customer list 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeTruthy[2m()[22m
+
+    Received: [31mfalse[39m
+
+      192 |   test('backend API /api/customers should return customer list', async ({ request }) => {
+      193 |     const response = await request.get(`${BACKEND_URL}/api/customers`);
+    > 194 |     expect(response.ok()).toBeTruthy();
+          |                           ^
+      195 |
+      196 |     const data = await response.json();
+      197 |     expect(Array.isArray(data)).toBe(true);
+        at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/frontend-validation.spec.ts:194:27
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/production-frontend-valida-3293b-should-return-customer-list-Mobile-Chrome/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/production-frontend-valida-3293b-should-return-customer-list-Mobile-Chrome/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [webkit] › tests/verification/legacy-php-parity.spec.ts:455:3 › Performance & Reliability Parity › API response times are acceptable 
+    [Mobile Chrome] › tests/production/frontend-validation.spec.ts:192:3 › Production Frontend - Backend API Direct Tests › backend API /api/customers should return customer list 
+  488 passed (2.4m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m
