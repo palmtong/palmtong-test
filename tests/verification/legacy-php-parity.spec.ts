@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
+import { generateThaiIdFromSeed } from '../helpers/thai-id';
 
-const BACKEND_URL = process.env.BACKEND_URL!;
-const FRONTEND_URL = process.env.FRONTEND_URL!;
+const BACKEND_URL = process.env.BACKEND_URL || 'https://palmtong-backend.anu-9da.workers.dev';
+const FRONTEND_URL = process.env.FRONTEND_URL || 'https://b2afebdb.palmtong-frontend.pages.dev';
 
 /**
  * Legacy PHP Function Parity Verification
@@ -45,7 +46,7 @@ test.describe('Legacy PHP to Cloudflare Parity Verification', () => {
     test('Customer CRUD matches legacy PHP functionality', async ({ request }) => {
       // CREATE (using Cloudflare field names: firstname, lastname, not customer_firstname, customer_lastname)
       // Use unique ID card to avoid duplicates
-      const uniqueIdCard = '4' + Date.now().toString().slice(-12);
+      const uniqueIdCard = generateThaiIdFromSeed(Date.now());
       const createResponse = await request.post(`${BACKEND_URL}/api/customers`, {
         data: {
           idcard: uniqueIdCard,
@@ -150,7 +151,7 @@ test.describe('Legacy PHP to Cloudflare Parity Verification', () => {
       // Step 2: Create customer (using Cloudflare field names)
       const customerResponse = await request.post(`${BACKEND_URL}/api/customers`, {
         data: {
-          idcard: '1' + Date.now().toString().slice(-12),
+          idcard: generateThaiIdFromSeed(Date.now()),
           firstname: 'Buyer',
           lastname: 'Test',
           mobile_phone_1: '0812345678',
@@ -205,7 +206,7 @@ test.describe('Legacy PHP to Cloudflare Parity Verification', () => {
 
       const customerRes = await request.post(`${BACKEND_URL}/api/customers`, {
         data: {
-          idcard: '2' + Date.now().toString().slice(-12),
+          idcard: generateThaiIdFromSeed(Date.now()),
           firstname: 'Invoice',
           lastname: 'Customer',
           mobile_phone_1: '0812345678',
@@ -337,7 +338,7 @@ test.describe('Legacy PHP to Cloudflare Parity Verification', () => {
      */
     test('Thai ID card validation matches legacy', async ({ request }) => {
       // Valid Thai ID (13 digits, unique)
-      const validIdCard = '5' + Date.now().toString().slice(-12);
+      const validIdCard = generateThaiIdFromSeed(Date.now());
       const validResponse = await request.post(`${BACKEND_URL}/api/customers`, {
         data: {
           idcard: validIdCard,
@@ -411,17 +412,18 @@ test.describe('Legacy PHP to Cloudflare Parity Verification', () => {
       await page.goto(`${FRONTEND_URL}/customers`);
       await page.waitForLoadState('networkidle');
 
-      const deleteButton = page.locator('button:has-text("Delete"), button:has-text("ลบ")').first();
+      // Look for delete button (Thai: ลบ)
+      const deleteButton = page.getByRole('button', { name: /ลบ|delete/i }).first();
       if ((await deleteButton.count()) > 0) {
         await deleteButton.click();
 
         // Modern: AlertDialog component (vs legacy: window.confirm)
-        const dialog = page.locator('[role="alertdialog"]');
-        await expect(dialog).toBeVisible();
+        const dialog = page.getByRole('alertdialog');
+        await expect(dialog).toBeVisible({ timeout: 10000 });
         console.log(`✓ Delete confirmation dialog works (modern AlertDialog vs legacy window.confirm)`);
 
-        // Close dialog
-        const cancelButton = page.locator('button:has-text("Cancel")').last();
+        // Close dialog (Thai: ยกเลิก / Cancel)
+        const cancelButton = page.getByRole('button', { name: /ยกเลิก|cancel/i });
         await cancelButton.click();
       }
     });
@@ -472,12 +474,12 @@ test.describe('Performance & Reliability Parity', () => {
 
   test('Concurrent operations handle correctly', async ({ request }) => {
     // Create multiple customers concurrently (legacy: single-threaded PHP)
-    // Use unique ID cards by including index in the middle of timestamp
-    const timestamp = Date.now().toString().slice(-11); // Use last 11 digits of timestamp
+    // Use valid Thai IDs with proper checksums
+    const timestamp = Date.now();
     const promises = Array.from({ length: 5 }, (_, i) =>
       request.post(`${BACKEND_URL}/api/customers`, {
         data: {
-          idcard: `6${i}${timestamp}`, // Format: 6 + index + timestamp = 13 digits
+          idcard: generateThaiIdFromSeed(timestamp + i * 1000), // Add offset to ensure unique IDs
           firstname: `Concurrent${i}`,
           lastname: 'Test',
           mobile_phone_1: '0812345678',
@@ -492,8 +494,10 @@ test.describe('Performance & Reliability Parity', () => {
 
     // Cleanup
     for (const result of results) {
-      const data = await result.json();
-      await request.delete(`${BACKEND_URL}/api/customers/${data.customer_id}`);
+      if (result.ok()) {
+        const data = await result.json();
+        await request.delete(`${BACKEND_URL}/api/customers/${data.customer_id}`);
+      }
     }
   });
 });

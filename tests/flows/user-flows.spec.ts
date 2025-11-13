@@ -436,7 +436,7 @@ test.describe('User Flow Tests', () => {
       const promises = Array.from({ length: 5 }, (_, i) =>
         request.post(`${BACKEND_URL}/api/customers`, {
           data: {
-            idcard: `${timestamp + i}`.padStart(13, '2'),
+            idcard: generateThaiIdFromSeed(timestamp + i * 1000), // Add offset to ensure unique IDs
             firstname: `Concurrent${i}`,
             lastname: 'Test',
             phone: `08${timestamp.toString().slice(-8)}`,
