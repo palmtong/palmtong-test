@@ -1,0 +1,1437 @@
+[dotenv@17.2.3] injecting env (2) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+{
+  "config": {
+    "configFile": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/playwright.config.ts",
+    "rootDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 5
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "Mobile Safari",
+        "name": "Mobile Safari",
+        "testDir": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "production/complete-integration.spec.ts",
+      "file": "production/complete-integration.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Complete Integration - Dashboard",
+          "file": "production/complete-integration.spec.ts",
+          "line": 63,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Dashboard API returns complete metrics",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1292,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: \u001b[32m\"totalSales\"\u001b[39m\nReceived path: \u001b[31m[]\u001b[39m\n\nReceived value: \u001b[31m{\"averageValue\": 58601.45899274382, \"pendingInvoices\": 9, \"recentSales\": [{\"bike_chasi_number\": \"MLHKF5021R5203112\", \"customer_name\": \"ทัตธน คำม่วง\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8137, \"sale_total\": 76700}, {\"bike_chasi_number\": \"MLHJK1622S5254566\", \"customer_name\": \"ภัทราภรณ์ ซิ้วจ้าย\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8136, \"sale_total\": 78900}, {\"bike_chasi_number\": \"MLHJC9321T5728668\", \"customer_name\": \" เมืองไทย ลิสซิ่ง จำกัด  (สำนักงานใหญ่)\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8135, \"sale_total\": 62000}, {\"bike_chasi_number\": \"MLHJC9325T5740595\", \"customer_name\": \"อานนท์ สีเหลือง\", \"sale_date\": \"2025-11-08\", \"sale_id\": 8134, \"sale_total\": 61900}, {\"bike_chasi_number\": \"MLHJK0432S5627644\", \"customer_name\": \"วรรณภา เพ็งสะและ\", \"sale_date\": \"2025-11-06\", \"sale_id\": 8133, \"sale_total\": 54900}, {\"bike_chasi_number\": \"MLESEK51111210488\", \"customer_name\": \"ศรัทธาวุฒิ คำปลิว\", \"sale_date\": \"2025-11-06\", \"sale_id\": 8132, \"sale_total\": 70700}, {\"bike_chasi_number\": \"MLHJK0414S5456992\", \"customer_name\": \"กบิลพัฒณ์ บุญมูสิก\", \"sale_date\": \"2025-11-03\", \"sale_id\": 8131, \"sale_total\": 54900}, {\"bike_chasi_number\": \"MLHJK1628S5252062\", \"customer_name\": \"ฟัยรุส มะนอ\", \"sale_date\": \"2025-11-01\", \"sale_id\": 8130, \"sale_total\": 79900}, {\"bike_chasi_number\": \"MLHJC9326T5725880\", \"customer_name\": \"จตุพร บริสารคุณ\", \"sale_date\": \"2025-11-01\", \"sale_id\": 8129, \"sale_total\": 67700}, {\"bike_chasi_number\": \"MLHJK0433S5625353\", \"customer_name\": \"สมศรี กมลเลิศ\", \"sale_date\": \"2025-10-28\", \"sale_id\": 8128, \"sale_total\": 55200}], \"totalCount\": 8131, \"totalRevenue\": 476488463.07}\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: \u001b[32m\"totalSales\"\u001b[39m\nReceived path: \u001b[31m[]\u001b[39m\n\nReceived value: \u001b[31m{\"averageValue\": 58601.45899274382, \"pendingInvoices\": 9, \"recentSales\": [{\"bike_chasi_number\": \"MLHKF5021R5203112\", \"customer_name\": \"ทัตธน คำม่วง\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8137, \"sale_total\": 76700}, {\"bike_chasi_number\": \"MLHJK1622S5254566\", \"customer_name\": \"ภัทราภรณ์ ซิ้วจ้าย\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8136, \"sale_total\": 78900}, {\"bike_chasi_number\": \"MLHJC9321T5728668\", \"customer_name\": \" เมืองไทย ลิสซิ่ง จำกัด  (สำนักงานใหญ่)\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8135, \"sale_total\": 62000}, {\"bike_chasi_number\": \"MLHJC9325T5740595\", \"customer_name\": \"อานนท์ สีเหลือง\", \"sale_date\": \"2025-11-08\", \"sale_id\": 8134, \"sale_total\": 61900}, {\"bike_chasi_number\": \"MLHJK0432S5627644\", \"customer_name\": \"วรรณภา เพ็งสะและ\", \"sale_date\": \"2025-11-06\", \"sale_id\": 8133, \"sale_total\": 54900}, {\"bike_chasi_number\": \"MLESEK51111210488\", \"customer_name\": \"ศรัทธาวุฒิ คำปลิว\", \"sale_date\": \"2025-11-06\", \"sale_id\": 8132, \"sale_total\": 70700}, {\"bike_chasi_number\": \"MLHJK0414S5456992\", \"customer_name\": \"กบิลพัฒณ์ บุญมูสิก\", \"sale_date\": \"2025-11-03\", \"sale_id\": 8131, \"sale_total\": 54900}, {\"bike_chasi_number\": \"MLHJK1628S5252062\", \"customer_name\": \"ฟัยรุส มะนอ\", \"sale_date\": \"2025-11-01\", \"sale_id\": 8130, \"sale_total\": 79900}, {\"bike_chasi_number\": \"MLHJC9326T5725880\", \"customer_name\": \"จตุพร บริสารคุณ\", \"sale_date\": \"2025-11-01\", \"sale_id\": 8129, \"sale_total\": 67700}, {\"bike_chasi_number\": \"MLHJK0433S5625353\", \"customer_name\": \"สมศรี กมลเลิศ\", \"sale_date\": \"2025-10-28\", \"sale_id\": 8128, \"sale_total\": 55200}], \"totalCount\": 8131, \"totalRevenue\": 476488463.07}\u001b[39m\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:75:24",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                          "column": 24,
+                          "line": 75
+                        },
+                        "snippet": "  73 |     expect(data.inventory).toHaveProperty('soldBikes');\n  74 |     expect(data.inventory).toHaveProperty('totalBikes');\n> 75 |     expect(data.sales).toHaveProperty('totalSales');\n     |                        ^\n  76 |   });\n  77 |\n  78 |   test('Dashboard UI displays all metrics in Thai', async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 24,
+                            "line": 75
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: \u001b[32m\"totalSales\"\u001b[39m\nReceived path: \u001b[31m[]\u001b[39m\n\nReceived value: \u001b[31m{\"averageValue\": 58601.45899274382, \"pendingInvoices\": 9, \"recentSales\": [{\"bike_chasi_number\": \"MLHKF5021R5203112\", \"customer_name\": \"ทัตธน คำม่วง\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8137, \"sale_total\": 76700}, {\"bike_chasi_number\": \"MLHJK1622S5254566\", \"customer_name\": \"ภัทราภรณ์ ซิ้วจ้าย\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8136, \"sale_total\": 78900}, {\"bike_chasi_number\": \"MLHJC9321T5728668\", \"customer_name\": \" เมืองไทย ลิสซิ่ง จำกัด  (สำนักงานใหญ่)\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8135, \"sale_total\": 62000}, {\"bike_chasi_number\": \"MLHJC9325T5740595\", \"customer_name\": \"อานนท์ สีเหลือง\", \"sale_date\": \"2025-11-08\", \"sale_id\": 8134, \"sale_total\": 61900}, {\"bike_chasi_number\": \"MLHJK0432S5627644\", \"customer_name\": \"วรรณภา เพ็งสะและ\", \"sale_date\": \"2025-11-06\", \"sale_id\": 8133, \"sale_total\": 54900}, {\"bike_chasi_number\": \"MLESEK51111210488\", \"customer_name\": \"ศรัทธาวุฒิ คำปลิว\", \"sale_date\": \"2025-11-06\", \"sale_id\": 8132, \"sale_total\": 70700}, {\"bike_chasi_number\": \"MLHJK0414S5456992\", \"customer_name\": \"กบิลพัฒณ์ บุญมูสิก\", \"sale_date\": \"2025-11-03\", \"sale_id\": 8131, \"sale_total\": 54900}, {\"bike_chasi_number\": \"MLHJK1628S5252062\", \"customer_name\": \"ฟัยรุส มะนอ\", \"sale_date\": \"2025-11-01\", \"sale_id\": 8130, \"sale_total\": 79900}, {\"bike_chasi_number\": \"MLHJC9326T5725880\", \"customer_name\": \"จตุพร บริสารคุณ\", \"sale_date\": \"2025-11-01\", \"sale_id\": 8129, \"sale_total\": 67700}, {\"bike_chasi_number\": \"MLHJK0433S5625353\", \"customer_name\": \"สมศรี กมลเลิศ\", \"sale_date\": \"2025-10-28\", \"sale_id\": 8128, \"sale_total\": 55200}], \"totalCount\": 8131, \"totalRevenue\": 476488463.07}\u001b[39m\n\n  73 |     expect(data.inventory).toHaveProperty('soldBikes');\n  74 |     expect(data.inventory).toHaveProperty('totalBikes');\n> 75 |     expect(data.sales).toHaveProperty('totalSales');\n     |                        ^\n  76 |   });\n  77 |\n  78 |   test('Dashboard UI displays all metrics in Thai', async ({ page }) => {\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:75:24"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T20:02:35.393Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-5ebed-PI-returns-complete-metrics-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                        "column": 24,
+                        "line": 75
+                      }
+                    },
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 430,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: \u001b[32m\"totalSales\"\u001b[39m\nReceived path: \u001b[31m[]\u001b[39m\n\nReceived value: \u001b[31m{\"averageValue\": 58601.45899274382, \"pendingInvoices\": 9, \"recentSales\": [{\"bike_chasi_number\": \"MLHKF5021R5203112\", \"customer_name\": \"ทัตธน คำม่วง\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8137, \"sale_total\": 76700}, {\"bike_chasi_number\": \"MLHJK1622S5254566\", \"customer_name\": \"ภัทราภรณ์ ซิ้วจ้าย\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8136, \"sale_total\": 78900}, {\"bike_chasi_number\": \"MLHJC9321T5728668\", \"customer_name\": \" เมืองไทย ลิสซิ่ง จำกัด  (สำนักงานใหญ่)\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8135, \"sale_total\": 62000}, {\"bike_chasi_number\": \"MLHJC9325T5740595\", \"customer_name\": \"อานนท์ สีเหลือง\", \"sale_date\": \"2025-11-08\", \"sale_id\": 8134, \"sale_total\": 61900}, {\"bike_chasi_number\": \"MLHJK0432S5627644\", \"customer_name\": \"วรรณภา เพ็งสะและ\", \"sale_date\": \"2025-11-06\", \"sale_id\": 8133, \"sale_total\": 54900}, {\"bike_chasi_number\": \"MLESEK51111210488\", \"customer_name\": \"ศรัทธาวุฒิ คำปลิว\", \"sale_date\": \"2025-11-06\", \"sale_id\": 8132, \"sale_total\": 70700}, {\"bike_chasi_number\": \"MLHJK0414S5456992\", \"customer_name\": \"กบิลพัฒณ์ บุญมูสิก\", \"sale_date\": \"2025-11-03\", \"sale_id\": 8131, \"sale_total\": 54900}, {\"bike_chasi_number\": \"MLHJK1628S5252062\", \"customer_name\": \"ฟัยรุส มะนอ\", \"sale_date\": \"2025-11-01\", \"sale_id\": 8130, \"sale_total\": 79900}, {\"bike_chasi_number\": \"MLHJC9326T5725880\", \"customer_name\": \"จตุพร บริสารคุณ\", \"sale_date\": \"2025-11-01\", \"sale_id\": 8129, \"sale_total\": 67700}, {\"bike_chasi_number\": \"MLHJK0433S5625353\", \"customer_name\": \"สมศรี กมลเลิศ\", \"sale_date\": \"2025-10-28\", \"sale_id\": 8128, \"sale_total\": 55200}], \"totalCount\": 8131, \"totalRevenue\": 476488463.07}\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: \u001b[32m\"totalSales\"\u001b[39m\nReceived path: \u001b[31m[]\u001b[39m\n\nReceived value: \u001b[31m{\"averageValue\": 58601.45899274382, \"pendingInvoices\": 9, \"recentSales\": [{\"bike_chasi_number\": \"MLHKF5021R5203112\", \"customer_name\": \"ทัตธน คำม่วง\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8137, \"sale_total\": 76700}, {\"bike_chasi_number\": \"MLHJK1622S5254566\", \"customer_name\": \"ภัทราภรณ์ ซิ้วจ้าย\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8136, \"sale_total\": 78900}, {\"bike_chasi_number\": \"MLHJC9321T5728668\", \"customer_name\": \" เมืองไทย ลิสซิ่ง จำกัด  (สำนักงานใหญ่)\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8135, \"sale_total\": 62000}, {\"bike_chasi_number\": \"MLHJC9325T5740595\", \"customer_name\": \"อานนท์ สีเหลือง\", \"sale_date\": \"2025-11-08\", \"sale_id\": 8134, \"sale_total\": 61900}, {\"bike_chasi_number\": \"MLHJK0432S5627644\", \"customer_name\": \"วรรณภา เพ็งสะและ\", \"sale_date\": \"2025-11-06\", \"sale_id\": 8133, \"sale_total\": 54900}, {\"bike_chasi_number\": \"MLESEK51111210488\", \"customer_name\": \"ศรัทธาวุฒิ คำปลิว\", \"sale_date\": \"2025-11-06\", \"sale_id\": 8132, \"sale_total\": 70700}, {\"bike_chasi_number\": \"MLHJK0414S5456992\", \"customer_name\": \"กบิลพัฒณ์ บุญมูสิก\", \"sale_date\": \"2025-11-03\", \"sale_id\": 8131, \"sale_total\": 54900}, {\"bike_chasi_number\": \"MLHJK1628S5252062\", \"customer_name\": \"ฟัยรุส มะนอ\", \"sale_date\": \"2025-11-01\", \"sale_id\": 8130, \"sale_total\": 79900}, {\"bike_chasi_number\": \"MLHJC9326T5725880\", \"customer_name\": \"จตุพร บริสารคุณ\", \"sale_date\": \"2025-11-01\", \"sale_id\": 8129, \"sale_total\": 67700}, {\"bike_chasi_number\": \"MLHJK0433S5625353\", \"customer_name\": \"สมศรี กมลเลิศ\", \"sale_date\": \"2025-10-28\", \"sale_id\": 8128, \"sale_total\": 55200}], \"totalCount\": 8131, \"totalRevenue\": 476488463.07}\u001b[39m\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:75:24",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                          "column": 24,
+                          "line": 75
+                        },
+                        "snippet": "  73 |     expect(data.inventory).toHaveProperty('soldBikes');\n  74 |     expect(data.inventory).toHaveProperty('totalBikes');\n> 75 |     expect(data.sales).toHaveProperty('totalSales');\n     |                        ^\n  76 |   });\n  77 |\n  78 |   test('Dashboard UI displays all metrics in Thai', async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 24,
+                            "line": 75
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: \u001b[32m\"totalSales\"\u001b[39m\nReceived path: \u001b[31m[]\u001b[39m\n\nReceived value: \u001b[31m{\"averageValue\": 58601.45899274382, \"pendingInvoices\": 9, \"recentSales\": [{\"bike_chasi_number\": \"MLHKF5021R5203112\", \"customer_name\": \"ทัตธน คำม่วง\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8137, \"sale_total\": 76700}, {\"bike_chasi_number\": \"MLHJK1622S5254566\", \"customer_name\": \"ภัทราภรณ์ ซิ้วจ้าย\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8136, \"sale_total\": 78900}, {\"bike_chasi_number\": \"MLHJC9321T5728668\", \"customer_name\": \" เมืองไทย ลิสซิ่ง จำกัด  (สำนักงานใหญ่)\", \"sale_date\": \"2025-11-10\", \"sale_id\": 8135, \"sale_total\": 62000}, {\"bike_chasi_number\": \"MLHJC9325T5740595\", \"customer_name\": \"อานนท์ สีเหลือง\", \"sale_date\": \"2025-11-08\", \"sale_id\": 8134, \"sale_total\": 61900}, {\"bike_chasi_number\": \"MLHJK0432S5627644\", \"customer_name\": \"วรรณภา เพ็งสะและ\", \"sale_date\": \"2025-11-06\", \"sale_id\": 8133, \"sale_total\": 54900}, {\"bike_chasi_number\": \"MLESEK51111210488\", \"customer_name\": \"ศรัทธาวุฒิ คำปลิว\", \"sale_date\": \"2025-11-06\", \"sale_id\": 8132, \"sale_total\": 70700}, {\"bike_chasi_number\": \"MLHJK0414S5456992\", \"customer_name\": \"กบิลพัฒณ์ บุญมูสิก\", \"sale_date\": \"2025-11-03\", \"sale_id\": 8131, \"sale_total\": 54900}, {\"bike_chasi_number\": \"MLHJK1628S5252062\", \"customer_name\": \"ฟัยรุส มะนอ\", \"sale_date\": \"2025-11-01\", \"sale_id\": 8130, \"sale_total\": 79900}, {\"bike_chasi_number\": \"MLHJC9326T5725880\", \"customer_name\": \"จตุพร บริสารคุณ\", \"sale_date\": \"2025-11-01\", \"sale_id\": 8129, \"sale_total\": 67700}, {\"bike_chasi_number\": \"MLHJK0433S5625353\", \"customer_name\": \"สมศรี กมลเลิศ\", \"sale_date\": \"2025-10-28\", \"sale_id\": 8128, \"sale_total\": 55200}], \"totalCount\": 8131, \"totalRevenue\": 476488463.07}\u001b[39m\n\n  73 |     expect(data.inventory).toHaveProperty('soldBikes');\n  74 |     expect(data.inventory).toHaveProperty('totalBikes');\n> 75 |     expect(data.sales).toHaveProperty('totalSales');\n     |                        ^\n  76 |   });\n  77 |\n  78 |   test('Dashboard UI displays all metrics in Thai', async ({ page }) => {\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:75:24"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-11-13T20:02:37.063Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-5ebed-PI-returns-complete-metrics-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                        "column": 24,
+                        "line": 75
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ece2ef8b988c11fa4f5b-8fcd31ede191930fad49",
+              "file": "production/complete-integration.spec.ts",
+              "line": 65,
+              "column": 3
+            },
+            {
+              "title": "Dashboard UI displays all metrics in Thai",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3809,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T20:02:35.376Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ece2ef8b988c11fa4f5b-33eee2a2936bc1cf97ef",
+              "file": "production/complete-integration.spec.ts",
+              "line": 78,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Complete Integration - Customers CRUD",
+          "file": "production/complete-integration.spec.ts",
+          "line": 89,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Full CRUD workflow for Customers",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "timedOut",
+                      "duration": 120251,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 38,
+                            "line": 106
+                          },
+                          "message": "Error: locator.fill: Test timeout of 120000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/ที่อยู่/)\u001b[22m\n\n\n  104 |     await page.getByLabel(/นามสกุล/).fill(testCustomer.lastname);\n  105 |     await page.getByLabel(/เบอร์โทรศัพท์/).fill(testCustomer.phone);\n> 106 |     await page.getByLabel(/ที่อยู่/).fill(testCustomer.address);\n      |                                      ^\n  107 |\n  108 |     await page.getByRole('button', { name: /บันทึก|สร้าง/ }).click();\n  109 |     await page.waitForTimeout(1500);\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:106:38"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T20:02:35.378Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-4b1a1-CRUD-workflow-for-Customers-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-4b1a1-CRUD-workflow-for-Customers-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-4b1a1-CRUD-workflow-for-Customers-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-4b1a1-CRUD-workflow-for-Customers-chromium/trace.zip"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 120245,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 38,
+                            "line": 106
+                          },
+                          "message": "Error: locator.fill: Test timeout of 120000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/ที่อยู่/)\u001b[22m\n\n\n  104 |     await page.getByLabel(/นามสกุล/).fill(testCustomer.lastname);\n  105 |     await page.getByLabel(/เบอร์โทรศัพท์/).fill(testCustomer.phone);\n> 106 |     await page.getByLabel(/ที่อยู่/).fill(testCustomer.address);\n      |                                      ^\n  107 |\n  108 |     await page.getByRole('button', { name: /บันทึก|สร้าง/ }).click();\n  109 |     await page.waitForTimeout(1500);\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:106:38"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-11-13T20:04:36.475Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-4b1a1-CRUD-workflow-for-Customers-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-4b1a1-CRUD-workflow-for-Customers-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-4b1a1-CRUD-workflow-for-Customers-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-4b1a1-CRUD-workflow-for-Customers-chromium-retry1/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ece2ef8b988c11fa4f5b-ec1777b9152c58fd3610",
+              "file": "production/complete-integration.spec.ts",
+              "line": 91,
+              "column": 3
+            },
+            {
+              "title": "Customers API CRUD operations",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 329,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:156:33",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                          "column": 33,
+                          "line": 156
+                        },
+                        "snippet": "  154 |       data: testCustomer\n  155 |     });\n> 156 |     expect(createResponse.ok()).toBeTruthy();\n      |                                 ^\n  157 |     const created = await createResponse.json();\n  158 |     expect(created).toHaveProperty('customer_id');\n  159 |     const customerId = created.customer_id;"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 33,
+                            "line": 156
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  154 |       data: testCustomer\n  155 |     });\n> 156 |     expect(createResponse.ok()).toBeTruthy();\n      |                                 ^\n  157 |     const created = await createResponse.json();\n  158 |     expect(created).toHaveProperty('customer_id');\n  159 |     const customerId = created.customer_id;\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:156:33"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T20:02:35.376Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-6a21d-stomers-API-CRUD-operations-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                        "column": 33,
+                        "line": 156
+                      }
+                    },
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 531,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"ทดสอบ6121\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"ทดสอบ6121\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:165:41",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                          "column": 41,
+                          "line": 165
+                        },
+                        "snippet": "  163 |     expect(readResponse.ok()).toBeTruthy();\n  164 |     const customer = await readResponse.json();\n> 165 |     expect(customer.customer_firstname).toBe(testCustomer.firstname);\n      |                                         ^\n  166 |\n  167 |     // UPDATE\n  168 |     const updateData = { ...testCustomer, lastname: 'อัพเดท' };"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 41,
+                            "line": 165
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"ทดสอบ6121\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n\n  163 |     expect(readResponse.ok()).toBeTruthy();\n  164 |     const customer = await readResponse.json();\n> 165 |     expect(customer.customer_firstname).toBe(testCustomer.firstname);\n      |                                         ^\n  166 |\n  167 |     // UPDATE\n  168 |     const updateData = { ...testCustomer, lastname: 'อัพเดท' };\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:165:41"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-11-13T20:02:36.109Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-6a21d-stomers-API-CRUD-operations-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                        "column": 41,
+                        "line": 165
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ece2ef8b988c11fa4f5b-390cc80ecfe7992400db",
+              "file": "production/complete-integration.spec.ts",
+              "line": 149,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Complete Integration - Brands CRUD",
+          "file": "production/complete-integration.spec.ts",
+          "line": 189,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Full CRUD workflow for Brands",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 8472,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"ยี่ห้อทดสอบ5788\"\u001b[39m\nReceived string:    \u001b[31m\"รหัส↕ชื่อภาษาไทย↕ชื่อภาษาอังกฤษ↕หมายเหตุ↕การกระทำ8โซล่าSOLAR-แก้ไขลบ7Alpha VolantisAlpha Volantis-แก้ไขลบ6เรียวก้าRYUKA-แก้ไขลบ5สตาเลียนStallion-แก้ไขลบ4ซูซูกิSuzuki-แก้ไขลบ3คาวาซากิKawasaki-แก้ไขลบ2ยามาฮ่าYamaha-แก้ไขลบ1ฮอนด้าHonda-แก้ไขลบ\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"ยี่ห้อทดสอบ5788\"\u001b[39m\nReceived string:    \u001b[31m\"รหัส↕ชื่อภาษาไทย↕ชื่อภาษาอังกฤษ↕หมายเหตุ↕การกระทำ8โซล่าSOLAR-แก้ไขลบ7Alpha VolantisAlpha Volantis-แก้ไขลบ6เรียวก้าRYUKA-แก้ไขลบ5สตาเลียนStallion-แก้ไขลบ4ซูซูกิSuzuki-แก้ไขลบ3คาวาซากิKawasaki-แก้ไขลบ2ยามาฮ่าYamaha-แก้ไขลบ1ฮอนด้าHonda-แก้ไขลบ\"\u001b[39m\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:208:23",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                          "column": 23,
+                          "line": 208
+                        },
+                        "snippet": "  206 |     await waitForTableLoad(page);\n  207 |     const tableText = await page.locator('table').textContent();\n> 208 |     expect(tableText).toContain(testBrand.nameThai);\n      |                       ^\n  209 |\n  210 |     // UPDATE\n  211 |     const editButton = page.getByRole('row').filter({ hasText: testBrand.nameThai })"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 23,
+                            "line": 208
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"ยี่ห้อทดสอบ5788\"\u001b[39m\nReceived string:    \u001b[31m\"รหัส↕ชื่อภาษาไทย↕ชื่อภาษาอังกฤษ↕หมายเหตุ↕การกระทำ8โซล่าSOLAR-แก้ไขลบ7Alpha VolantisAlpha Volantis-แก้ไขลบ6เรียวก้าRYUKA-แก้ไขลบ5สตาเลียนStallion-แก้ไขลบ4ซูซูกิSuzuki-แก้ไขลบ3คาวาซากิKawasaki-แก้ไขลบ2ยามาฮ่าYamaha-แก้ไขลบ1ฮอนด้าHonda-แก้ไขลบ\"\u001b[39m\n\n  206 |     await waitForTableLoad(page);\n  207 |     const tableText = await page.locator('table').textContent();\n> 208 |     expect(tableText).toContain(testBrand.nameThai);\n      |                       ^\n  209 |\n  210 |     // UPDATE\n  211 |     const editButton = page.getByRole('row').filter({ hasText: testBrand.nameThai })\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:208:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T20:02:35.378Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-7b852-ll-CRUD-workflow-for-Brands-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-7b852-ll-CRUD-workflow-for-Brands-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-7b852-ll-CRUD-workflow-for-Brands-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-7b852-ll-CRUD-workflow-for-Brands-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                        "column": 23,
+                        "line": 208
+                      }
+                    },
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 8724,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"ยี่ห้อทดสอบ4684\"\u001b[39m\nReceived string:    \u001b[31m\"รหัส↕ชื่อภาษาไทย↕ชื่อภาษาอังกฤษ↕หมายเหตุ↕การกระทำ8โซล่าSOLAR-แก้ไขลบ7Alpha VolantisAlpha Volantis-แก้ไขลบ6เรียวก้าRYUKA-แก้ไขลบ5สตาเลียนStallion-แก้ไขลบ4ซูซูกิSuzuki-แก้ไขลบ3คาวาซากิKawasaki-แก้ไขลบ2ยามาฮ่าYamaha-แก้ไขลบ1ฮอนด้าHonda-แก้ไขลบ\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"ยี่ห้อทดสอบ4684\"\u001b[39m\nReceived string:    \u001b[31m\"รหัส↕ชื่อภาษาไทย↕ชื่อภาษาอังกฤษ↕หมายเหตุ↕การกระทำ8โซล่าSOLAR-แก้ไขลบ7Alpha VolantisAlpha Volantis-แก้ไขลบ6เรียวก้าRYUKA-แก้ไขลบ5สตาเลียนStallion-แก้ไขลบ4ซูซูกิSuzuki-แก้ไขลบ3คาวาซากิKawasaki-แก้ไขลบ2ยามาฮ่าYamaha-แก้ไขลบ1ฮอนด้าHonda-แก้ไขลบ\"\u001b[39m\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:208:23",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                          "column": 23,
+                          "line": 208
+                        },
+                        "snippet": "  206 |     await waitForTableLoad(page);\n  207 |     const tableText = await page.locator('table').textContent();\n> 208 |     expect(tableText).toContain(testBrand.nameThai);\n      |                       ^\n  209 |\n  210 |     // UPDATE\n  211 |     const editButton = page.getByRole('row').filter({ hasText: testBrand.nameThai })"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 23,
+                            "line": 208
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected substring: \u001b[32m\"ยี่ห้อทดสอบ4684\"\u001b[39m\nReceived string:    \u001b[31m\"รหัส↕ชื่อภาษาไทย↕ชื่อภาษาอังกฤษ↕หมายเหตุ↕การกระทำ8โซล่าSOLAR-แก้ไขลบ7Alpha VolantisAlpha Volantis-แก้ไขลบ6เรียวก้าRYUKA-แก้ไขลบ5สตาเลียนStallion-แก้ไขลบ4ซูซูกิSuzuki-แก้ไขลบ3คาวาซากิKawasaki-แก้ไขลบ2ยามาฮ่าYamaha-แก้ไขลบ1ฮอนด้าHonda-แก้ไขลบ\"\u001b[39m\n\n  206 |     await waitForTableLoad(page);\n  207 |     const tableText = await page.locator('table').textContent();\n> 208 |     expect(tableText).toContain(testBrand.nameThai);\n      |                       ^\n  209 |\n  210 |     // UPDATE\n  211 |     const editButton = page.getByRole('row').filter({ hasText: testBrand.nameThai })\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:208:23"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-11-13T20:02:44.525Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-7b852-ll-CRUD-workflow-for-Brands-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-7b852-ll-CRUD-workflow-for-Brands-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-7b852-ll-CRUD-workflow-for-Brands-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-7b852-ll-CRUD-workflow-for-Brands-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                        "column": 23,
+                        "line": 208
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ece2ef8b988c11fa4f5b-0833a5ed8cb33eefa2ee",
+              "file": "production/complete-integration.spec.ts",
+              "line": 191,
+              "column": 3
+            },
+            {
+              "title": "Brands API CRUD operations",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 407,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T20:02:37.020Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ece2ef8b988c11fa4f5b-ec001157c7862b8707b1",
+              "file": "production/complete-integration.spec.ts",
+              "line": 242,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Complete Integration - Suppliers CRUD",
+          "file": "production/complete-integration.spec.ts",
+          "line": 280,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Full CRUD workflow for Suppliers",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 3,
+                      "status": "timedOut",
+                      "duration": 120255,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 39,
+                            "line": 291
+                          },
+                          "message": "Error: locator.fill: Test timeout of 120000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/ชื่อเต็ม/)\u001b[22m\n\n\n  289 |     await openModal(page, /เพิ่มซัพพลายเออร์/);\n  290 |     await page.getByLabel(/ชื่อเล่น/).fill(testSupplier.nickname);\n> 291 |     await page.getByLabel(/ชื่อเต็ม/).fill(testSupplier.name);\n      |                                       ^\n  292 |     await page.getByLabel(/ที่อยู่/).fill(testSupplier.address);\n  293 |     await page.getByLabel(/เบอร์โทรศัพท์/).fill(testSupplier.phone);\n  294 |     await page.getByRole('button', { name: /บันทึก|สร้าง/ }).click();\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:291:39"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T20:02:37.441Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-9c2a1-CRUD-workflow-for-Suppliers-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-9c2a1-CRUD-workflow-for-Suppliers-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-9c2a1-CRUD-workflow-for-Suppliers-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-9c2a1-CRUD-workflow-for-Suppliers-chromium/trace.zip"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 2,
+                      "status": "timedOut",
+                      "duration": 120226,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 39,
+                            "line": 291
+                          },
+                          "message": "Error: locator.fill: Test timeout of 120000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel(/ชื่อเต็ม/)\u001b[22m\n\n\n  289 |     await openModal(page, /เพิ่มซัพพลายเออร์/);\n  290 |     await page.getByLabel(/ชื่อเล่น/).fill(testSupplier.nickname);\n> 291 |     await page.getByLabel(/ชื่อเต็ม/).fill(testSupplier.name);\n      |                                       ^\n  292 |     await page.getByLabel(/ที่อยู่/).fill(testSupplier.address);\n  293 |     await page.getByLabel(/เบอร์โทรศัพท์/).fill(testSupplier.phone);\n  294 |     await page.getByRole('button', { name: /บันทึก|สร้าง/ }).click();\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:291:39"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-11-13T20:04:38.397Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-9c2a1-CRUD-workflow-for-Suppliers-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-9c2a1-CRUD-workflow-for-Suppliers-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-9c2a1-CRUD-workflow-for-Suppliers-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-9c2a1-CRUD-workflow-for-Suppliers-chromium-retry1/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ece2ef8b988c11fa4f5b-c612b60b6304850405f7",
+              "file": "production/complete-integration.spec.ts",
+              "line": 282,
+              "column": 3
+            },
+            {
+              "title": "Suppliers API CRUD operations",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 455,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T20:02:37.875Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ece2ef8b988c11fa4f5b-d88e8a4bdcb550eaa73f",
+              "file": "production/complete-integration.spec.ts",
+              "line": 335,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Complete Integration - Finance Companies CRUD",
+          "file": "production/complete-integration.spec.ts",
+          "line": 364,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Full CRUD workflow for Finance Companies",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 120352,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 50,
+                            "line": 375
+                          },
+                          "message": "Error: locator.fill: Test timeout of 120000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"fullname\"]')\u001b[22m\n\n\n  373 |     await openModal(page, /เพิ่มบริษัทการเงิน/);\n  374 |     await page.locator('input[name=\"nickname\"]').fill(testFinance.nickname);\n> 375 |     await page.locator('input[name=\"fullname\"]').fill(testFinance.fullname);\n      |                                                  ^\n  376 |     await page.getByLabel(/ที่อยู่/).fill(testFinance.address);\n  377 |     await page.getByLabel(/เบอร์โทรศัพท์/).fill(testFinance.phone);\n  378 |     await page.getByRole('button', { name: /บันทึก|สร้าง/ }).click();\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:375:50"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T20:02:38.342Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-fcf5e-kflow-for-Finance-Companies-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-fcf5e-kflow-for-Finance-Companies-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-fcf5e-kflow-for-Finance-Companies-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-fcf5e-kflow-for-Finance-Companies-chromium/trace.zip"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 120301,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 50,
+                            "line": 375
+                          },
+                          "message": "Error: locator.fill: Test timeout of 120000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"fullname\"]')\u001b[22m\n\n\n  373 |     await openModal(page, /เพิ่มบริษัทการเงิน/);\n  374 |     await page.locator('input[name=\"nickname\"]').fill(testFinance.nickname);\n> 375 |     await page.locator('input[name=\"fullname\"]').fill(testFinance.fullname);\n      |                                                  ^\n  376 |     await page.getByLabel(/ที่อยู่/).fill(testFinance.address);\n  377 |     await page.getByLabel(/เบอร์โทรศัพท์/).fill(testFinance.phone);\n  378 |     await page.getByRole('button', { name: /บันทึก|สร้าง/ }).click();\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:375:50"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-11-13T20:04:39.496Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-fcf5e-kflow-for-Finance-Companies-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-fcf5e-kflow-for-Finance-Companies-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-fcf5e-kflow-for-Finance-Companies-chromium-retry1/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-fcf5e-kflow-for-Finance-Companies-chromium-retry1/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ece2ef8b988c11fa4f5b-1bcee3d5d8284016ba65",
+              "file": "production/complete-integration.spec.ts",
+              "line": 366,
+              "column": 3
+            },
+            {
+              "title": "Finance API CRUD operations",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 154,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:426:33",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                          "column": 33,
+                          "line": 426
+                        },
+                        "snippet": "  424 |       data: testFinance\n  425 |     });\n> 426 |     expect(createResponse.ok()).toBeTruthy();\n      |                                 ^\n  427 |     const created = await createResponse.json();\n  428 |     const financeId = created.finance_id;\n  429 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 33,
+                            "line": 426
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  424 |       data: testFinance\n  425 |     });\n> 426 |     expect(createResponse.ok()).toBeTruthy();\n      |                                 ^\n  427 |     const created = await createResponse.json();\n  428 |     const financeId = created.finance_id;\n  429 |\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:426:33"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T20:02:39.429Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-b811e-Finance-API-CRUD-operations-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                        "column": 33,
+                        "line": 426
+                      }
+                    },
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 167,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:426:33",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                          "column": 33,
+                          "line": 426
+                        },
+                        "snippet": "  424 |       data: testFinance\n  425 |     });\n> 426 |     expect(createResponse.ok()).toBeTruthy();\n      |                                 ^\n  427 |     const created = await createResponse.json();\n  428 |     const financeId = created.finance_id;\n  429 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 33,
+                            "line": 426
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  424 |       data: testFinance\n  425 |     });\n> 426 |     expect(createResponse.ok()).toBeTruthy();\n      |                                 ^\n  427 |     const created = await createResponse.json();\n  428 |     const financeId = created.finance_id;\n  429 |\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:426:33"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-11-13T20:02:39.974Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-b811e-Finance-API-CRUD-operations-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                        "column": 33,
+                        "line": 426
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ece2ef8b988c11fa4f5b-fc6e04be583ce6c31dc8",
+              "file": "production/complete-integration.spec.ts",
+              "line": 419,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Complete Integration - Thai Language Validation",
+          "file": "production/complete-integration.spec.ts",
+          "line": 448,
+          "column": 6,
+          "specs": [
+            {
+              "title": "All pages display Thai navigation consistently",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 24356,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T20:02:40.523Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ece2ef8b988c11fa4f5b-f4aa3fd7136be20b79ed",
+              "file": "production/complete-integration.spec.ts",
+              "line": 450,
+              "column": 3
+            },
+            {
+              "title": "All CRUD buttons display in Thai",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 14249,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T20:02:53.774Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ece2ef8b988c11fa4f5b-7246eeaff4e83e01f5d0",
+              "file": "production/complete-integration.spec.ts",
+              "line": 471,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Complete Integration - Performance Validation",
+          "file": "production/complete-integration.spec.ts",
+          "line": 495,
+          "column": 6,
+          "specs": [
+            {
+              "title": "All API endpoints respond within 2 seconds",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1010,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "/api/dashboard: 446ms\n"
+                        },
+                        {
+                          "text": "/api/customers?page=1&rows=10: 78ms\n"
+                        },
+                        {
+                          "text": "/api/bikes/unsold?page=1&rows=10: 81ms\n"
+                        },
+                        {
+                          "text": "/api/brands?page=1&rows=10: 78ms\n"
+                        },
+                        {
+                          "text": "/api/suppliers?page=1&rows=10: 76ms\n"
+                        },
+                        {
+                          "text": "/api/finance?page=1&rows=10: 77ms\n"
+                        },
+                        {
+                          "text": "/api/sales?page=1&rows=10: 81ms\n"
+                        },
+                        {
+                          "text": "/api/invoices?page=1&rows=10: 82ms\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T20:03:04.983Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ece2ef8b988c11fa4f5b-9ecdd2c33d11cf570f3d",
+              "file": "production/complete-integration.spec.ts",
+              "line": 497,
+              "column": 3
+            },
+            {
+              "title": "All pages load within 5 seconds",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 6674,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "/: 1225ms\n"
+                        },
+                        {
+                          "text": "/customers: 765ms\n"
+                        },
+                        {
+                          "text": "/bikes: 752ms\n"
+                        },
+                        {
+                          "text": "/brands: 738ms\n"
+                        },
+                        {
+                          "text": "/suppliers: 750ms\n"
+                        },
+                        {
+                          "text": "/finance: 741ms\n"
+                        },
+                        {
+                          "text": "/sales: 832ms\n"
+                        },
+                        {
+                          "text": "/invoices: 740ms\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T20:03:05.999Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ece2ef8b988c11fa4f5b-c85fe3f43ac0d21cfbf2",
+              "file": "production/complete-integration.spec.ts",
+              "line": 520,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Complete Integration - Data Flow Validation",
+          "file": "production/complete-integration.spec.ts",
+          "line": 544,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Complete data flow: Frontend → Backend → D1 → UI",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 242,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:553:33",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                          "column": 33,
+                          "line": 553
+                        },
+                        "snippet": "  551 |       data: testCustomer\n  552 |     });\n> 553 |     expect(createResponse.ok()).toBeTruthy();\n      |                                 ^\n  554 |     const created = await createResponse.json();\n  555 |     const customerId = created.customer_id;\n  556 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 33,
+                            "line": 553
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  551 |       data: testCustomer\n  552 |     });\n> 553 |     expect(createResponse.ok()).toBeTruthy();\n      |                                 ^\n  554 |     const created = await createResponse.json();\n  555 |     const customerId = created.customer_id;\n  556 |\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:553:33"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-11-13T20:03:08.129Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-0babb-rontend-→-Backend-→-D1-→-UI-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-0babb-rontend-→-Backend-→-D1-→-UI-chromium/video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-0babb-rontend-→-Backend-→-D1-→-UI-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                        "column": 33,
+                        "line": 553
+                      }
+                    },
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 261,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:553:33",
+                        "location": {
+                          "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                          "column": 33,
+                          "line": 553
+                        },
+                        "snippet": "  551 |       data: testCustomer\n  552 |     });\n> 553 |     expect(createResponse.ok()).toBeTruthy();\n      |                                 ^\n  554 |     const created = await createResponse.json();\n  555 |     const customerId = created.customer_id;\n  556 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                            "column": 33,
+                            "line": 553
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  551 |       data: testCustomer\n  552 |     });\n> 553 |     expect(createResponse.ok()).toBeTruthy();\n      |                                 ^\n  554 |     const created = await createResponse.json();\n  555 |     const customerId = created.customer_id;\n  556 |\n    at /Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts:553:33"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-11-13T20:03:08.764Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-0babb-rontend-→-Backend-→-D1-→-UI-chromium-retry1/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-0babb-rontend-→-Backend-→-D1-→-UI-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/test-results/production-complete-integr-0babb-rontend-→-Backend-→-D1-→-UI-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/mac/Projects/palmtong/_palmtong/palmtong-test/tests/production/complete-integration.spec.ts",
+                        "column": 33,
+                        "line": 553
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ece2ef8b988c11fa4f5b-0f01cceef6f25a489f18",
+              "file": "production/complete-integration.spec.ts",
+              "line": 546,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-11-13T20:02:34.971Z",
+    "duration": 245251.821,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 8,
+    "flaky": 0
+  }
+}
