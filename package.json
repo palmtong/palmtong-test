@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "playwright test",
-    "test:backend": "playwright test tests/backend --project=chromium",
-    "test:frontend": "playwright test tests/frontend --project=chromium",
+    "test:backend": "playwright test tests/api --project=chromium",
+    "test:frontend": "playwright test tests/e2e --project=chromium",
     "test:e2e": "playwright test tests/e2e --project=chromium",
     "test:pdf": "playwright test tests/pdf-generation.spec.ts --project=chromium",
     "test:pdf:production": "playwright test tests/production/pdf-generation-production.spec.ts --project=chromium",
