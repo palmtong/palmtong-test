@@ -9,6 +9,8 @@
     "test:backend": "playwright test tests/backend --project=chromium",
     "test:frontend": "playwright test tests/frontend --project=chromium",
     "test:e2e": "playwright test tests/e2e --project=chromium",
+    "test:pdf": "playwright test tests/pdf-generation.spec.ts --project=chromium",
+    "test:pdf:production": "playwright test tests/production/pdf-generation-production.spec.ts --project=chromium",
     "test:all": "playwright test --project=chromium --project=firefox --project=webkit",
     "test:json": "cat test-results/results.json | jq '{expected: .stats.expected, unexpected: .stats.unexpected, skipped: .stats.skipped}'",
     "test:failures": "cat test-results/results.json | jq '.suites[].suites[].specs[] | select(.ok == false) | {title: .title, file: .file}' | head -20",
