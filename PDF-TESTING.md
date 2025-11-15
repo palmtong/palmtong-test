@@ -58,12 +58,14 @@ $ npm run test:pdf:production
 7 passed (4.1s)
 ```
 
-### Comprehensive Tests (8/8 passing, 1 skipped):
+### Comprehensive Tests - Dual Environment Support ✅
 
-The comprehensive test suite now **automatically detects production** and uses existing data instead of creating test data.
+The comprehensive test suite **automatically detects** the environment and adapts its behavior accordingly.
+
+#### Production Environment (8/8 passing):
 
 ```bash
-$ npm run test:pdf
+$ npm run test:pdf  # Against production
 
 ⚠️  Production mode: Using existing invoice data
 ✓ Using existing production data:
@@ -72,27 +74,47 @@ $ npm run test:pdf
   - Environment: Production
   - Backend URL: https://palmtong-backend.anu-9da.workers.dev
 
-✅ 8 passed (5.5s)
+✅ 8 passed (3.1s)
 ✅ 1 skipped (local dev-specific test)
-
-Tests passed:
-1. PDF generation with correct headers
-2. PDF from current database data (no caching)
-3. Thai language in PDF (verified in production)
-4. Valid PDF with reasonable size (> 1KB)
-5. Return 404 for non-existent invoice
-6. Unlimited PDF regeneration (5 iterations)
-7. PDF metadata and structure
-8. Cloudflare Workers runtime
 ```
 
-**Key improvements:**
-- ✅ Comprehensive tests now work on both production and local dev
+#### Local Development Environment (8/8 passing):
+
+```bash
+$ npm run test:pdf  # Against wrangler dev
+
+🔧 Local dev mode: Creating test data
+✓ Test data created:
+  - Brand ID: 7
+  - Customer ID: 20
+  - Bike ID: 9
+  - Sale ID: 7
+  - Invoice ID: 9
+  - Environment: Local Dev
+  - Backend URL: http://localhost:8787
+
+✅ 8 passed (839ms)
+✅ 1 skipped (production-specific test)
+```
+
+#### All Tests Covered:
+
+1. ✅ PDF generation with correct headers (Content-Type, Cache-Control, Content-Disposition)
+2. ✅ PDF from current database data (no caching)
+3. ✅ Thai language support in PDFs
+4. ✅ Valid PDF format with reasonable size (> 1KB)
+5. ✅ Error handling (404 for non-existent invoices)
+6. ✅ Unlimited PDF regeneration (5 iterations)
+7. ✅ PDF metadata and structure validation
+8. ✅ Environment-specific behavior (production/local dev)
+
+**Key Features:**
 - ✅ Automatic environment detection (IS_PRODUCTION)
-- ✅ Production mode uses existing data (no test data creation)
-- ✅ Local dev mode creates complete test data
-- ✅ Cleanup skipped in production
-- ✅ Tests adapted for production constraints
+- ✅ Production mode: Uses existing data, no modifications, no cleanup
+- ✅ Local dev mode: Creates test data with valid Thai IDs, tests editing, performs cleanup
+- ✅ Valid Thai ID card generation with checksum validation
+- ✅ Handles different API response formats (local dev vs production)
+- ✅ Tests adapt to environment constraints
 
 ## Test Scripts
 
@@ -109,37 +131,78 @@ Updated `package.json` with new test commands:
 
 ## Running Tests
 
-### Against Production (Cloudflare Workers)
+### Quick Start - Test Both Environments
 
 ```bash
 cd /Users/mac/Projects/palmtong/_palmtong/palmtong-test
 
-# Ensure .env has production URL
-cat .env
-# BACKEND_URL=https://palmtong-backend.anu-9da.workers.dev
+# 1. Test against production (uses existing data, safe)
+npm run test:pdf  # or npm run test:pdf:production
 
-# Run production tests (uses existing data)
-npm run test:pdf:production
-
-# Run comprehensive tests (creates test data)
-npm run test:pdf
-```
-
-### Against Local Development (wrangler dev)
-
-```bash
+# 2. Test against local dev
 # Terminal 1: Start wrangler dev
 cd /Users/mac/Projects/palmtong/_palmtong/palmtong-cf
 npx wrangler dev
 
-# Terminal 2: Update .env and run tests
+# Terminal 2: Switch to local and test
+cd /Users/mac/Projects/palmtong/_palmtong/palmtong-test
+echo "BACKEND_URL=http://localhost:8787" > .env
+npm run test:pdf
+
+# 3. Restore production environment
+mv .env.production .env  # or manually update .env
+```
+
+### Production Environment Testing
+
+```bash
 cd /Users/mac/Projects/palmtong/_palmtong/palmtong-test
 
-# Update .env to local
-echo "BACKEND_URL=http://localhost:8787" > .env
+# Ensure .env points to production
+cat .env
+# BACKEND_URL=https://palmtong-backend.anu-9da.workers.dev
+
+# Option 1: Lightweight production tests (recommended)
+npm run test:pdf:production  # 7 tests, uses existing data
+
+# Option 2: Comprehensive tests (also production-safe)
+npm run test:pdf  # 8 tests, automatically detects production
+```
+
+### Local Development Testing
+
+```bash
+# Terminal 1: Start wrangler dev
+cd /Users/mac/Projects/palmtong/_palmtong/palmtong-cf
+npx wrangler dev --port 8787
+
+# Terminal 2: Configure and run tests
+cd /Users/mac/Projects/palmtong/_palmtong/palmtong-test
+
+# Update .env to local (one-time)
+cat > .env << EOF
+BACKEND_URL=http://localhost:8787
+FRONTEND_URL=http://localhost:5173
+EOF
 
 # Run comprehensive tests
+npm run test:pdf  # 8 tests, creates test data automatically
+```
+
+### Environment Switching
+
+```bash
+# Save current environment
+cp .env .env.backup
+
+# Switch to local dev
+echo "BACKEND_URL=http://localhost:8787" > .env
+
+# Run tests
 npm run test:pdf
+
+# Restore previous environment
+mv .env.backup .env
 ```
 
 ## Key Findings
@@ -357,20 +420,35 @@ Previously, the comprehensive tests would fail on production due to attempting t
 
 ## Summary
 
-**Test Status**: ✅ **ALL TESTS PASSING**
-- Production-specific tests: 7/7 passing
-- Comprehensive tests: 8/8 passing (1 skipped for local dev)
-- Total coverage: 15 unique test scenarios
+**Test Status**: ✅ **ALL TESTS PASSING (BOTH ENVIRONMENTS)**
 
-**Environment**: Cloudflare Workers + D1 Database
+### Production (Cloudflare Workers):
+- ✅ Comprehensive tests: 8/8 passing (3.1s)
+- ✅ Production-specific tests: 7/7 passing (4.1s)
+- ✅ Uses existing data (production-safe)
+- ✅ No modifications or cleanup
+
+### Local Development (wrangler dev):
+- ✅ Comprehensive tests: 8/8 passing (839ms)
+- ✅ Creates test data with valid Thai IDs
+- ✅ Tests editing and regeneration
+- ✅ Automatic cleanup
+
+**Total Coverage**: 15 unique test scenarios across both environments
 
 **Key Features**:
-- ✅ Automatic environment detection
-- ✅ Production-safe (uses existing data)
-- ✅ Comprehensive local dev testing (creates & cleans test data)
-- ✅ Thai language support verified
-- ✅ PDF generation < 100ms
+- ✅ Automatic environment detection (IS_PRODUCTION)
+- ✅ Valid Thai ID card generation with checksum validation
+- ✅ Handles different API response formats (local dev vs production)
+- ✅ Thai language support verified in both environments
+- ✅ PDF generation < 1s in local dev, < 5s in production
 - ✅ On-demand generation (no caching)
 - ✅ Unlimited regeneration capability
+- ✅ Production-safe (no data creation/modification)
+
+**Tested Environments**:
+- ✅ Cloudflare Workers (Production): https://palmtong-backend.anu-9da.workers.dev
+- ✅ Wrangler Dev (Local): http://localhost:8787
+- ✅ D1 Database (Both local and remote)
 
 **Last Updated**: 2025-11-15
