@@ -141,7 +141,7 @@ npm run test:pdf  # or npm run test:pdf:production
 
 # 2. Test against local dev
 # Terminal 1: Start wrangler dev
-cd /Users/mac/Projects/palmtong/_palmtong/palmtong-cf
+cd /Users/mac/Projects/palmtong/_palmtong/palmtong-backend
 npx wrangler dev
 
 # Terminal 2: Switch to local and test
@@ -173,7 +173,7 @@ npm run test:pdf  # 8 tests, automatically detects production
 
 ```bash
 # Terminal 1: Start wrangler dev
-cd /Users/mac/Projects/palmtong/_palmtong/palmtong-cf
+cd /Users/mac/Projects/palmtong/_palmtong/palmtong-backend
 npx wrangler dev --port 8787
 
 # Terminal 2: Configure and run tests
@@ -402,7 +402,7 @@ Previously, the comprehensive tests would fail on production due to attempting t
 1. **Run comprehensive tests against wrangler dev**:
    ```bash
    # Terminal 1
-   cd palmtong-cf && npx wrangler dev
+   cd palmtong-backend && npx wrangler dev
 
    # Terminal 2
    cd palmtong-test
